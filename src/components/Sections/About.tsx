@@ -1,8 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Cpu, GraduationCap, Check } from 'lucide-react';
 import { USER_INFO } from '../../constants';
 
 const About: React.FC = () => {
+  const [isDownloaded, setIsDownloaded] = useState(false);
+
+  const handleDownload = () => {
+    setIsDownloaded(true);
+    setTimeout(() => setIsDownloaded(false), 3000);
+  };
 
   const timeline = [
     {
@@ -135,18 +142,46 @@ const About: React.FC = () => {
                   </motion.div>
                 ))}
 
-                <motion.a
-                  href={USER_INFO.cv_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="col-span-1 h-fit w-full flex items-center justify-center px-6 py-3 bg-white text-black font-bold rounded-xl hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-accent/20 cursor-pointer text-center text-sm"
-                >
-                  Lebenslauf herunterladen
-                </motion.a>
+                <div className="col-span-1 h-fit w-full">
+                  <a
+                    href={USER_INFO.cv_link}
+                    download
+                    onClick={handleDownload}
+                    className={`
+                      relative w-full flex items-center justify-center px-6 py-3 font-bold rounded-xl transition-all duration-500 shadow-lg cursor-pointer overflow-hidden text-sm
+                      ${isDownloaded
+                        ? 'bg-green-500 text-white hover:shadow-green-500/20'
+                        : 'bg-white text-black hover:bg-accent hover:text-white hover:shadow-accent/20'
+                      }
+                    `}
+                  >
+                    <div className="relative z-10 flex items-center gap-2">
+                      <AnimatePresence mode="wait">
+                        {isDownloaded ? (
+                          <motion.span
+                            key="success"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            className="flex items-center gap-2"
+                          >
+                            <Check size={18} />
+                            Vielen Dank!
+                          </motion.span>
+                        ) : (
+                          <motion.span
+                            key="default"
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                          >
+                            Lebenslauf herunterladen
+                          </motion.span>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  </a>
+                </div>
 
               </div>
             </div>

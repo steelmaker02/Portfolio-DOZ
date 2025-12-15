@@ -7,6 +7,11 @@
     color: #ffffff;
 }
 
+html {
+    background-color: #080808;
+    overscroll-behavior: none;
+}
+
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,4 +35,48 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
+
+@media (pointer: fine) {
+
+    *,
+    *::before,
+    *::after {
+        cursor: none !important;
+    }
+}
+
+iframe {
+    cursor: auto !important;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
 }

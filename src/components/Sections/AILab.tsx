@@ -5,9 +5,9 @@ import ProjectModal from './ProjectModal';
 import { Project, ProjectCategory } from '../../types';
 
 const aiProjects = [
-  { id: 1, title: "Biotechnologie", image: "/images/ai-lab/Biotechnologie.jpg" },
-  { id: 2, title: "Kosmetikstudio", image: "/images/ai-lab/Kosmetikstudio.jpg" },
-  { id: 3, title: "Autoservice", image: "/images/ai-lab/Autoservice.jpg" }
+  { id: 1, title: "Biotechnologie", image: "images/ai-lab/Biotechnologie.jpg" },
+  { id: 2, title: "Kosmetikstudio", image: "images/ai-lab/Kosmetikstudio.jpg" },
+  { id: 3, title: "Autoservice", image: "images/ai-lab/Autoservice.jpg" }
 ];
 
 const aiFullGalleryProject: Project = {
@@ -19,25 +19,25 @@ const aiFullGalleryProject: Project = {
   tools: ['KI'],
   tags: ['Research', 'Concept'],
   gallery: [
-    { src: '/images/ai-lab/Anwaltskanzlei.jpg', title: 'Anwaltskanzlei' },
-    { src: '/images/ai-lab/Bauunternehmen.jpg', title: 'Bauunternehmen' },
-    { src: '/images/ai-lab/Business Coach.jpg', title: 'Business Coach' },
-    { src: '/images/ai-lab/E-Learning.jpg', title: 'E-Learning Plattform' },
-    { src: '/images/ai-lab/Event-Agentur.jpg', title: 'Event Agentur' },
-    { src: '/images/ai-lab/Fitnessstudio.jpg', title: 'Fitnessstudio' },
-    { src: '/images/ai-lab/Food Delivery.jpg', title: 'Food Delivery App' },
-    { src: '/images/ai-lab/Fotograf.jpg', title: 'Fotografie Portfolio' },
-    { src: '/images/ai-lab/Immobilienverwaltung.jpg', title: 'Immobilienverwaltung' },
-    { src: '/images/ai-lab/Logistik & Spedition.jpg', title: 'Logistik & Spedition' },
-    { src: '/images/ai-lab/Medizinische Klinik.jpg', title: 'Medizinische Klinik' },
-    { src: '/images/ai-lab/Online-Shop.jpg', title: 'Online Shop' },
-    { src: '/images/ai-lab/Reinigungsservice.jpg', title: 'Reinigungsservice' },
-    { src: '/images/ai-lab/Reisebüro.jpg', title: 'Reisebüro' },
-    { src: '/images/ai-lab/Renovierung.jpg', title: 'Renovierung & Sanierung' },
-    { src: '/images/ai-lab/Restaurant.jpg', title: 'Restaurant' },
-    { src: '/images/ai-lab/Solarenergie.jpg', title: 'Solarenergie' },
-    { src: '/images/ai-lab/Tattoo-Studio.jpg', title: 'Tattoo Studio' },
-    { src: '/images/ai-lab/Webagentur.jpg', title: 'Webagentur Concept' },
+    { src: 'images/ai-lab/Anwaltskanzlei.jpg', title: 'Anwaltskanzlei' },
+    { src: 'images/ai-lab/Bauunternehmen.jpg', title: 'Bauunternehmen' },
+    { src: 'images/ai-lab/Business Coach.jpg', title: 'Business Coach' },
+    { src: 'images/ai-lab/E-Learning.jpg', title: 'E-Learning Plattform' },
+    { src: 'images/ai-lab/Event-Agentur.jpg', title: 'Event Agentur' },
+    { src: 'images/ai-lab/Fitnessstudio.jpg', title: 'Fitnessstudio' },
+    { src: 'images/ai-lab/Food Delivery.jpg', title: 'Food Delivery App' },
+    { src: 'images/ai-lab/Fotograf.jpg', title: 'Fotografie Portfolio' },
+    { src: 'images/ai-lab/Immobilienverwaltung.jpg', title: 'Immobilienverwaltung' },
+    { src: 'images/ai-lab/Logistik & Spedition.jpg', title: 'Logistik & Spedition' },
+    { src: 'images/ai-lab/Medizinische Klinik.jpg', title: 'Medizinische Klinik' },
+    { src: 'images/ai-lab/Online-Shop.jpg', title: 'Online Shop' },
+    { src: 'images/ai-lab/Reinigungsservice.jpg', title: 'Reinigungsservice' },
+    { src: 'images/ai-lab/Reisebüro.jpg', title: 'Reisebüro' },
+    { src: 'images/ai-lab/Renovierung.jpg', title: 'Renovierung & Sanierung' },
+    { src: 'images/ai-lab/Restaurant.jpg', title: 'Restaurant' },
+    { src: 'images/ai-lab/Solarenergie.jpg', title: 'Solarenergie' },
+    { src: 'images/ai-lab/Tattoo-Studio.jpg', title: 'Tattoo Studio' },
+    { src: 'images/ai-lab/Webagentur.jpg', title: 'Webagentur Concept' },
   ]
 };
 
@@ -116,6 +116,10 @@ const AILab: React.FC = () => {
                 <img
                   src={item.image}
                   alt={item.title}
+                  width="1408"
+                  height="768"
+                  decoding="async"
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />

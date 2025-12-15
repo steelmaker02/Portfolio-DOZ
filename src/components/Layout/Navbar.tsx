@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b ${isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
+      className={`fixed top-0 left-0 right-0 z-50 transition-[padding,background-color,border-color,transform,opacity,box-shadow] duration-300 ease-in-out border-b ${isHidden ? '-translate-y-full opacity-0' : 'translate-y-0 opacity-100'
         } ${isScrolled || mobileMenuOpen
           ? 'py-4 bg-[#050505]/90 backdrop-blur-xl border-white/5 shadow-lg'
           : 'pt-8 pb-6 md:pt-12 md:pb-6 bg-transparent border-transparent'
@@ -48,8 +48,10 @@ const Navbar: React.FC = () => {
 
         <a href="#" className="relative block group z-[60]" onClick={() => setMobileMenuOpen(false)}>
           <img
-            src="/images/logo.svg"
+            src="images/logo.svg"
             alt="Logo"
+            width="48"
+            height="48"
             className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 -ml-0 md:-ml-0"
           />
         </a>
@@ -70,6 +72,7 @@ const Navbar: React.FC = () => {
         <button
           className="lg:hidden z-[60] relative text-white p-2 -mr-2 hover:bg-white/10 rounded-full transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>

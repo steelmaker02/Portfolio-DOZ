@@ -8,7 +8,7 @@ export const USER_INFO = {
   availability: "Verfügbar ab 09.2026",
   location: "Neumünster - Kiel - Hamburg",
   email: "zaiats.design@gmail.com",
-  cv_link: "/documents/CV_Dima_Zaiats_2025.pdf",
+  cv_link: "images/documents/Lebenslauf-Zaiats_Dmytro.pdf",
   bio_short: "Ich gestalte digitale Erlebnisse an der Schnittstelle von klassischem Grafikdesign, modernem Web-Development und generativer KI.",
 };
 
@@ -38,8 +38,8 @@ export const PROJECTS: Project[] = [
     title: 'Online Bildungsplatform',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web1_thumb.png',
-    fullWebImage: '/images/projects/web1_full.png',
+    coverImage: 'images/projects/web1_thumb.png',
+    fullWebImage: 'images/projects/web1_full.webp',
     tools: ['Figma', 'Photoshop', 'Illustrator'],
     tags: ['Education', 'UI/UX'],
     size: 'large'
@@ -49,8 +49,8 @@ export const PROJECTS: Project[] = [
     title: 'Odessa Balletttheater',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web2_thumb.webp',
-    fullWebImage: '/images/projects/web2_full.webp',
+    coverImage: 'images/projects/web2_thumb.webp',
+    fullWebImage: 'images/projects/web2_full.webp',
     tools: ['Figma', 'Photoshop'],
     tags: ['Culture', 'Minimal'],
     size: 'wide'
@@ -60,8 +60,8 @@ export const PROJECTS: Project[] = [
     title: 'Hörgeräteshop',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web3_thumb.webp',
-    fullWebImage: '/images/projects/web3_full.webp',
+    coverImage: 'images/projects/web3_thumb.webp',
+    fullWebImage: 'images/projects/web3_full.webp',
     tools: ['Figma', 'Shopify'],
     tags: ['E-Commerce', 'Medical'],
     size: 'small'
@@ -71,8 +71,8 @@ export const PROJECTS: Project[] = [
     title: 'Cargo aus China',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web4_thumb.webp',
-    fullWebImage: '/images/projects/web4_full.webp',
+    coverImage: 'images/projects/web4_thumb.webp',
+    fullWebImage: 'images/projects/web4_full.webp',
     tools: ['Figma', 'Illustrator'],
     tags: ['Fashion', 'Branding'],
     size: 'small'
@@ -82,9 +82,9 @@ export const PROJECTS: Project[] = [
     title: 'Alvarez Chocolat',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web5_thumb.webp',
-    fullWebImage: '/images/projects/web5_full.webp',
-    videoUrl: '/videos/web5_full.mp4',
+    coverImage: 'images/projects/web5_thumb.webp',
+    fullWebImage: 'images/projects/web5_full.webp',
+    videoUrl: 'videos/web5_full.mp4',
     tools: ['Figma', 'After Effects'],
     tags: ['Food', 'Landing Page'],
     size: 'wide'
@@ -94,8 +94,8 @@ export const PROJECTS: Project[] = [
     title: 'Outdoor-Bekleidung',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: '/images/projects/web6_thumb.webp',
-    fullWebImage: '/images/projects/web6_full.webp',
+    coverImage: 'images/projects/web6_thumb.webp',
+    fullWebImage: 'images/projects/web6_full.webp',
     tools: ['Figma', 'Illustrator'],
     tags: ['Fashion', 'Branding'],
     size: 'small'
@@ -106,12 +106,12 @@ export const PROJECTS: Project[] = [
     title: 'Futurelab',
     category: ProjectCategory.PHOTOSHOP,
     year: '2025',
-    coverImage: '/images/projects/ps1_thumb.webp',
+    coverImage: 'images/projects/ps1_thumb.webp',
     gallery: [
-      '/images/projects/ps1_detail1.webp',
-      '/images/projects/ps1_detail2.webp',
-      '/images/projects/ps1_detail3.webp',
-      '/images/projects/ps1_detail4.webp'
+      'images/projects/ps1_detail1.webp',
+      'images/projects/ps1_detail2.webp',
+      'images/projects/ps1_detail3.webp',
+      'images/projects/ps1_detail4.webp'
     ],
     tools: ['Photoshop'],
     tags: ['Compositing', 'Retouch'],
@@ -122,16 +122,16 @@ export const PROJECTS: Project[] = [
     title: 'The Horrors — Konzertplakat',
     category: ProjectCategory.PHOTOSHOP,
     year: '2025',
-    coverImage: '/images/projects/ps2_thumb.webp',
+    coverImage: 'images/projects/ps2_thumb.webp',
     gallery: [
-      '/images/projects/ps2_detail1.webp',
-      '/images/projects/ps2_detail2.webp',
-      '/images/projects/ps2_detail3.webp',
-      '/images/projects/ps2_detail4.webp',
-      '/images/projects/ps2_detail5.webp',
-      '/images/projects/ps2_detail6.webp',
-      '/images/projects/ps2_detail7.webp',
-      '/images/projects/ps2_detail8.webp'
+      'images/projects/ps2_detail1.webp',
+      'images/projects/ps2_detail2.webp',
+      'images/projects/ps2_detail3.webp',
+      'images/projects/ps2_detail4.webp',
+      'images/projects/ps2_detail5.webp',
+      'images/projects/ps2_detail6.webp',
+      'images/projects/ps2_detail7.webp',
+      'images/projects/ps2_detail8.webp'
     ],
     tools: ['Photoshop', 'Midjourney'],
     tags: ['Concept Art', 'Matte Painting'],
@@ -143,13 +143,13 @@ export const PROJECTS: Project[] = [
     title: 'Gipfelglück',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
-    coverImage: '/images/projects/logo1_thumb.webp',
-    brandbookUrl: '/documents/Gipfelglueck_Brandbook.pdf',
+    coverImage: 'images/projects/logo1_thumb.webp',
+    brandbookUrl: 'images/documents/Gipfelglueck_Brandbook.pdf',
     gallery: [
-      '/images/projects/logo1_mockup1.webp',
-      '/images/projects/logo1_mockup2.webp',
-      '/images/projects/logo1_mockup3.webp',
-      '/images/projects/logo1_mockup4.webp'
+      'images/projects/logo1_mockup1.webp',
+      'images/projects/logo1_mockup2.webp',
+      'images/projects/logo1_mockup3.webp',
+      'images/projects/logo1_mockup4.webp'
     ],
     tools: ['Illustrator', 'Photoshop'],
     tags: ['Branding', 'Vector'],
@@ -160,11 +160,11 @@ export const PROJECTS: Project[] = [
     title: 'Nachteule',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
-    coverImage: '/images/projects/logo2_thumb.webp',
+    coverImage: 'images/projects/logo2_thumb.webp',
     gallery: [
-      '/images/projects/logo2_mockup1.webp',
-      '/images/projects/logo2_mockup2.webp',
-      '/images/projects/logo2_mockup3.webp'
+      'images/projects/logo2_mockup1.webp',
+      'images/projects/logo2_mockup2.webp',
+      'images/projects/logo2_mockup3.webp'
     ],
     tools: ['Illustrator', 'Photoshop'],
     tags: ['Branding', 'Vector'],
@@ -175,11 +175,11 @@ export const PROJECTS: Project[] = [
     title: 'PUR Biomarkt',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
-    coverImage: '/images/projects/logo3_thumb.webp',
+    coverImage: 'images/projects/logo3_thumb.webp',
     gallery: [
-      '/images/projects/logo3_mockup1.webp',
-      '/images/projects/logo3_mockup2.webp',
-      '/images/projects/logo3_mockup3.webp'
+      'images/projects/logo3_mockup1.webp',
+      'images/projects/logo3_mockup2.webp',
+      'images/projects/logo3_mockup3.webp'
     ],
     tools: ['Illustrator', 'Photoshop'],
     tags: ['Branding', 'Vector'],
@@ -188,10 +188,18 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'ai-1',
-    title: 'Abstract Forms',
+    title: 'Horrorreiche',
     category: ProjectCategory.AI,
     year: '2025',
-    coverImage: '/images/projects/ai1.jpg',
+    coverImage: 'images/projects/ai1.webp',
+    gallery: [
+      'images/projects/ai2.webp',
+      'images/projects/ai3.webp',
+      'images/projects/ai4.webp',
+      'images/projects/ai5.webp',
+      'images/projects/ai6.webp',
+      'images/projects/ai7.webp'
+    ],
     tools: ['Stable Diffusion'],
     tags: ['AI Art'],
     size: 'small'

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Layers, Image as ImageIcon, PenTool, Monitor } from 'lucide-react';
+import { ArrowUpRight, Layers, Image as ImageIcon, PenTool, Monitor, Sparkles } from 'lucide-react';
 import { PROJECTS } from '../../constants';
 import { Project, ProjectCategory } from '../../types';
 import ProjectModal from './ProjectModal';
@@ -10,7 +10,7 @@ const TABS = [
   { id: ProjectCategory.WEB, label: 'Webseiten', icon: Monitor },
   { id: ProjectCategory.PHOTOSHOP, label: 'Photoshop', icon: ImageIcon },
   { id: ProjectCategory.ILLUSTRATOR, label: 'Logos', icon: PenTool },
-  { id: ProjectCategory.AI, label: 'KI Kunst', icon: null },
+  { id: ProjectCategory.AI, label: 'KI Kunst', icon: Sparkles },
 ];
 
 const Portfolio: React.FC = () => {
@@ -40,9 +40,9 @@ const Portfolio: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all text-xs md:text-sm font-mono uppercase tracking-wider ${isActive
-                    ? 'bg-white text-black'
-                    : 'bg-white/5 text-secondary hover:bg-white/10 hover:text-white'
+                  className={`flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full transition-all text-xs md:text-sm font-bold font-mono uppercase tracking-wider ${isActive
+                    ? 'bg-accent text-black shadow-[0_0_20px_rgba(59,130,246,0.6)]'
+                    : 'bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white'
                     }`}
                 >
                   {Icon && <Icon size={14} />}
@@ -52,7 +52,6 @@ const Portfolio: React.FC = () => {
             })}
           </div>
         </div>
-
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => (
@@ -63,17 +62,16 @@ const Portfolio: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id}
-                className="relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505]"
-                onClick={() => {
-                  if (project.category !== ProjectCategory.AI) {
-                    setSelectedProject(project);
-                  }
-                }}
+                className="relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border border-transparent transition-colors hover:border-accent/30"
+                onClick={() => setSelectedProject(project)}
               >
                 <div className="relative">
                   <img
                     src={project.coverImage}
                     alt={project.title}
+                    width="800"
+                    height="600"
+                    loading="lazy"
                     className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -81,12 +79,12 @@ const Portfolio: React.FC = () => {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none" />
 
                 <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="bg-black/80 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-white font-bold text-sm md:text-lg flex justify-between items-center">
+                  <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white group-hover:text-accent font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                       {project.title}
-                      {project.category !== ProjectCategory.AI && <ArrowUpRight size={16} />}
+                      <ArrowUpRight size={16} />
                     </h3>
-                    <p className="text-accent text-[10px] md:text-xs font-mono mt-1 uppercase">{project.category}</p>
+                    <p className="text-white/60 text-[10px] md:text-xs font-mono mt-1 uppercase">{project.category}</p>
                   </div>
                 </div>
 

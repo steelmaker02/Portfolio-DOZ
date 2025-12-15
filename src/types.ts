@@ -1,20 +1,43 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+export enum ProjectCategory {
+  WEB = 'Web Design',
+  PHOTOSHOP = 'Photoshop Art',
+  ILLUSTRATOR = 'Logofolio',
+  AI = 'AI Gen'
+}
 
-export default defineConfig({
-  plugins: [react()],
+export type CardSize = 'small' | 'wide' | 'tall' | 'large';
 
-  base: '/Portfolio-DOZ/',
+export type GalleryItem = string | { src: string; title: string };
 
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'esbuild',
-  },
+export interface Project {
+  id: string;
+  title: string;
+  category: ProjectCategory;
+  year: string;
+  coverImage: string;
 
-  server: {
-    port: 3000,
-    open: true,
-  }
-});
+  fullWebImage?: string;
+  videoUrl?: string;
+
+  gallery?: GalleryItem[];
+
+  brandbookUrl?: string;
+
+  description?: string;
+
+  tools: string[];
+  tags: string[];
+  size?: CardSize;
+}
+
+export interface Skill {
+  name: string;
+  level: number;
+  icon?: string;
+}
+
+export interface SocialLink {
+  platform: 'LinkedIn' | 'GitHub' | 'Email' | 'Instagram';
+  url: string;
+  label: string;
+}

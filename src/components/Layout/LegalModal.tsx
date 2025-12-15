@@ -10,6 +10,7 @@ interface LegalModalProps {
 }
 
 const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, content }) => {
+
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
@@ -18,6 +19,14 @@ const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, content
         }
         return () => { document.body.style.overflow = 'unset'; };
     }, [isOpen]);
+
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') onClose();
+        };
+        if (isOpen) window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [isOpen, onClose]);
 
     return (
         <AnimatePresence>
@@ -28,16 +37,16 @@ const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, content
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={onClose}
-                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[9999]"
+                        className="fixed inset-0 bg-black/80 backdrop-blur-md z-[9000]"
                     />
 
                     <motion.div
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                        className="fixed inset-4 md:inset-10 md:max-w-4xl mx-auto bg-surface border border-white/10 rounded-2xl z-[10000] overflow-hidden flex flex-col shadow-2xl"
+                        className="fixed inset-4 md:inset-10 md:max-w-4xl mx-auto bg-[#121212] border border-white/10 rounded-2xl z-[9001] overflow-hidden flex flex-col shadow-2xl"
                     >
-                        <div className="flex justify-between items-center p-6 border-b border-white/5 bg-surface">
+                        <div className="flex justify-between items-center p-6 border-b border-white/5 bg-[#121212]">
                             <h2 className="text-xl font-display font-bold text-white">{title}</h2>
                             <button
                                 onClick={onClose}
@@ -47,7 +56,7 @@ const LegalModal: React.FC<LegalModalProps> = ({ isOpen, onClose, title, content
                             </button>
                         </div>
 
-                        <div className="p-6 md:p-10 overflow-y-auto text-secondary text-sm leading-relaxed space-y-4">
+                        <div className="p-6 md:p-10 overflow-y-auto text-secondary text-sm leading-relaxed scrollbar-hide">
                             {content}
                         </div>
                     </motion.div>

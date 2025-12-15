@@ -22,18 +22,42 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     }, [project]);
 
     useEffect(() => {
+        if (project) {
+            window.history.pushState({ modal: true }, '', window.location.href);
+
+            const handlePopState = () => {
+                onClose();
+            };
+
+            window.addEventListener('popstate', handlePopState);
+
+            return () => {
+                window.removeEventListener('popstate', handlePopState);
+            };
+        }
+    }, [project]);
+
+    useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') onClose();
+            if (event.key === 'Escape') handleManualClose();
         };
         if (project) window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [project, onClose]);
+    }, [project]);
 
     const [showHeader, setShowHeader] = useState(true);
     useEffect(() => {
-        const timer = setTimeout(() => setShowHeader(false), 2000);
+        const timer = setTimeout(() => setShowHeader(false), 2500);
         return () => clearTimeout(timer);
     }, [project]);
+
+    const handleManualClose = () => {
+        if (window.history.state?.modal) {
+            window.history.back();
+        } else {
+            onClose();
+        }
+    };
 
     if (!project) return null;
 
@@ -44,7 +68,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-lg flex items-center justify-center p-0 md:p-4"
-                onClick={onClose}
+                onClick={handleManualClose}
             >
                 <motion.div
                     initial={{ y: 50, opacity: 0 }}
@@ -60,7 +84,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         initial={{ y: -100 }}
                         animate={{ y: showHeader ? 0 : -100 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute top-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-b from-black/90 to-transparent z-50 flex justify-between items-start pointer-events-none"
+                        className="absolute top-0 left-0 right-0 pt-12 pb-4 px-4 md:p-6 bg-gradient-to-b from-black/95 to-transparent z-50 flex justify-between items-start pointer-events-none"
                     >
                         <div className="pointer-events-auto pl-2 flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
                             <div>
@@ -73,7 +97,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     href={project.brandbookUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="px-4 py-1.5 md:px-6 md:py-2 bg-white text-black text-xs md:text-sm font-bold rounded-full hover:bg-accent hover:text-white transition-colors shadow-lg self-start"
+                                    className="px-4 py-1.5 md:px-6 md:py-2 bg-white text-black text-xs md:text-sm font-bold rounded-full hover:bg-accent hover:text-white transition-colors shadow-lg self-start mt-2 md:mt-0"
                                 >
                                     Brandbuch PDF
                                 </a>
@@ -81,10 +105,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         </div>
 
                         <button
-                            onClick={onClose}
+                            onClick={handleManualClose}
                             className="pointer-events-auto p-2 md:p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-colors text-white border border-white/10"
                         >
-                            <X size={20} />
+                            <X size={24} />
                         </button>
                     </motion.div>
 
@@ -117,7 +141,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className="w-full pt-24 md:pt-32 px-4 md:px-10 pb-20">
+                                <div className="w-full pt-32 md:pt-24 px-4 md:px-10 pb-20">
 
                                     <div className="max-w-4xl mx-auto mb-10 md:mb-16">
                                         <p className="text-base md:text-2xl text-gray-300 leading-relaxed border-l-4 border-accent pl-4 md:pl-6">

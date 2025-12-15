@@ -30,7 +30,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
                 y: "100%",
                 transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] }
             }}
-            className="fixed inset-0 z-[9999] bg-[#050505] flex items-center justify-center overflow-hidden"
+            className="fixed inset-0 z-[9999] bg-[#050505] flex items-center justify-center overflow-hidden will-change-transform"
         >
 
             <motion.div
@@ -46,7 +46,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
 
             <div className="relative flex items-center justify-center">
                 <motion.img
-                    src="/images/logo_big.svg"
+                    src="images/logo_big.svg"
                     alt="Loading..."
 
                     width="200"

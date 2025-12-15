@@ -60,7 +60,6 @@ const AILab: React.FC = () => {
     };
 
     updateScrollRange();
-
     window.addEventListener('resize', updateScrollRange);
     return () => window.removeEventListener('resize', updateScrollRange);
   }, []);
@@ -134,20 +133,20 @@ const AILab: React.FC = () => {
                 onClick={() => setIsModalOpen(true)}
                 className="w-full h-full relative rounded-2xl border border-white/10 bg-[#0A0A0A] overflow-hidden group hover:border-purple-500/50 transition-all duration-500 flex flex-col items-center justify-center gap-4 md:gap-6"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <span className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
+                <span className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
                   <ArrowRight size={24} className="group-hover:-rotate-45 transition-transform duration-300" />
-                </div>
+                </span>
 
-                <div className="relative z-10 text-center">
+                <span className="relative z-10 text-center block">
                   <span className="block text-xl sm:text-2xl md:text-4xl font-display font-bold text-white uppercase leading-none tracking-tight group-hover:scale-105 transition-transform duration-300">
                     Alle <br /> Werke
                   </span>
                   <span className="text-xs font-mono text-purple-400 mt-2 block opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-75">
                     Galerie öffnen
                   </span>
-                </div>
+                </span>
               </button>
             </div>
 

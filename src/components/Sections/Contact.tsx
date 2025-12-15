@@ -10,7 +10,7 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="pt-24 md:pt-32 pb-16 px-4 md:px-6 relative z-10">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-5xl">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 

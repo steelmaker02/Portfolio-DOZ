@@ -189,6 +189,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'ai-1',
     title: 'Horrorreiche',
+    instagramUrl: "https://instagram.com/horror.realms/",
     category: ProjectCategory.AI,
     year: '2025',
     coverImage: 'images/projects/ai1.webp',

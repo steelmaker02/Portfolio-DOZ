@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Instagram } from 'lucide-react';
 import { Project, ProjectCategory } from '../../types';
 
 interface ProjectModalProps {
@@ -24,16 +24,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     useEffect(() => {
         if (project) {
             window.history.pushState({ modal: true }, '', window.location.href);
-
-            const handlePopState = () => {
-                onClose();
-            };
-
+            const handlePopState = () => { onClose(); };
             window.addEventListener('popstate', handlePopState);
-
-            return () => {
-                window.removeEventListener('popstate', handlePopState);
-            };
+            return () => { window.removeEventListener('popstate', handlePopState); };
         }
     }, [project]);
 
@@ -86,22 +79,38 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         transition={{ duration: 0.3 }}
                         className="absolute top-0 left-0 right-0 pt-12 pb-4 px-4 md:p-6 bg-gradient-to-b from-black/95 to-transparent z-50 flex justify-between items-start pointer-events-none"
                     >
-                        <div className="pointer-events-auto pl-2 flex flex-col md:flex-row md:items-center gap-2 md:gap-8">
+                        <div className="pointer-events-auto pl-2 flex flex-col md:flex-row md:items-center gap-2 md:gap-4 flex-wrap">
                             <div>
                                 <h3 className="text-lg md:text-2xl font-display font-bold text-white drop-shadow-md leading-tight">{project.title}</h3>
                                 <p className="text-white/80 text-xs md:text-sm font-mono mt-1">{project.category} • {project.year}</p>
                             </div>
 
-                            {project.brandbookUrl && (
-                                <a
-                                    href={project.brandbookUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-4 py-1.5 md:px-6 md:py-2 bg-white text-black text-xs md:text-sm font-bold rounded-full hover:bg-accent hover:text-white transition-colors shadow-lg self-start mt-2 md:mt-0"
-                                >
-                                    Brandbuch PDF
-                                </a>
-                            )}
+                            <div className="flex gap-2 mt-2 md:mt-0">
+
+                                {project.brandbookUrl && (
+                                    <a
+                                        href={project.brandbookUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-1.5 md:px-6 md:py-2 bg-white text-black text-xs md:text-sm font-bold rounded-full hover:bg-accent hover:text-white transition-colors shadow-lg self-start"
+                                    >
+                                        Brandbuch PDF
+                                    </a>
+                                )}
+
+                                {project.instagramUrl && (
+                                    <a
+                                        href={project.instagramUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-white/10 border border-white/20 text-white text-xs md:text-sm font-bold rounded-full hover:bg-pink-600 hover:border-pink-600 transition-colors shadow-lg self-start backdrop-blur-md"
+                                    >
+                                        <Instagram size={16} />
+                                        <span>Instagram</span>
+                                    </a>
+                                )}
+
+                            </div>
                         </div>
 
                         <button

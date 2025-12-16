@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Copy, Check } from 'lucide-react';
 import { USER_INFO } from '../../constants';
-import AnimatedIcon from '../UI/AnimatedIcon';
-
-import emailAnim from '../../assets/icons/Email.json';
 
 const Contact: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText(USER_INFO.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <section id="contact" className="pt-24 md:pt-32 pb-16 px-4 md:px-6 relative z-10">
@@ -30,7 +35,7 @@ const Contact: React.FC = () => {
                 <br className="hidden md:block" />
                 <span className="text-white"> 6-monatiges Pflichtpraktikum</span> im Bereich Web Design.
                 <br /><br />
-                Lassen Sie uns darüber sprechen, wie ich Ihr Team mit meiner Kombination aus Design, Technik und Management-Erfahrung unterstützen kann.
+                Lassen Sie uns darüber sprechen, wie ich Ihr Team unterstützen kann.
               </p>
 
               <div className="pt-6">
@@ -40,36 +45,58 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2 h-full min-h-[300px] lg:min-h-[400px]">
+          <div className="order-1 lg:order-2 h-full min-h-[350px] lg:min-h-[450px]">
             <a
-              href={`mailto:${USER_INFO.email}?subject=Bewerbung%20Pflichtpraktikum%20-%20Anfrage`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-              className="group relative w-full h-full bg-surface border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col justify-between overflow-hidden hover:border-accent/50 transition-all duration-500"
+              href={`mailto:${USER_INFO.email}?subject=Bewerbung%20Pflichtpraktikum`}
+              className="group relative w-full h-full bg-[#121212] border border-white/5 rounded-3xl p-8 md:p-10 flex flex-col justify-between overflow-hidden hover:border-white/20 transition-all duration-500 cursor-pointer"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 opacity-20 pointer-events-none"
+                style={{
+                  backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)',
+                  backgroundSize: '24px 24px'
+                }}
+              />
 
-              <div className="flex justify-between items-start relative z-10">
-                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-white group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                  <AnimatedIcon
-                    animationData={emailAnim}
-                    size={40}
-                    isHovered={isHovered}
-                  />
+              <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative z-10 flex justify-between items-start">
+                <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-md">
+                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <span className="text-white/60 text-[10px] font-mono uppercase tracking-widest">
+                    Antworte schnell
+                  </span>
                 </div>
-                <div className="p-3 rounded-full border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-colors duration-300">
+
+                <div className="p-3 rounded-full bg-white text-black group-hover:scale-110 transition-transform duration-300">
                   <ArrowUpRight size={24} className="group-hover:rotate-45 transition-transform duration-300" />
                 </div>
               </div>
 
-              <div className="relative z-10 mt-auto">
-                <h3 className="text-2xl md:text-4xl font-display font-bold text-white mb-2 group-hover:translate-x-2 transition-transform duration-300">
-                  E-Mail schreiben
+              <div className="relative z-10 my-auto">
+                <h3 className="text-6xl md:text-8xl font-display font-bold text-white/10 group-hover:text-white transition-colors duration-500 select-none">
+                  HELLO.
                 </h3>
-                <p className="text-secondary font-mono text-sm md:text-base group-hover:text-white transition-colors duration-300 break-all">
-                  {USER_INFO.email}
-                </p>
               </div>
+
+              <div className="relative z-10">
+                <p className="text-xs font-mono text-accent mb-2 uppercase tracking-wider">
+                  E-Mail schreiben
+                </p>
+                <div className="flex items-center justify-between group/email">
+                  <span className="text-xl md:text-2xl text-white font-bold group-hover:underline decoration-accent underline-offset-4 break-all">
+                    {USER_INFO.email}
+                  </span>
+
+                  <button
+                    onClick={handleCopy}
+                    className="p-2 text-secondary hover:text-white transition-colors opacity-0 group-hover/email:opacity-100"
+                    title="E-Mail kopieren"
+                  >
+                    {copied ? <Check size={18} className="text-green-500" /> : <Copy size={18} />}
+                  </button>
+                </div>
+              </div>
+
             </a>
           </div>
 

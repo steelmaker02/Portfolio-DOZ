@@ -206,7 +206,7 @@ const Hero: React.FC = () => {
                 <div className="p-0 text-white h-full flex items-center">
                   <AnimatedIcon
                     animationData={chemistryAnim}
-                    size={52}
+                    size={40}
                     isHovered={hoveredElement === 'ai'}
                   />
                 </div>

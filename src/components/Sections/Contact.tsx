@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             >
 
               <div
-                className={`absolute inset-0 z-50 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${copied ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute inset-0 z-50 flex justify-center pointer-events-none transition-opacity duration-300 items-start pt-28 md:items-center md:pt-0 ${copied ? 'opacity-100' : 'opacity-0'}`}
               >
                 <span className="bg-white text-black text-sm font-bold px-6 py-3 rounded-full shadow-[0_0_25px_rgba(255,255,255,0.4)] flex items-center gap-2 transform scale-100 transition-transform">
                   <Check size={18} className="text-green-600" />

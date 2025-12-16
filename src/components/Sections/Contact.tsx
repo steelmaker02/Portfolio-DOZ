@@ -64,7 +64,7 @@ const Contact: React.FC = () => {
                 <div className="p-0 text-white">
                   <AnimatedIcon
                     animationData={emailAnim}
-                    size={50}
+                    size={56}
                     isHovered={isHovered}
                   />
                 </div>
@@ -89,10 +89,10 @@ const Contact: React.FC = () => {
                 >
                   <span className="break-all">{USER_INFO.email}</span>
 
-                  {copied ? <Check size={14} /> : <Copy size={14} className="opacity-50" />}
+                  {copied ? <Check size={14} className="text-white" /> : <Copy size={14} className="opacity-50" />}
 
                   {copied && (
-                    <span className="absolute -top-8 left-0 text-xs bg-green-500 text-black px-2 py-1 rounded font-bold">
+                    <span className="absolute -top-10 left-0 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.3)] whitespace-nowrap pointer-events-none">
                       Kopiert!
                     </span>
                   )}

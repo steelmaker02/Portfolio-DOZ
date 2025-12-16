@@ -5,7 +5,7 @@ export const USER_INFO = {
   surname: "Zaiats",
   role: "Mediengestalter i.A. & Creative Dev",
   status: "Suche Pflichtpraktikum",
-  availability: "Verfügbar ab 09.2026",
+  availability: "ab 09.2026",
   location: "Neumünster - Kiel - Hamburg",
   email: "zaiats.design@gmail.com",
   cv_link: "images/documents/Lebenslauf-Zaiats_Dmytro.pdf",

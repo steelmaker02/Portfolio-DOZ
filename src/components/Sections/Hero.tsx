@@ -122,7 +122,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Available</span>
+                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Verfügbar</span>
                 </div>
               </div>
 

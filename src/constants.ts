@@ -204,6 +204,29 @@ export const PROJECTS: Project[] = [
     tools: ['Stable Diffusion'],
     tags: ['AI Art'],
     size: 'small'
+  },
+
+  {
+    id: 'ai-2',
+    title: '8k Muster zum Drucken',
+    adobestockUrl: "https://stock.adobe.com/de/contributor/212996395/dmytro?load_type=author&prev_url=detail",
+    category: ProjectCategory.AI,
+    year: '2025',
+    coverImage: 'images/projects/ai11.webp',
+    gallery: [
+      'images/projects/ai12.webp',
+      'images/projects/ai13.webp',
+      'images/projects/ai14.webp',
+      'images/projects/ai15.webp',
+      'images/projects/ai16.webp',
+      'images/projects/ai17.webp',
+      'images/projects/ai18.webp',
+      'images/projects/ai19.webp',
+      'images/projects/ai20.webp'
+    ],
+    tools: ['Stable Diffusion'],
+    tags: ['AI Art'],
+    size: 'small'
   }
 ];
 

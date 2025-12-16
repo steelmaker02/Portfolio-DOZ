@@ -22,8 +22,9 @@ export interface Project {
   gallery?: GalleryItem[];
 
   brandbookUrl?: string;
-  instagramUrl?: string; 
-  
+  instagramUrl?: string;
+  adobestockUrl?: string;
+
   description?: string;
 
   tools: string[];

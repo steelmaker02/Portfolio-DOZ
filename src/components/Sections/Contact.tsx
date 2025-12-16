@@ -60,11 +60,21 @@ const Contact: React.FC = () => {
               className="group relative w-full h-full bg-[#121212] border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col justify-between transition-all duration-300 cursor-pointer hover:border-green-500/30 hover:bg-green-500/5"
             >
 
-              <div className="flex justify-between items-start">
+              <div
+                className={`absolute inset-0 z-50 flex items-center justify-center pointer-events-none transition-opacity duration-300 ${copied ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <span className="bg-white text-black text-sm font-bold px-6 py-3 rounded-full shadow-[0_0_25px_rgba(255,255,255,0.4)] flex items-center gap-2 transform scale-100 transition-transform">
+                  <Check size={18} className="text-green-600" />
+                  Kopiert!
+                </span>
+              </div>
+
+
+              <div className="flex justify-between items-start relative z-10">
                 <div className="p-0 text-white">
                   <AnimatedIcon
                     animationData={emailAnim}
-                    size={56}
+                    size={54}
                     isHovered={isHovered}
                   />
                 </div>
@@ -74,7 +84,7 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-auto">
+              <div className="mt-auto relative z-10">
                 <h3 className="text-secondary text-xs font-mono uppercase tracking-widest mb-2">
                   Direkt Kontakt
                 </h3>
@@ -84,18 +94,11 @@ const Contact: React.FC = () => {
 
                 <div
                   onClick={handleEmailClick}
-                  className="relative z-20 pt-6 border-t border-white/5 flex items-center gap-3 text-sm font-mono text-secondary group-hover:text-green-400 transition-colors cursor-copy select-text w-fit"
+                  className="pt-6 border-t border-white/5 flex items-center gap-3 text-sm font-mono text-secondary group-hover:text-green-400 transition-colors cursor-copy select-text w-fit"
                   title="Klicken zum Kopieren"
                 >
                   <span className="break-all">{USER_INFO.email}</span>
-
-                  {copied ? <Check size={14} className="text-white" /> : <Copy size={14} className="opacity-50" />}
-
-                  {copied && (
-                    <span className="absolute -top-10 left-0 bg-white text-black text-xs font-bold px-3 py-1.5 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.3)] whitespace-nowrap pointer-events-none">
-                      Kopiert!
-                    </span>
-                  )}
+                  {copied ? <Check size={14} /> : <Copy size={14} className="opacity-50" />}
                 </div>
               </div>
 

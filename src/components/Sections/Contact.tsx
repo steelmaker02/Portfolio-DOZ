@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Copy, Check } from 'lucide-react';
 import { USER_INFO } from '../../constants';
 import AnimatedIcon from '../UI/AnimatedIcon';
 
@@ -7,10 +7,22 @@ import emailAnim from '../../assets/icons/Email.json';
 
 const Contact: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCardClick = () => {
+    window.location.href = `mailto:${USER_INFO.email}?subject=Bewerbung%20Pflichtpraktikum%20-%20Anfrage`;
+  };
+
+  const handleEmailClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(USER_INFO.email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <section id="contact" className="pt-24 md:pt-32 pb-16 px-4 md:px-6 relative z-10">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
@@ -41,8 +53,8 @@ const Contact: React.FC = () => {
           </div>
 
           <div className="order-1 lg:order-2 h-full min-h-[300px] lg:min-h-[400px]">
-            <a
-              href={`mailto:${USER_INFO.email}?subject=Bewerbung%20Pflichtpraktikum%20-%20Anfrage`}
+            <div
+              onClick={handleCardClick}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               className="group relative w-full h-full bg-[#121212] border border-white/5 rounded-3xl p-8 md:p-12 flex flex-col justify-between transition-all duration-300 cursor-pointer hover:border-green-500/30 hover:bg-green-500/5"
@@ -52,7 +64,7 @@ const Contact: React.FC = () => {
                 <div className="p-0 text-white">
                   <AnimatedIcon
                     animationData={emailAnim}
-                    size={64}
+                    size={50}
                     isHovered={isHovered}
                   />
                 </div>
@@ -70,12 +82,24 @@ const Contact: React.FC = () => {
                   E-Mail schreiben
                 </p>
 
-                <div className="pt-6 border-t border-white/5 flex items-center gap-2 text-sm font-mono text-secondary group-hover:text-green-400 transition-colors">
+                <div
+                  onClick={handleEmailClick}
+                  className="relative z-20 pt-6 border-t border-white/5 flex items-center gap-3 text-sm font-mono text-secondary group-hover:text-green-400 transition-colors cursor-copy select-text w-fit"
+                  title="Klicken zum Kopieren"
+                >
                   <span className="break-all">{USER_INFO.email}</span>
+
+                  {copied ? <Check size={14} /> : <Copy size={14} className="opacity-50" />}
+
+                  {copied && (
+                    <span className="absolute -top-8 left-0 text-xs bg-green-500 text-black px-2 py-1 rounded font-bold">
+                      Kopiert!
+                    </span>
+                  )}
                 </div>
               </div>
 
-            </a>
+            </div>
           </div>
 
         </div>

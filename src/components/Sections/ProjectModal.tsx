@@ -127,7 +127,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                         <button
                             onClick={handleManualClose}
-                            className="pointer-events-auto p-2 md:p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-colors text-white border border-white/10"
+                            className="pointer-events-auto p-2 md:p-3 bg-white/10 backdrop-blur-md rounded-full transition-all duration-300 text-white border border-white/10 hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                         >
                             <X size={24} />
                         </button>

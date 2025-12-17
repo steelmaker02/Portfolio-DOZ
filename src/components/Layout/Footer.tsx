@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                                     href={social.url}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="text-secondary hover:text-white transition-colors p-2 hover:bg-white/5 rounded-full"
+                                    className="text-secondary hover:text-accent transition-colors p-2 hover:bg-accent/10 rounded-full"
                                     aria-label={social.label}
                                 >
                                     {social.platform === 'LinkedIn' && <Linkedin size={20} />}
@@ -112,10 +112,10 @@ const Footer: React.FC = () => {
                         </div>
 
                         <div className="flex gap-6 text-sm font-mono text-secondary uppercase tracking-wider justify-center md:justify-end">
-                            <button onClick={() => setModalOpen('impressum')} className="hover:text-white transition-colors">
+                            <button onClick={() => setModalOpen('impressum')} className="hover:text-accent transition-colors">
                                 Impressum
                             </button>
-                            <button onClick={() => setModalOpen('privacy')} className="hover:text-white transition-colors">
+                            <button onClick={() => setModalOpen('privacy')} className="hover:text-accent transition-colors">
                                 Datenschutz
                             </button>
                         </div>

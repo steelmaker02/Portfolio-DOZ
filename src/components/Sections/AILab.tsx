@@ -135,7 +135,7 @@ const AILab: React.FC = () => {
               >
                 <span className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <span className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-300">
+                <span className="relative z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <ArrowRight size={24} className="group-hover:-rotate-45 transition-transform duration-300" />
                 </span>
 

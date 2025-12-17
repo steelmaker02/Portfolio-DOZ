@@ -16,10 +16,15 @@ const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    const styleLabel = "color: #3B82F6; font-weight: bold; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; padding-right: 8px;";
+    const styleValue = "color: #A1A1AA; font-family: 'JetBrains Mono', monospace; font-size: 12px;";
+
     console.log(
-      "%c Hallo! Danke für deinen Besuch! 👋 \n%c Ich suche ab Sep 2026 ein Praktikum. Lass uns reden: zaiats.design@gmail.com",
-      "color: #3B82F6; font-size: 20px; font-weight: bold; font-family: sans-serif;",
-      "color: #ffffff; font-size: 14px; font-family: sans-serif;"
+      `%cCREATOR%c Dmytro Zaiats\n%cROLE   %c Mediengestalter i.A.\n%cSTATUS %c Suche Pflichtpraktikum (09.2026)\n%cCONTACT%c zaiats.design@gmail.com`,
+      styleLabel, styleValue,
+      styleLabel, styleValue,
+      styleLabel, styleValue,
+      styleLabel, styleValue
     );
   }, []);
 

@@ -36,9 +36,16 @@ const Hero: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 h-full"
         >
 
-          <motion.div
+          <motion.a
+            href="#contact"
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest('a[href="#portfolio"]')) return;
+
+              e.preventDefault();
+              lenis?.scrollTo('#contact', { duration: 1.5 });
+            }}
             variants={itemVariants}
-            className="col-span-1 md:col-span-6 lg:col-span-8 row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors"
+            className="col-span-1 md:col-span-6 lg:col-span-8 row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors cursor-pointer"
           >
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -68,13 +75,13 @@ const Hero: React.FC = () => {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#portfolio"
-                  className="w-full sm:w-auto text-center px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-accent/20"
+                  className="w-full sm:w-auto text-center px-6 py-3 md:px-8 md:py-4 bg-white text-black font-bold rounded-full hover:bg-accent hover:text-white transition-all duration-300 shadow-lg hover:shadow-accent/20 relative z-10"
                 >
                   Projekte ansehen
                 </a>
               </div>
             </div>
-          </motion.div>
+          </motion.a>
 
 
           <motion.div

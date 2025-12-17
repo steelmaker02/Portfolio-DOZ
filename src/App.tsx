@@ -17,7 +17,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     console.log(
-      "%c Hallo! Danke für deinen Besuch! 👋 \n%c Ich suche ab Jan 2026 ein Praktikum. Lass uns reden: zaiats.design@gmail.com",
+      "%c Hallo! Danke für deinen Besuch! 👋 \n%c Ich suche ab Sep 2026 ein Praktikum. Lass uns reden: zaiats.design@gmail.com",
       "color: #3B82F6; font-size: 20px; font-weight: bold; font-family: sans-serif;",
       "color: #ffffff; font-size: 14px; font-family: sans-serif;"
     );

@@ -7,7 +7,7 @@ const AbstractBackground: React.FC = () => {
     const y1 = useTransform(scrollYProgress, [0, 1], [0, 800]);
     const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 120]);
 
-    const y2 = useTransform(scrollYProgress, [0, 1], [0, 100]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, 600]);
     const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -250]);
 
     const y3 = useTransform(scrollYProgress, [0, 1], [0, 200]);
@@ -25,6 +25,7 @@ const AbstractBackground: React.FC = () => {
                     alt=""
                     loading="lazy"
                     decoding="async"
+                    // @ts-ignore
                     fetchPriority="low"
                     className="w-full h-full object-contain blur-sm"
                 />
@@ -39,6 +40,7 @@ const AbstractBackground: React.FC = () => {
                     alt=""
                     loading="lazy"
                     decoding="async"
+                    // @ts-ignore
                     fetchPriority="low"
                     className="w-full h-full object-contain blur-sm"
                 />
@@ -50,7 +52,6 @@ const AbstractBackground: React.FC = () => {
                     rotate: rotate3,
                     x: "-50%"
                 }}
-
                 className="will-change-transform absolute bottom-[-5%] left-1/2 w-[350px] h-[350px] 2xl:w-[720px] 2xl:h-[720px] opacity-20 mix-blend-screen"
             >
                 <img
@@ -58,6 +59,7 @@ const AbstractBackground: React.FC = () => {
                     alt=""
                     loading="lazy"
                     decoding="async"
+                    // @ts-ignore
                     fetchPriority="low"
                     className="w-full h-full object-cover blur-sm"
                 />

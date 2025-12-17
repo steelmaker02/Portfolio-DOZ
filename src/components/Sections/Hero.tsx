@@ -25,6 +25,7 @@ const Hero: React.FC = () => {
 
   return (
     <section className="min-h-screen pt-24 pb-12 px-4 md:pt-32 md:pb-16 md:px-6 flex flex-col justify-center relative overflow-hidden">
+
       <div className="absolute top-[-20%] right-[-10%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-accent/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none opacity-40 will-change-transform" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-blue-900/10 rounded-full blur-[60px] md:blur-[100px] pointer-events-none opacity-30 will-change-transform" />
 
@@ -36,16 +37,9 @@ const Hero: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 h-full"
         >
 
-          <motion.a
-            href="#contact"
-            onClick={(e) => {
-              if ((e.target as HTMLElement).closest('a[href="#portfolio"]')) return;
-
-              e.preventDefault();
-              lenis?.scrollTo('#contact', { duration: 1.5 });
-            }}
+          <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-6 lg:col-span-8 row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors cursor-pointer"
+            className="col-span-1 md:col-span-6 lg:col-span-8 row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors"
           >
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -81,7 +75,7 @@ const Hero: React.FC = () => {
                 </a>
               </div>
             </div>
-          </motion.a>
+          </motion.div>
 
 
           <motion.div
@@ -114,10 +108,15 @@ const Hero: React.FC = () => {
             variants={itemVariants}
             className="col-span-1 md:col-span-3 lg:col-span-4"
           >
-            <div
+            <a
+              href="#contact"
               onMouseEnter={() => setHoveredElement('status')}
               onMouseLeave={() => setHoveredElement(null)}
-              className="h-full min-h-[250px] bg-surface border border-white/5 rounded-3xl p-6 flex flex-col justify-between hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300 cursor-default group"
+              onClick={(e) => {
+                e.preventDefault();
+                lenis?.scrollTo('#contact', { duration: 1.5 });
+              }}
+              className="h-full min-h-[250px] bg-surface border border-white/5 rounded-3xl p-6 flex flex-col justify-between hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300 cursor-pointer group block"
             >
               <div className="flex justify-between items-start h-[50px] md:h-[64px]">
                 <div className="p-0 text-white">
@@ -129,22 +128,20 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Verfügbar</span>
+                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Available</span>
                 </div>
               </div>
 
               <div className="mt-4 md:mt-8">
                 <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">Status</div>
-
                 <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1 truncate">{USER_INFO.status}</h2>
-
                 <p className="text-green-400 text-sm font-mono">{USER_INFO.availability}</p>
               </div>
 
               <div className="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-2 text-[10px] font-mono text-secondary uppercase tracking-wider group-hover:text-white transition-colors">
                 <span>Neumünster</span> • <span>Kiel</span> • <span>Hamburg</span>
               </div>
-            </div>
+            </a>
           </motion.div>
 
 
@@ -177,9 +174,7 @@ const Hero: React.FC = () => {
 
               <div className="mt-4 md:mt-8">
                 <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">Workflow</div>
-
                 <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">State-of-the-Art</h2>
-
                 <p className="text-secondary text-sm leading-relaxed line-clamp-1">
                   Aktuelle Tools für effiziente Web-Erlebnisse.
                 </p>
@@ -213,7 +208,7 @@ const Hero: React.FC = () => {
                 <div className="p-0 text-white h-full flex items-center">
                   <AnimatedIcon
                     animationData={chemistryAnim}
-                    size={40}
+                    size={52}
                     isHovered={hoveredElement === 'ai'}
                   />
                 </div>
@@ -226,11 +221,9 @@ const Hero: React.FC = () => {
                 <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">
                   Generative Kunst
                 </div>
-
                 <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">
                   KI Labor
                 </h2>
-
                 <p className="text-secondary text-sm leading-relaxed line-clamp-1">
                   Experimente mit KI.
                 </p>

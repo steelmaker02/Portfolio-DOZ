@@ -14,6 +14,9 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://steelmaker02.github.io/Portfolio-DOZ/" />
 
+  <link rel="alternate" hreflang="de" href="https://steelmaker02.github.io/Portfolio-DOZ/" />
+  <link rel="alternate" hreflang="x-default" href="https://steelmaker02.github.io/Portfolio-DOZ/" />
+
   <link rel="icon" type="image/png" href="favicon.png?v=2" />
 
   <meta property="og:site_name" content="Dmytro Zaiats Portfolio" />
@@ -28,20 +31,55 @@
   <meta name="twitter:title" content="Dmytro Zaiats | Digital Designer Portfolio" />
   <meta name="twitter:description" content="Mediengestalter Digital & Print. UI/UX Design, Web Development & AI Art." />
   <meta name="twitter:image" content="https://steelmaker02.github.io/Portfolio-DOZ/images/og-image.jpg" />
+  <meta name="twitter:site" content="@steelmaker02" />
+  <meta name="twitter:creator" content="@steelmaker02" />
 
   <script type="application/ld+json">
   {
-    "@context": "http://schema.org",
-    "@type": "Person",
-    "name": "Dmytro Zaiats",
-    "jobTitle": "Mediengestalter Digital & Print",
-    "url": "https://steelmaker02.github.io/Portfolio-DOZ/",
-    "sameAs": [
-      "https://www.linkedin.com/in/dmytro-zaiats-2509473a0/",
-      "https://github.com/steelmaker02"
-    ],
-    "image": "https://steelmaker02.github.io/Portfolio-DOZ/images/me/portrait.webp",
-    "description": "Portfolio von Dmytro Zaiats – Mediengestalter Digital & Print. UI/UX Design, Web-Konzepte und KI-Kunst."
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#person",
+        "name": "Dmytro Zaiats",
+        "jobTitle": "Mediengestalter Digital & Print",
+        "url": "https://steelmaker02.github.io/Portfolio-DOZ/",
+        "sameAs": [
+          "https://www.linkedin.com/in/dmytro-zaiats-2509473a0/",
+          "https://github.com/steelmaker02"
+        ],
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://steelmaker02.github.io/Portfolio-DOZ/images/me/portrait.webp"
+        },
+        "description": "Portfolio von Dmytro Zaiats – Mediengestalter Digital & Print. UI/UX Design, Web-Konzepte und KI-Kunst."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#website",
+        "url": "https://steelmaker02.github.io/Portfolio-DOZ/",
+        "name": "Dmytro Zaiats Portfolio",
+        "description": "Mediengestalter Digital & Print Portfolio",
+        "publisher": {
+          "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#person"
+        },
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#webpage",
+        "url": "https://steelmaker02.github.io/Portfolio-DOZ/",
+        "name": "Startseite | Dmytro Zaiats",
+        "isPartOf": {
+          "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#website"
+        },
+        "about": {
+          "@id": "https://steelmaker02.github.io/Portfolio-DOZ/#person"
+        },
+        "description": "Portfolio von Dmytro Zaiats – Mediengestalter Digital & Print. UI/UX Design, Web-Konzepte und KI-Kunst.",
+        "inLanguage": "de-DE"
+      }
+    ]
   }
   </script>
 

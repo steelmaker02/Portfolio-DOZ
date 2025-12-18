@@ -107,6 +107,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             </div>
 
                             <div className="flex gap-2 mt-2 md:mt-0">
+
                                 {project.brandbookUrl && (
                                     <a
                                         href={project.brandbookUrl}
@@ -117,6 +118,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                         Brandbuch PDF
                                     </a>
                                 )}
+
                                 {project.instagramUrl && (
                                     <a
                                         href={project.instagramUrl}
@@ -128,6 +130,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                         <span>Instagram</span>
                                     </a>
                                 )}
+
+                                {project.adobestockUrl && (
+                                    <a
+                                        href={project.adobestockUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-white/10 border border-white/20 text-white text-xs md:text-sm font-bold rounded-full hover:bg-orange-600 hover:border-orange-600 transition-colors shadow-lg self-start backdrop-blur-md"
+                                    >
+                                        <Image size={16} />
+                                        <span>Adobe Stock</span>
+                                    </a>
+                                )}
+
                             </div>
                         </div>
 

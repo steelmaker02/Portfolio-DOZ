@@ -100,57 +100,56 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         transition={{ duration: 0.3 }}
                         className="absolute top-0 left-0 right-0 pt-12 pb-4 px-4 md:p-6 bg-gradient-to-b from-black/95 to-transparent z-50 flex flex-col md:flex-row justify-between items-start md:items-center pointer-events-none gap-4"
                     >
+                        <div className="pointer-events-auto pl-2 flex flex-col md:flex-row md:items-center gap-2 md:gap-4 flex-wrap">
+                            <div>
+                                <h3 className="text-lg md:text-2xl font-display font-bold text-white drop-shadow-md leading-tight">{project.title}</h3>
+                                <p className="text-white/80 text-xs md:text-sm font-mono mt-1">{project.category} • {project.year}</p>
+                            </div>
 
-                        <div className="pointer-events-auto pl-2">
-                            <h3 className="text-lg md:text-2xl font-display font-bold text-white drop-shadow-md leading-tight">{project.title}</h3>
-                            <p className="text-white/80 text-xs md:text-sm font-mono mt-1">{project.category} • {project.year}</p>
+                            <div className="flex gap-2 mt-2 md:mt-0">
+                                {project.brandbookUrl && (
+                                    <a
+                                        href={project.brandbookUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    >
+                                        Brandbuch PDF
+                                    </a>
+                                )}
+
+                                {project.instagramUrl && (
+                                    <a
+                                        href={project.instagramUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-pink-600 hover:border-pink-600 hover:shadow-[0_0_15px_rgba(219,39,119,0.5)]"
+                                    >
+                                        <Instagram size={18} />
+                                        <span className="hidden sm:inline">Instagram</span>
+                                    </a>
+                                )}
+
+                                {project.adobestockUrl && (
+                                    <a
+                                        href={project.adobestockUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-orange-600 hover:border-orange-600 hover:shadow-[0_0_15px_rgba(234,88,12,0.5)]"
+                                    >
+                                        <Image size={18} />
+                                        <span className="hidden sm:inline">Adobe Stock</span>
+                                    </a>
+                                )}
+                            </div>
                         </div>
 
-                        <div className="pointer-events-auto flex items-center gap-3 self-end md:self-auto">
-
-                            {project.brandbookUrl && (
-                                <a
-                                    href={project.brandbookUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                                >
-                                    Brandbuch PDF
-                                </a>
-                            )}
-
-                            {project.instagramUrl && (
-                                <a
-                                    href={project.instagramUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-pink-600 hover:border-pink-600 hover:shadow-[0_0_15px_rgba(219,39,119,0.5)]"
-                                >
-                                    <Instagram size={18} />
-                                    <span className="hidden sm:inline">Instagram</span>
-                                </a>
-                            )}
-
-                            {project.adobestockUrl && (
-                                <a
-                                    href={project.adobestockUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-orange-600 hover:border-orange-600 hover:shadow-[0_0_15px_rgba(234,88,12,0.5)]"
-                                >
-                                    <Image size={18} />
-                                    <span className="hidden sm:inline">Adobe Stock</span>
-                                </a>
-                            )}
-
-                            <button
-                                onClick={handleManualClose}
-                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                            >
-                                <X size={24} />
-                            </button>
-
-                        </div>
+                        <button
+                            onClick={handleManualClose}
+                            className="pointer-events-auto flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent"
+                        >
+                            <X size={24} />
+                        </button>
                     </motion.div>
 
                     <div
@@ -160,7 +159,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         data-lenis-prevent="true"
                     >
                         {project.category === ProjectCategory.WEB && (
-                            <div className="w-full flex flex-col items-center">
+                            <div className="w-full flex flex-col items-center pt-24 md:pt-28 pb-10">
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
@@ -185,7 +184,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className="w-full pt-32 md:pt-36 px-4 md:px-10 pb-20">
+                                <div className="w-full pt-24 md:pt-28 px-4 md:px-10 pb-20">
 
                                     <div className="max-w-4xl mx-auto mb-10 md:mb-16">
                                         <p className="text-base md:text-2xl text-gray-300 leading-relaxed border-l-4 border-accent pl-4 md:pl-6">

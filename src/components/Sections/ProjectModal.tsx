@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Instagram, Image } from 'lucide-react';
+import { X, Instagram, Image, ArrowDown } from 'lucide-react';
 import { Project, ProjectCategory } from '../../types';
 
 interface ProjectModalProps {
@@ -9,6 +9,9 @@ interface ProjectModalProps {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+
+    const contentRef = useRef<HTMLDivElement>(null);
+    const [canScrollDown, setCanScrollDown] = useState(false);
 
     useEffect(() => {
         if (project) {
@@ -42,6 +45,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(() => setShowHeader(false), 2500);
         return () => clearTimeout(timer);
+    }, [project]);
+
+    const checkScroll = () => {
+        if (!contentRef.current) return;
+        const { scrollTop, scrollHeight, clientHeight } = contentRef.current;
+        const isScrollable = scrollHeight > clientHeight;
+        const isNotAtBottom = scrollTop + clientHeight < scrollHeight - 20;
+        setCanScrollDown(isScrollable && isNotAtBottom);
+    };
+
+    useEffect(() => {
+        checkScroll();
+        window.addEventListener('resize', checkScroll);
+        const timer = setTimeout(checkScroll, 500);
+        return () => {
+            window.removeEventListener('resize', checkScroll);
+            clearTimeout(timer);
+        };
     }, [project]);
 
     const handleManualClose = () => {
@@ -86,7 +107,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             </div>
 
                             <div className="flex gap-2 mt-2 md:mt-0">
-
                                 {project.brandbookUrl && (
                                     <a
                                         href={project.brandbookUrl}
@@ -97,7 +117,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                         Brandbuch PDF
                                     </a>
                                 )}
-
                                 {project.instagramUrl && (
                                     <a
                                         href={project.instagramUrl}
@@ -109,31 +128,20 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                         <span>Instagram</span>
                                     </a>
                                 )}
-
-                                {project.adobestockUrl && (
-                                    <a
-                                        href={project.adobestockUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center gap-2 px-4 py-1.5 md:px-6 md:py-2 bg-white/10 border border-white/20 text-white text-xs md:text-sm font-bold rounded-full hover:bg-orange-600 hover:border-orange-600 transition-colors shadow-lg self-start backdrop-blur-md"
-                                    >
-                                        <Image size={16} />
-                                        <span>Adobe Stock</span>
-                                    </a>
-                                )}
-
                             </div>
                         </div>
 
                         <button
                             onClick={handleManualClose}
-                            className="pointer-events-auto p-2 md:p-3 bg-white/10 backdrop-blur-md rounded-full transition-all duration-300 text-white border border-white/10 hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                            className="pointer-events-auto p-2 md:p-3 bg-white/10 backdrop-blur-md rounded-full transition-colors duration-300 text-white border border-white/10 hover:bg-accent hover:border-accent"
                         >
-                            <X size={24} />
+                            <X size={20} />
                         </button>
                     </motion.div>
 
                     <div
+                        ref={contentRef}
+                        onScroll={checkScroll}
                         className="flex-1 overflow-y-auto p-0 bg-[#0a0a0a]"
                         data-lenis-prevent="true"
                     >
@@ -152,6 +160,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                             src={project.fullWebImage}
                                             alt="Full Design"
                                             className="w-full h-auto block"
+                                            loading="eager"
                                         />
                                     </div>
                                 )}
@@ -182,6 +191,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                                             src={src}
                                                             alt={`Detail ${index}`}
                                                             className="w-full h-auto block"
+                                                            loading={index < 2 ? "eager" : "lazy"}
+                                                            decoding="async"
                                                         />
                                                     </div>
 
@@ -197,6 +208,26 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 </div>
                             )}
                     </div>
+
+                    <AnimatePresence>
+                        {canScrollDown && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 20 }}
+                                className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
+                            >
+                                <div className="bg-black/60 backdrop-blur-md border border-white/10 text-white rounded-full p-3 shadow-lg">
+                                    <motion.div
+                                        animate={{ y: [0, 4, 0] }}
+                                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                                    >
+                                        <ArrowDown size={20} />
+                                    </motion.div>
+                                </div>
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
 
                 </motion.div>
             </motion.div>

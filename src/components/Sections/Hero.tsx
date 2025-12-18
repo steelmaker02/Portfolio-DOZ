@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Available</span>
+                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Verfügbar</span>
                 </div>
               </div>
 
@@ -173,15 +173,19 @@ const Hero: React.FC = () => {
               </div>
 
               <div className="mt-4 md:mt-8">
-                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">Workflow</div>
-                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">State-of-the-Art</h2>
+                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">
+                  Technologie
+                </div>
+                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">
+                  Modern Tech Stack
+                </h2>
                 <p className="text-secondary text-sm leading-relaxed line-clamp-1">
-                  Aktuelle Tools für effiziente Web-Erlebnisse.
+                  Aktuelle Tools für performantes Webdesign.
                 </p>
               </div>
 
               <div className="mt-auto pt-6 border-t border-white/5 flex items-center gap-2 text-[10px] font-mono text-secondary uppercase tracking-wider group-hover:text-blue-400 transition-colors">
-                <span>View Tech Stack</span>
+                <span>Tech Stack ansehen</span>
                 <div className="h-[1px] w-8 bg-white/10 group-hover:bg-blue-400 transition-colors" />
               </div>
             </a>
@@ -208,7 +212,7 @@ const Hero: React.FC = () => {
                 <div className="p-0 text-white h-full flex items-center">
                   <AnimatedIcon
                     animationData={chemistryAnim}
-                    size={52}
+                    size={48}
                     isHovered={hoveredElement === 'ai'}
                   />
                 </div>

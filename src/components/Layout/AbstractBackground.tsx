@@ -52,7 +52,7 @@ const AbstractBackground: React.FC = () => {
             >
                 <img
                     src="images/shapes/shape1.webp"
-                    alt=""
+                    alt="Abstract 3D Background Shape"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore
@@ -67,7 +67,7 @@ const AbstractBackground: React.FC = () => {
             >
                 <img
                     src="images/shapes/shape2.webp"
-                    alt=""
+                    alt="Abstract 3D Background Shape"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore
@@ -88,7 +88,7 @@ const AbstractBackground: React.FC = () => {
             >
                 <img
                     src="images/shapes/shape3.webp"
-                    alt=""
+                    alt="Abstract 3D Background Shape"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore

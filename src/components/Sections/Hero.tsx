@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-3 lg:col-span-4 lg:row-span-2 relative min-h-[350px] h-full overflow-hidden rounded-3xl border border-white/5 group"
+            className="col-span-1 md:col-span-3 lg:col-span-4 lg:row-span-2 relative aspect-[4/5] md:h-full overflow-hidden rounded-3xl border border-white/5 group"
           >
             <img
               src="images/me/portrait.webp"
@@ -97,6 +97,7 @@ const Hero: React.FC = () => {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
+
             <div className="absolute bottom-6 left-6">
               <p className="text-white font-display font-bold text-xl md:text-2xl">{USER_INFO.name} {USER_INFO.surname}</p>
               <p className="text-secondary text-sm">Digital Designer</p>

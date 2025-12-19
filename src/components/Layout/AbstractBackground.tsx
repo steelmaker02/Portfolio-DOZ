@@ -48,11 +48,13 @@ const AbstractBackground: React.FC = () => {
 
             <motion.div
                 style={{ x: x1, y: y1, rotate: rotate1 }}
-                className="will-change-transform hidden 2xl:block absolute top-[-10%] right-[-20%] w-[800px] h-[800px] opacity-40 mix-blend-screen [mask-image:radial-gradient(closest-side,black_60%,transparent_100%)]"
+                className="will-change-transform absolute top-[-5%] right-[-40%] md:right-[-20%] 2xl:right-[-10%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[800px] 2xl:h-[800px] opacity-40 mix-blend-screen [mask-image:radial-gradient(closest-side,black_60%,transparent_100%)]"
             >
                 <img
                     src="images/shapes/shape1.webp"
-                    alt="Abstract 3D Background Shape"
+                    alt="Abstract Shape"
+                    width="800"
+                    height="800"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore
@@ -63,11 +65,13 @@ const AbstractBackground: React.FC = () => {
 
             <motion.div
                 style={{ x: x2, y: y2, rotate: rotate2 }}
-                className="will-change-transform hidden 2xl:block absolute top-[10%] left-[-15%] w-[800px] h-[800px] opacity-30 mix-blend-screen [mask-image:radial-gradient(closest-side,black_70%,transparent_100%)]"
+                className="will-change-transform absolute top-[10%] left-[-40%] md:left-[-15%] 2xl:left-[-5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] 2xl:w-[800px] 2xl:h-[800px] opacity-30 mix-blend-screen [mask-image:radial-gradient(closest-side,black_70%,transparent_100%)]"
             >
                 <img
                     src="images/shapes/shape2.webp"
-                    alt="Abstract 3D Background Shape"
+                    alt="Abstract Shape"
+                    width="800"
+                    height="800"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore
@@ -84,11 +88,13 @@ const AbstractBackground: React.FC = () => {
                     left: "50%",
                     translateX: "-50%"
                 }}
-                className="will-change-transform absolute bottom-[-5%] w-[350px] h-[350px] 2xl:w-[720px] 2xl:h-[720px] opacity-20 mix-blend-screen"
+                className="will-change-transform absolute bottom-[-5%] w-[350px] h-[350px] md:w-[500px] md:h-[500px] 2xl:w-[720px] 2xl:h-[720px] opacity-20 mix-blend-screen"
             >
                 <img
                     src="images/shapes/shape3.webp"
-                    alt="Abstract 3D Background Shape"
+                    alt="Abstract Shape"
+                    width="800"
+                    height="800"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore

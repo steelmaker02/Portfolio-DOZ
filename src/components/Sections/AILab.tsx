@@ -67,7 +67,7 @@ const AILab: React.FC = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 0.85, 1],
-    ["0px", `-${scrollRange}px`, `-${scrollRange}px`]
+    ["0%", `-${scrollRange}px`, `-${scrollRange}px`]
   );
 
   const headerOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
@@ -82,7 +82,7 @@ const AILab: React.FC = () => {
 
           <motion.div
             style={{ opacity: headerOpacity, x: headerX }}
-            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 max-w-lg pointer-events-none pr-6"
+            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 pointer-events-none pr-6 w-[85vw] md:max-w-[40vw] lg:max-w-[35vw] xl:max-w-lg"
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-accent font-mono text-xs uppercase tracking-widest">
@@ -95,7 +95,7 @@ const AILab: React.FC = () => {
                 von Gedanken.
               </span>
             </h2>
-            <p className="text-base md:text-lg text-secondary leading-relaxed max-w-md">
+            <p className="text-base md:text-lg text-secondary leading-relaxed">
               Ich nutze KI zur direkten Visualisierung meiner Ideen, für Moodboards und zur Konkurrenzanalyse –
               parallel zum klassischen Designprozess.
             </p>

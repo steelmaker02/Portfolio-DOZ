@@ -60,6 +60,7 @@ const AILab: React.FC = () => {
     };
 
     updateScrollRange();
+
     window.addEventListener('resize', updateScrollRange);
     return () => window.removeEventListener('resize', updateScrollRange);
   }, []);
@@ -82,14 +83,15 @@ const AILab: React.FC = () => {
 
           <motion.div
             style={{ opacity: headerOpacity, x: headerX }}
-            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 pointer-events-none pr-6 w-[85vw] md:max-w-[40vw] lg:max-w-[35vw] xl:max-w-lg"
+            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 pointer-events-none pr-6 w-[85vw] md:max-w-[40vw] xl:max-w-lg"
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-accent font-mono text-xs uppercase tracking-widest">
                 KI Labor
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
+
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
               Visualisierung <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">
                 von Gedanken.
@@ -110,7 +112,8 @@ const AILab: React.FC = () => {
             {aiProjects.map((item) => (
               <div
                 key={item.id}
-                className="relative aspect-video h-[30vh] min-h-[220px] md:h-[50vh] w-[85vw] md:w-[auto] flex-shrink-0 rounded-2xl overflow-hidden group shadow-2xl cursor-default"
+                onClick={() => setIsModalOpen(true)}
+                className="relative aspect-video h-[30vh] min-h-[220px] md:h-[50vh] w-[85vw] md:w-[auto] flex-shrink-0 rounded-2xl overflow-hidden group shadow-2xl cursor-pointer"
               >
                 <img
                   src={item.image}

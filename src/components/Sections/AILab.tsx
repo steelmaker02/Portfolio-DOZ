@@ -60,6 +60,7 @@ const AILab: React.FC = () => {
     };
 
     updateScrollRange();
+
     window.addEventListener('resize', updateScrollRange);
     return () => window.removeEventListener('resize', updateScrollRange);
   }, []);
@@ -67,7 +68,7 @@ const AILab: React.FC = () => {
   const x = useTransform(
     scrollYProgress,
     [0, 0.85, 1],
-    ["0px", `-${scrollRange}px`, `-${scrollRange}px`]
+    ["0%", `-${scrollRange}px`, `-${scrollRange}px`]
   );
 
   const headerOpacity = useTransform(scrollYProgress, [0, 0.15], [1, 0]);
@@ -82,20 +83,20 @@ const AILab: React.FC = () => {
 
           <motion.div
             style={{ opacity: headerOpacity, x: headerX }}
-            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 max-w-lg pointer-events-none pr-6"
+            className="absolute top-24 md:top-1/3 left-6 md:left-20 z-10 pointer-events-none pr-6 w-[85vw] md:max-w-[320px] lg:max-w-[450px] xl:max-w-2xl"
           >
             <div className="flex items-center gap-3 mb-6">
               <span className="text-accent font-mono text-xs uppercase tracking-widest">
                 KI Labor
               </span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold text-white leading-[1.1] mb-6">
               Visualisierung <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-600">
                 von Gedanken.
               </span>
             </h2>
-            <p className="text-base md:text-lg text-secondary leading-relaxed max-w-md">
+            <p className="text-base md:text-lg text-secondary leading-relaxed">
               Ich nutze KI zur direkten Visualisierung meiner Ideen, für Moodboards und zur Konkurrenzanalyse –
               parallel zum klassischen Designprozess.
             </p>
@@ -104,7 +105,7 @@ const AILab: React.FC = () => {
           <motion.div
             ref={scrollContainerRef}
             style={{ x }}
-            className="flex gap-4 md:gap-8 px-6 md:px-20 pl-[100vw] md:pl-[50vw] items-center"
+            className="flex gap-4 md:gap-8 px-6 md:px-20 pl-[100vw] md:pl-[55vw] xl:pl-[45vw] items-center"
           >
 
             {aiProjects.map((item) => (

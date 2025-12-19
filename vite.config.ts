@@ -11,8 +11,23 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'esbuild',
+    chunkSizeWarningLimit: 1000,
+
     rollupOptions: {
       external: ['fsevents'],
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('lottie-react')) {
+              return 'lottie';
+            }
+            if (id.includes('framer-motion')) {
+              return 'framer';
+            }
+            return 'vendor';
+          }
+        }
+      }
     },
   },
 

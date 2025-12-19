@@ -148,14 +148,14 @@ const About: React.FC = () => {
                     download
                     onClick={handleDownload}
                     className={`
-                      relative w-full flex items-center justify-center px-6 py-3 font-bold rounded-xl transition-all duration-500 shadow-lg cursor-pointer overflow-hidden text-sm
+                      relative w-full flex items-center justify-center px-4 py-3 font-bold rounded-xl transition-all duration-500 shadow-lg cursor-pointer overflow-hidden text-sm text-center
                       ${isDownloaded
                         ? 'bg-green-500 text-white hover:shadow-green-500/20'
                         : 'bg-white text-black hover:bg-accent hover:text-white hover:shadow-accent/20'
                       }
                     `}
                   >
-                    <div className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center justify-center gap-2 w-full">
                       <AnimatePresence mode="wait">
                         {isDownloaded ? (
                           <motion.span
@@ -163,10 +163,10 @@ const About: React.FC = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="flex items-center gap-2"
+                            className="flex items-center justify-center gap-2 w-full"
                           >
-                            <Check size={18} />
-                            Vielen Dank!
+                            <Check size={18} className="flex-shrink-0" />
+                            <span>Vielen Dank!</span>
                           </motion.span>
                         ) : (
                           <motion.span
@@ -174,18 +174,20 @@ const About: React.FC = () => {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
+                            className="w-full block"
                           >
                             Lebenslauf herunterladen
                           </motion.span>
                         )}
                       </AnimatePresence>
-                    </div>
+                    </span>
                   </a>
                 </div>
 
               </div>
             </div>
           </div>
+
 
           <div className="lg:col-span-6">
             <h3 className="text-white font-bold text-lg mb-8">

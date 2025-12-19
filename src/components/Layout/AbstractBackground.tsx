@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from 'framer-motion';
 const AbstractBackground: React.FC = () => {
     const { scrollYProgress } = useScroll();
-    code
-    Code
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 

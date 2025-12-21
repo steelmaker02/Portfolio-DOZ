@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-1 xl:col-span-4 xl:row-span-2 relative min-h-[350px] md:min-h-[400px] h-full overflow-hidden rounded-3xl border border-white/5 group"
+            className="col-span-1 md:col-span-1 xl:col-span-4 xl:row-span-2 relative aspect-[4/5] md:h-full overflow-hidden rounded-3xl border border-white/5 group"
           >
             <img
               src="images/me/portrait.webp"
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Available</span>
+                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Verfügbar</span>
                 </div>
               </div>
 
@@ -139,7 +139,11 @@ const Hero: React.FC = () => {
               </div>
 
               <div className="mt-auto pt-6 border-t border-white/5 flex flex-wrap gap-2 text-[10px] font-mono text-secondary uppercase tracking-wider group-hover:text-white transition-colors">
-                <span>Neumünster</span> • <span>Kiel</span> • <span>Hamburg</span>
+                <span>Neumünster</span>
+                <span className="text-secondary group-hover:text-green-400 transition-colors">•</span>
+                <span>Kiel</span>
+                <span className="text-secondary group-hover:text-green-400 transition-colors">•</span>
+                <span>Hamburg</span>
               </div>
             </a>
           </motion.div>
@@ -173,8 +177,12 @@ const Hero: React.FC = () => {
               </div>
 
               <div className="mt-4 md:mt-8">
-                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">Technologie</div>
-                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">Modern Tech Stack</h2>
+                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">
+                  Technologie
+                </div>
+                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">
+                  Modern Tech Stack
+                </h2>
                 <p className="text-secondary text-sm leading-relaxed line-clamp-1">
                   Aktuelle Tools für performantes Webdesign.
                 </p>
@@ -208,7 +216,7 @@ const Hero: React.FC = () => {
                 <div className="p-0 text-white h-full flex items-center">
                   <AnimatedIcon
                     animationData={chemistryAnim}
-                    size={48}
+                    size={46}
                     isHovered={hoveredElement === 'ai'}
                   />
                 </div>

@@ -34,12 +34,12 @@ const Hero: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-4 h-full"
+          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-12 gap-6 h-full"
         >
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-6 lg:col-span-8 row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors"
+            className="col-span-1 md:col-span-2 xl:col-span-8 xl:row-span-2 bg-surface border border-white/5 rounded-3xl p-6 md:p-12 flex flex-col justify-between group hover:border-white/10 transition-colors"
           >
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                 </span>
               </div>
 
-              <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] mb-6">
+              <h1 className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tight leading-[0.95] mb-6">
                 DIGITAL & <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
                   WEB DESIGN
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-3 lg:col-span-4 lg:row-span-2 relative aspect-[4/5] md:h-full overflow-hidden rounded-3xl border border-white/5 group"
+            className="col-span-1 md:col-span-1 xl:col-span-4 xl:row-span-2 relative min-h-[350px] md:min-h-[400px] h-full overflow-hidden rounded-3xl border border-white/5 group"
           >
             <img
               src="images/me/portrait.webp"
@@ -97,7 +97,6 @@ const Hero: React.FC = () => {
               }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
-
             <div className="absolute bottom-6 left-6">
               <p className="text-white font-display font-bold text-xl md:text-2xl">{USER_INFO.name} {USER_INFO.surname}</p>
               <p className="text-secondary text-sm">Digital Designer</p>
@@ -107,7 +106,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-3 lg:col-span-4"
+            className="col-span-1 md:col-span-1 xl:col-span-4"
           >
             <a
               href="#contact"
@@ -129,7 +128,7 @@ const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 group-hover:bg-green-500/20 transition-colors">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Verfügbar</span>
+                  <span className="text-green-500 text-xs font-bold uppercase tracking-widest">Available</span>
                 </div>
               </div>
 
@@ -148,7 +147,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-3 lg:col-span-4"
+            className="col-span-1 md:col-span-1 xl:col-span-4"
           >
             <a
               href="#skills"
@@ -174,12 +173,8 @@ const Hero: React.FC = () => {
               </div>
 
               <div className="mt-4 md:mt-8">
-                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">
-                  Technologie
-                </div>
-                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">
-                  Modern Tech Stack
-                </h2>
+                <div className="text-secondary text-xs font-mono uppercase tracking-widest mb-2 h-4">Technologie</div>
+                <h2 className="text-lg md:text-xl text-white font-bold leading-tight mb-1">Modern Tech Stack</h2>
                 <p className="text-secondary text-sm leading-relaxed line-clamp-1">
                   Aktuelle Tools für performantes Webdesign.
                 </p>
@@ -195,7 +190,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-3 lg:col-span-4"
+            className="col-span-1 md:col-span-1 xl:col-span-4"
           >
             <a
               href="#ai-lab"

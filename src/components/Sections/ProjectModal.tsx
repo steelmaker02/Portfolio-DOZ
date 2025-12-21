@@ -145,7 +145,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                             <button
                                 onClick={handleManualClose}
-                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent"
+                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                             >
                                 <X size={24} />
                             </button>
@@ -226,12 +226,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 exit={{ opacity: 0, y: 20 }}
                                 className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
                             >
-                                <div className="bg-black/60 backdrop-blur-md border border-white/10 text-white rounded-full p-3 shadow-lg">
+
+                                <div className="bg-black/80 backdrop-blur-md border border-white/10 text-accent rounded-full p-3 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                                     <motion.div
                                         animate={{ y: [0, 4, 0] }}
                                         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                                     >
-                                        <ArrowDown size={20} />
+                                        <ArrowDown size={24} />
                                     </motion.div>
                                 </div>
                             </motion.div>

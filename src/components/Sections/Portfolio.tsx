@@ -17,6 +17,8 @@ const Portfolio: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ALL');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+
   const filteredProjects = useMemo(() => {
     if (activeTab === 'ALL') return PROJECTS;
     return PROJECTS.filter(p => p.category === activeTab);
@@ -52,44 +54,57 @@ const Portfolio: React.FC = () => {
             })}
           </div>
         </div>
+
         <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           <AnimatePresence mode='popLayout'>
-            {filteredProjects.map((project) => (
-              <motion.div
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
-                key={project.id}
-                className="relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border border-transparent transition-colors hover:border-accent/30"
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className="relative">
-                  <img
-                    src={project.coverImage}
-                    alt={project.title}
-                    width="800"
-                    height="600"
-                    loading="lazy"
-                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
+            {filteredProjects.map((project) => {
 
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none" />
+              const isDimmed = hoveredId !== null && hoveredId !== project.id;
 
-                <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h3 className="text-white group-hover:text-accent font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
-                      {project.title}
-                      <ArrowUpRight size={16} />
-                    </h3>
-                    <p className="text-white/60 text-[10px] md:text-xs font-mono mt-1 uppercase">{project.category}</p>
+              return (
+                <motion.div
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  key={project.id}
+
+                  onMouseEnter={() => setHoveredId(project.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                  onClick={() => setSelectedProject(project)}
+
+                  className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border border-transparent hover:border-accent/30 transition-all duration-500 ease-in-out ${isDimmed
+                    ? 'blur-[2px] opacity-40 scale-[0.98] grayscale'
+                    : 'opacity-100 scale-100 grayscale-0'
+                    }`}
+                >
+                  <div className="relative">
+                    <img
+                      src={project.coverImage}
+                      alt={project.title}
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                    />
                   </div>
-                </div>
 
-              </motion.div>
-            ))}
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 pointer-events-none" />
+
+                  <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-white group-hover:text-accent font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
+                        {project.title}
+                        <ArrowUpRight size={16} />
+                      </h3>
+                      <p className="text-white/60 text-[10px] md:text-xs font-mono mt-1 uppercase">{project.category}</p>
+                    </div>
+                  </div>
+
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
 

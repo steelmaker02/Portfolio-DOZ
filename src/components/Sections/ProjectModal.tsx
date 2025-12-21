@@ -106,7 +106,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             <p className="text-white/80 text-xs md:text-sm font-mono mt-1">{project.category} • {project.year}</p>
                         </div>
 
-                        <div className="pointer-events-auto flex flex-wrap items-center gap-3 self-start md:self-auto">
+                        <div className="pointer-events-auto flex flex-wrap items-center gap-3 justify-end self-start md:self-auto">
 
                             {project.brandbookUrl && (
                                 <a
@@ -145,7 +145,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                             <button
                                 onClick={handleManualClose}
-                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent"
+                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                             >
                                 <X size={24} />
                             </button>

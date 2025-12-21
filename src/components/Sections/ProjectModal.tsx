@@ -160,7 +160,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         data-lenis-prevent="true"
                     >
                         {project.category === ProjectCategory.WEB && (
-                            <div className="w-full flex flex-col items-center pt-28 md:pt-32 pb-10 gap-10 md:gap-16">
+                            <div className="w-full flex flex-col items-center pt-24 md:pt-28 pb-10 gap-10 md:gap-16">
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
@@ -185,15 +185,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className="w-full pt-28 md:pt-32 px-4 md:px-10 pb-20">
+                                <div className="w-full pt-24 md:pt-28 px-4 md:px-10 pb-20">
 
-                                    {project.description && (
-                                        <div className="max-w-4xl mx-auto mb-10 md:mb-16">
-                                            <p className="text-base md:text-2xl text-gray-300 leading-relaxed border-l-4 border-accent pl-4 md:pl-6">
-                                                {project.description}
-                                            </p>
-                                        </div>
-                                    )}
 
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">
                                         {project.gallery?.map((item, index) => {

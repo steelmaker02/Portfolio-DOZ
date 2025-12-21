@@ -160,12 +160,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         data-lenis-prevent="true"
                     >
                         {project.category === ProjectCategory.WEB && (
-                            <div className="w-full flex flex-col items-center pt-28 md:pt-32 pb-10">
+                            <div className="w-full flex flex-col items-center pt-28 md:pt-32 pb-10 gap-10 md:gap-16">
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
                                         autoPlay loop muted playsInline
-                                        className="w-full h-auto block"
+                                        className="w-full h-auto block rounded-lg shadow-2xl"
                                     />
                                 )}
                                 {project.fullWebImage && (

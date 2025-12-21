@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
 
           <motion.div
             variants={itemVariants}
-            className="col-span-1 md:col-span-1 xl:col-span-4 xl:row-span-2 relative aspect-[4/5] md:h-full overflow-hidden rounded-3xl border border-white/5 group"
+            className="col-span-1 md:col-span-1 xl:col-span-4 xl:row-span-2 relative min-h-[350px] md:min-h-[400px] h-full overflow-hidden rounded-3xl border border-white/5 group"
           >
             <img
               src="images/me/portrait.webp"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, GraduationCap, Check } from 'lucide-react';
 import { USER_INFO } from '../../constants';
+import { Check } from 'lucide-react';
 
 const About: React.FC = () => {
   const [isDownloaded, setIsDownloaded] = useState(false);
@@ -189,12 +189,14 @@ const About: React.FC = () => {
           </div>
 
 
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-6 relative">
             <h3 className="text-white font-bold text-lg mb-8">
               Werdegang
             </h3>
 
-            <div className="space-y-8 border-l border-white/10 pl-6 md:pl-8 ml-3 relative">
+            <div className="absolute top-[60px] bottom-0 left-[9px] w-[2px] bg-gradient-to-b from-accent/50 via-white/10 to-transparent" />
+
+            <div className="space-y-12 relative">
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
@@ -202,9 +204,15 @@ const About: React.FC = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="relative"
+                  className="relative pl-10"
                 >
-                  <div className={`absolute -left-[33px] md:-left-[41px] top-1 w-4 h-4 md:w-5 md:h-5 rounded-full border-4 border-[#080808] ${index === 0 ? 'bg-accent' : 'bg-white/20'}`} />
+
+                  <div className={`absolute left-0 top-1.5 w-5 h-5 rounded-full border-2 bg-[#080808] z-10 ${index === 0
+                    ? 'border-accent shadow-[0_0_10px_rgba(59,130,246,0.5)]'
+                    : 'border-white/20'
+                    }`}>
+                    {index === 0 && <div className="w-2 h-2 bg-accent rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />}
+                  </div>
 
                   <span className="text-xs font-mono text-accent uppercase tracking-wider block">
                     {item.year}

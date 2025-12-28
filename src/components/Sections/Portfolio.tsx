@@ -24,6 +24,32 @@ const Portfolio: React.FC = () => {
     return PROJECTS.filter(p => p.category === activeTab);
   }, [activeTab]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration: 0.2, ease: "easeInOut" }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { type: "spring", stiffness: 300, damping: 25 }
+    },
+    exit: { opacity: 0, scale: 0.95, transition: { duration: 0.2 } }
+  };
+
   return (
     <section id="portfolio" className="py-16 md:py-32 px-4 md:px-6 relative min-h-screen">
       <div className="container mx-auto max-w-7xl">
@@ -55,8 +81,15 @@ const Portfolio: React.FC = () => {
           </div>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
-          <AnimatePresence mode='popLayout'>
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={activeTab}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="columns-1 md:columns-2 lg:columns-3 gap-6"
+          >
             {filteredProjects.map((project) => {
 
               const isHovered = hoveredId === project.id;
@@ -64,18 +97,15 @@ const Portfolio: React.FC = () => {
 
               return (
                 <motion.div
+                  variants={cardVariants}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                   key={project.id}
 
                   onMouseEnter={() => setHoveredId(project.id)}
                   onMouseLeave={() => setHoveredId(null)}
                   onClick={() => setSelectedProject(project)}
 
-                  className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-out ${isHovered
+                  className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-in-out ${isHovered
                     ? 'z-10 scale-[1.02] border-accent/50 shadow-2xl shadow-black/50 grayscale-0 opacity-100'
                     : isDimmed
                       ? 'scale-[0.96] border-transparent blur-[2px] opacity-40 grayscale'
@@ -93,13 +123,11 @@ const Portfolio: React.FC = () => {
                     />
                   </div>
 
-
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
 
                       <h3 className="text-white group-hover:text-white font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                         {project.title}
-
                         <ArrowUpRight
                           size={18}
                           className="text-white transition-all duration-300 group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110"
@@ -122,8 +150,8 @@ const Portfolio: React.FC = () => {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
       </div>
 

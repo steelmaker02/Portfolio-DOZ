@@ -59,7 +59,6 @@ const Portfolio: React.FC = () => {
           <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => {
 
-              // ИСПРАВЛЕНИЕ: Добавлена переменная isHovered
               const isHovered = hoveredId === project.id;
               const isDimmed = hoveredId !== null && hoveredId !== project.id;
 
@@ -76,6 +75,9 @@ const Portfolio: React.FC = () => {
                   onMouseLeave={() => setHoveredId(null)}
                   onClick={() => setSelectedProject(project)}
 
+                  // === ЭФФЕКТ SPOTLIGHT ===
+                  // isHovered: Увеличение + Яркая рамка + Тень + Четкость
+                  // isDimmed: Уменьшение + Блюр + Прозрачность + ЧБ
                   className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-out ${isHovered
                     ? 'z-10 scale-[1.02] border-accent/50 shadow-2xl shadow-black/50 grayscale-0 opacity-100'
                     : isDimmed
@@ -90,9 +92,12 @@ const Portfolio: React.FC = () => {
                       width="800"
                       height="600"
                       loading="lazy"
-                      className="w-full h-auto block transition-transform duration-700"
+                      // Внутренний зум картинки при наведении
+                      className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
+
+                  {/* ВАЖНО: УБРАЛ ЗАТЕМНЯЮЩИЙ СЛОЙ. ТЕПЕРЬ ЦВЕТА ЧИСТЫЕ. */}
 
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

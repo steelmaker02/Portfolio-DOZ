@@ -59,6 +59,8 @@ const Portfolio: React.FC = () => {
           <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => {
 
+              // ИСПРАВЛЕНИЕ: Добавлена переменная isHovered
+              const isHovered = hoveredId === project.id;
               const isDimmed = hoveredId !== null && hoveredId !== project.id;
 
               return (
@@ -88,10 +90,9 @@ const Portfolio: React.FC = () => {
                       width="800"
                       height="600"
                       loading="lazy"
-                      className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-auto block transition-transform duration-700"
                     />
                   </div>
-
 
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

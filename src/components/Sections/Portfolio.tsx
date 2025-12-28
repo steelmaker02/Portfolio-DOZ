@@ -55,10 +55,7 @@ const Portfolio: React.FC = () => {
           </div>
         </div>
 
-        <motion.div
-          layout
-          className="columns-1 md:columns-2 lg:columns-3 gap-6"
-        >
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
           <AnimatePresence mode='popLayout'>
             {filteredProjects.map((project) => {
 
@@ -68,18 +65,10 @@ const Portfolio: React.FC = () => {
               return (
                 <motion.div
                   layout
-
-                  initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                  exit={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
-
-                  transition={{
-                    type: "spring",
-                    stiffness: 350,
-                    damping: 25,
-                    mass: 0.5
-                  }}
-
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
                   key={project.id}
 
                   onMouseEnter={() => setHoveredId(project.id)}
@@ -104,11 +93,13 @@ const Portfolio: React.FC = () => {
                     />
                   </div>
 
+
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
 
                       <h3 className="text-white group-hover:text-white font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                         {project.title}
+
                         <ArrowUpRight
                           size={18}
                           className="text-white transition-all duration-300 group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110"
@@ -132,7 +123,7 @@ const Portfolio: React.FC = () => {
               );
             })}
           </AnimatePresence>
-        </motion.div>
+        </div>
 
       </div>
 

@@ -75,9 +75,6 @@ const Portfolio: React.FC = () => {
                   onMouseLeave={() => setHoveredId(null)}
                   onClick={() => setSelectedProject(project)}
 
-                  // === ЭФФЕКТ SPOTLIGHT ===
-                  // isHovered: Увеличение + Яркая рамка + Тень + Четкость
-                  // isDimmed: Уменьшение + Блюр + Прозрачность + ЧБ
                   className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-out ${isHovered
                     ? 'z-10 scale-[1.02] border-accent/50 shadow-2xl shadow-black/50 grayscale-0 opacity-100'
                     : isDimmed
@@ -92,20 +89,29 @@ const Portfolio: React.FC = () => {
                       width="800"
                       height="600"
                       loading="lazy"
-                      // Внутренний зум картинки при наведении
                       className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
 
-                  {/* ВАЖНО: УБРАЛ ЗАТЕМНЯЮЩИЙ СЛОЙ. ТЕПЕРЬ ЦВЕТА ЧИСТЫЕ. */}
 
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-white group-hover:text-accent font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
+
+                      <h3 className="text-white group-hover:text-white font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                         {project.title}
-                        <ArrowUpRight size={16} />
+                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:rotate-45 group-hover:text-accent" />
                       </h3>
-                      <p className="text-white/60 text-[10px] md:text-xs font-mono mt-1 uppercase">{project.category}</p>
+
+                      <div className="relative h-4 overflow-hidden mt-1">
+                        <p className="text-white/60 text-[10px] md:text-xs font-mono uppercase transition-transform duration-300 group-hover:-translate-y-full">
+                          {project.category}
+                        </p>
+
+                        <p className="absolute inset-0 text-accent text-[10px] md:text-xs font-mono uppercase font-bold transition-transform duration-300 translate-y-full group-hover:translate-y-0">
+                          Projekt ansehen
+                        </p>
+                      </div>
+
                     </div>
                   </div>
 

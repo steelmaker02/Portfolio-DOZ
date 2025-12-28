@@ -99,7 +99,11 @@ const Portfolio: React.FC = () => {
 
                       <h3 className="text-white group-hover:text-white font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                         {project.title}
-                        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:rotate-45 group-hover:text-accent" />
+
+                        <ArrowUpRight
+                          size={18}
+                          className="text-white transition-all duration-300 group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110"
+                        />
                       </h3>
 
                       <div className="relative h-4 overflow-hidden mt-1">

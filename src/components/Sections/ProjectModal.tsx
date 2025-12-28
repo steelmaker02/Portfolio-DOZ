@@ -227,7 +227,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
                             >
 
-                                <div className="bg-black/80 backdrop-blur-md border border-white/10 text-accent rounded-full p-3 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                                <div className="bg-black/80 backdrop-blur-md border border-white/10 text-accent rounded-full p-3">
                                     <motion.div
                                         animate={{ y: [0, 4, 0] }}
                                         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

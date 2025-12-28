@@ -74,9 +74,11 @@ const Portfolio: React.FC = () => {
                   onMouseLeave={() => setHoveredId(null)}
                   onClick={() => setSelectedProject(project)}
 
-                  className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border border-transparent hover:border-accent/30 transition-all duration-500 ease-in-out ${isDimmed
-                    ? 'blur-[2px] opacity-40 scale-[0.98] grayscale'
-                    : 'opacity-100 scale-100 grayscale-0'
+                  className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-out ${isHovered
+                    ? 'z-10 scale-[1.02] border-accent/50 shadow-2xl shadow-black/50 grayscale-0 opacity-100'
+                    : isDimmed
+                      ? 'scale-[0.96] border-transparent blur-[2px] opacity-40 grayscale'
+                      : 'scale-100 border-transparent opacity-100 grayscale-0'
                     }`}
                 >
                   <div className="relative">

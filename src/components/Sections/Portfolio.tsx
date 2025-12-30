@@ -24,6 +24,32 @@ const Portfolio: React.FC = () => {
     return PROJECTS.filter(p => p.category === activeTab);
   }, [activeTab]);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.05
+      }
+    },
+    exit: {
+      opacity: 0,
+      filter: "blur(5px)",
+      transition: { duration: 0.3 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.5, ease: "easeOut" }
+    }
+  };
+
   return (
     <section id="portfolio" className="py-16 md:py-32 px-4 md:px-6 relative min-h-screen">
       <div className="container mx-auto max-w-7xl">
@@ -55,8 +81,15 @@ const Portfolio: React.FC = () => {
           </div>
         </div>
 
-        <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
-          <AnimatePresence mode='popLayout'>
+        <AnimatePresence mode='wait'>
+          <motion.div
+            key={activeTab}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="columns-1 md:columns-2 lg:columns-3 gap-6"
+          >
             {filteredProjects.map((project) => {
 
               const isHovered = hoveredId === project.id;
@@ -64,11 +97,8 @@ const Portfolio: React.FC = () => {
 
               return (
                 <motion.div
+                  variants={cardVariants}
                   layout
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                   key={project.id}
 
                   onMouseEnter={() => setHoveredId(project.id)}
@@ -92,7 +122,6 @@ const Portfolio: React.FC = () => {
                       className="w-full h-auto block transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-
 
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -122,8 +151,8 @@ const Portfolio: React.FC = () => {
                 </motion.div>
               );
             })}
-          </AnimatePresence>
-        </div>
+          </motion.div>
+        </AnimatePresence>
 
       </div>
 

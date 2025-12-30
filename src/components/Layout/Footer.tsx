@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
                             ))}
                         </div>
 
-                        <div className="flex gap-6 text-sm font-mono text-secondary uppercase tracking-wider justify-center md:justify-end">
+                        <div className="flex flex-col gap-2 text-sm font-mono text-secondary uppercase tracking-wider items-center md:items-end">
                             <button onClick={() => setModalOpen('impressum')} className="hover:text-accent transition-colors">
                                 Impressum
                             </button>

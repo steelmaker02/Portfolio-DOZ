@@ -11,6 +11,7 @@ import Portfolio from './components/Sections/Portfolio';
 import AILab from './components/Sections/AILab';
 import Contact from './components/Sections/Contact';
 import CustomCursor from './components/UI/CustomCursor';
+import ScrollProgress from './components/UI/ScrollProgress';
 
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,6 +57,8 @@ const App: React.FC = () => {
           <AbstractBackground />
 
           <Navbar />
+
+          <ScrollProgress />
 
           <main className="relative z-10">
             <Hero />

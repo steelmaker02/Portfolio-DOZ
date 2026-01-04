@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { motion, useScroll, useSpring, useTransform, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 import { useLenis } from '../Layout/SmoothScroll';
 
@@ -37,9 +37,9 @@ const ScrollProgress: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
             onClick={handleClick}
-            className="fixed bottom-6 right-4 md:bottom-10 md:right-10 z-40 group"
+            className="fixed bottom-6 right-4 md:bottom-10 md:right-10 z-40 group active:scale-90 transition-transform duration-200"
         >
-            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/10 group-hover:border-white/30 transition-colors cursor-pointer">
+            <div className="relative w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-black/40 backdrop-blur-md rounded-full border border-white/10 group-hover:border-white/30 transition-colors cursor-pointer shadow-lg shadow-black/20">
 
                 <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 100 100">
                     <circle

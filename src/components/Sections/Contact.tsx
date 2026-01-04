@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ArrowUpRight, Copy, Check } from 'lucide-react';
 import { USER_INFO } from '../../constants';
 import AnimatedIcon from '../UI/AnimatedIcon';
-
 import emailAnim from '../../assets/icons/Email.json';
 
 const Contact: React.FC = () => {
@@ -46,8 +45,15 @@ const Contact: React.FC = () => {
               </p>
 
               <div className="pt-6">
-                <p className="text-xs font-mono uppercase text-secondary mb-3">Standort</p>
-                <p className="text-white text-lg">Neumünster • Kiel • Hamburg</p>
+                <p className="text-xs font-mono uppercase text-accent mb-3">Standort</p>
+
+                <div className="flex flex-wrap items-center gap-2 text-white text-lg">
+                  <span>Neumünster</span>
+                  <span className="text-green-500 text-xs">•</span>
+                  <span>Kiel</span>
+                  <span className="text-green-500 text-xs">•</span>
+                  <span>Hamburg</span>
+                </div>
               </div>
             </div>
           </div>
@@ -68,7 +74,6 @@ const Contact: React.FC = () => {
                   Kopiert!
                 </span>
               </div>
-
 
               <div className="flex justify-between items-start relative z-10">
                 <div className="p-0 text-white">

@@ -91,13 +91,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'web-6',
-    title: 'Outdoor-Bekleidung',
+    title: 'Cardio Training',
     category: ProjectCategory.WEB,
     year: '2025',
     coverImage: 'images/projects/web6_thumb.webp',
     fullWebImage: 'images/projects/web6_full.webp',
     tools: ['Figma', 'Illustrator'],
-    tags: ['Fashion', 'Branding'],
+    tags: ['Sport', 'Workout'],
     size: 'small'
   },
 

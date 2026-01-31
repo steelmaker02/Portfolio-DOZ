@@ -231,11 +231,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                                             return (
                                                 <div key={index} className="space-y-4">
-                                                    <div className="rounded-xl overflow-hidden border border-white/5 shadow-2xl bg-[#050505]">
+                                                    <div className="flex justify-center rounded-xl overflow-hidden border border-white/5 shadow-2xl bg-[#050505]">
                                                         <img
                                                             src={src}
                                                             alt={`Detail ${index}`}
-                                                            className="w-full h-auto block"
+
+                                                            className="max-w-full max-h-[85vh] w-auto h-auto object-contain block"
                                                             loading={index < 2 ? "eager" : "lazy"}
                                                             decoding="async"
                                                         />

@@ -24,6 +24,9 @@ export interface Project {
   brandbookUrl?: string;
   instagramUrl?: string;
   adobestockUrl?: string;
+  workoutUrl?: string;
+  peppapigUrl?: string
+  alvarezchocolatUrl?: string
 
   description?: string;
 

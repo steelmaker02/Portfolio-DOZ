@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Instagram, Image, ArrowDown } from 'lucide-react';
+import { X, Instagram, Image, ArrowDown, Globe } from 'lucide-react';
 import { Project, ProjectCategory } from '../../types';
 
 interface ProjectModalProps {
@@ -128,6 +128,42 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 >
                                     <Instagram size={18} />
                                     <span className="hidden sm:inline">Instagram</span>
+                                </a>
+                            )}
+
+                            {project.peppapigUrl && (
+                                <a
+                                    href={project.peppapigUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#ff8a80] hover:border-[#ff8a80] hover:shadow-[0_0_15px_rgba(255,138,128,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Seite</span>
+                                </a>
+                            )}
+
+                            {project.workoutUrl && (
+                                <a
+                                    href={project.workoutUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#3fd47d] hover:border-[#3fd47d] hover:shadow-[0_0_15px_rgba(63,212,125,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Seite</span>
+                                </a>
+                            )}
+
+                            {project.alvarezchocolatUrl && (
+                                <a
+                                    href={project.alvarezchocolatUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#784830] hover:border-[#784830] hover:shadow-[0_0_15px_rgba(120,72,48,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Seite</span>
                                 </a>
                             )}
 

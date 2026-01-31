@@ -80,6 +80,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-5',
     title: 'Alvarez Chocolat',
+    alvarezchocolatUrl: "https://steelmaker02.github.io/Alvarez/",
     category: ProjectCategory.WEB,
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
@@ -92,15 +93,38 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-6',
     title: 'Cardio Training',
+    workoutUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
     category: ProjectCategory.WEB,
-    year: '2025',
+    year: '2026',
     coverImage: 'images/projects/web6_thumb.webp',
     fullWebImage: 'images/projects/web6_full.webp',
     tools: ['Figma', 'Illustrator'],
     tags: ['Sport', 'Workout'],
     size: 'small'
   },
-
+  {
+    id: 'web-7',
+    title: 'Programmiershule',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web7_thumb.webp',
+    fullWebImage: 'images/projects/web7_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['IT', 'Onlineshule'],
+    size: 'small'
+  },
+  {
+    id: 'web-8',
+    title: 'Peppa Pig — Fan-Seite ',
+    peppapigUrl: "https://steelmaker02.github.io/Peppa-Fan/",
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web8_thumb.webp',
+    fullWebImage: 'images/projects/web8_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Kinder', 'Peppa'],
+    size: 'small'
+  },
   {
     id: 'ps-1',
     title: 'Futurelab',

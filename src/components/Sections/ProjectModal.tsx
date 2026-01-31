@@ -231,17 +231,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                                             return (
                                                 <div key={index} className="space-y-4">
-                                                    <div className="flex justify-center rounded-xl overflow-hidden border border-white/5 shadow-2xl bg-[#050505]">
+                                                    <div className="flex justify-center">
                                                         <img
                                                             src={src}
                                                             alt={`Detail ${index}`}
-
-                                                            className="max-w-full max-h-[85vh] w-auto h-auto object-contain block"
+                                                            className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
                                                             loading={index < 2 ? "eager" : "lazy"}
                                                             decoding="async"
                                                         />
                                                     </div>
-
                                                     {title && (
                                                         <h4 className="text-white/70 font-mono text-xs md:text-sm tracking-widest uppercase pl-2">
                                                             {title}

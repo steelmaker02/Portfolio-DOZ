@@ -85,7 +85,6 @@ export const PROJECTS: Project[] = [
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
     fullWebImage: 'images/projects/web5_full.webp',
-    videoUrl: 'videos/web5_full.mp4',
     tools: ['Figma', 'After Effects'],
     tags: ['Food', 'Landing Page'],
     size: 'wide'

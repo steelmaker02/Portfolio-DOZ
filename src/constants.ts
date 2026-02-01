@@ -145,6 +145,18 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'web-10',
+    title: 'Tattoo Artist',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web10_thumb.webp',
+    fullWebImage: 'images/projects/web10_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Tattoo', 'Studio'],
+    size: 'wide'
+  },
+
+  {
     id: 'ps-1',
     title: 'Futurelab',
     category: ProjectCategory.PHOTOSHOP,

@@ -44,6 +44,7 @@ export const PROJECTS: Project[] = [
     tags: ['Education', 'UI/UX'],
     size: 'large'
   },
+  
   {
     id: 'web-2',
     title: 'Odessa Balletttheater',
@@ -55,6 +56,7 @@ export const PROJECTS: Project[] = [
     tags: ['Culture', 'Minimal'],
     size: 'wide'
   },
+
   {
     id: 'web-3',
     title: 'Hörgeräteshop',
@@ -66,6 +68,7 @@ export const PROJECTS: Project[] = [
     tags: ['E-Commerce', 'Medical'],
     size: 'small'
   },
+
   {
     id: 'web-4',
     title: 'Cargo aus China',
@@ -77,6 +80,7 @@ export const PROJECTS: Project[] = [
     tags: ['Fashion', 'Branding'],
     size: 'small'
   },
+
   {
     id: 'web-5',
     title: 'Alvarez Chocolat',
@@ -89,6 +93,7 @@ export const PROJECTS: Project[] = [
     tags: ['Food', 'Landing Page'],
     size: 'wide'
   },
+
   {
     id: 'web-6',
     title: 'Cardio Training',
@@ -101,6 +106,7 @@ export const PROJECTS: Project[] = [
     tags: ['Sport', 'Workout'],
     size: 'small'
   },
+
   {
     id: 'web-7',
     title: 'Programmiershule',
@@ -112,6 +118,7 @@ export const PROJECTS: Project[] = [
     tags: ['IT', 'Onlineshule'],
     size: 'small'
   },
+
   {
     id: 'web-8',
     title: 'Peppa Pig — Fan-Seite ',
@@ -124,6 +131,7 @@ export const PROJECTS: Project[] = [
     tags: ['Kinder', 'Peppa'],
     size: 'small'
   },
+
   {
     id: 'ps-1',
     title: 'Futurelab',
@@ -140,6 +148,7 @@ export const PROJECTS: Project[] = [
     tags: ['Compositing', 'Retouch'],
     size: 'tall'
   },
+
   {
     id: 'ps-2',
     title: 'The Horrors — Konzertplakat',
@@ -178,6 +187,7 @@ export const PROJECTS: Project[] = [
     tags: ['Branding', 'Vector'],
     size: 'small'
   },
+
   {
     id: 'logo-2',
     title: 'Nachteule',
@@ -193,6 +203,7 @@ export const PROJECTS: Project[] = [
     tags: ['Branding', 'Vector'],
     size: 'small'
   },
+
   {
     id: 'logo-3',
     title: 'PUR Biomarkt',
@@ -206,7 +217,7 @@ export const PROJECTS: Project[] = [
     ],
     tools: ['Illustrator', 'Photoshop'],
     tags: ['Branding', 'Vector'],
-    size: 'small'
+    size: 'tall'
   },
 
   {

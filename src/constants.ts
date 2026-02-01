@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'web-8',
-    title: 'Peppa Pig — Fan-Seite ',
+    title: 'Peppa Pig — Fan-Seite',
     peppapigUrl: "https://steelmaker02.github.io/Peppa-Fan/",
     category: ProjectCategory.WEB,
     year: '2026',
@@ -129,6 +129,18 @@ export const PROJECTS: Project[] = [
     fullWebImage: 'images/projects/web8_full.webp',
     tools: ['Figma', 'Illustrator'],
     tags: ['Kinder', 'Peppa'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-9',
+    title: 'Mandy Aquagrim',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web9_thumb.webp',
+    fullWebImage: 'images/projects/web9_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Kinder', 'Aquagrim'],
     size: 'small'
   },
 
@@ -243,7 +255,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'ai-2',
     title: '8k Muster zum Drucken',
-    adobestockUrl: "https://stock.adobe.com/de/contributor/212996395/dmytro?load_type=author&prev_url=detail",
+    adobestockUrl: "https://stock.adobe.com/de/contributor/212996395/dmytro?load_type=author&prev_url=detail/",
     category: ProjectCategory.AI,
     year: '2025',
     coverImage: 'images/projects/ai11.webp',

@@ -195,6 +195,30 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ps-3',
+    title: 'Der Kreis – Gruppenpräsentation',
+    category: ProjectCategory.PHOTOSHOP,
+    year: '2025',
+    coverImage: 'images/projects/ps3_thumb.webp',
+    gallery: [
+      'images/projects/ps3_detail1.webp',
+      'images/projects/ps3_detail2.webp',
+      'images/projects/ps3_detail3.webp',
+      'images/projects/ps3_detail4.webp',
+      'images/projects/ps3_detail5.webp',
+      'images/projects/ps3_detail6.webp',
+      'images/projects/ps3_detail7.webp',
+      'images/projects/ps3_detail8.webp',
+      'images/projects/ps3_detail9.webp',
+      'images/projects/ps3_detail10.webp',
+      'images/projects/ps3_detail11.webp'
+    ],
+    tools: ['Photoshop', 'Canva'],
+    tags: ['Präsentation', 'Gruppenarbeit'],
+    size: 'wide'
+  },
+
+  {
     id: 'logo-1',
     title: 'Gipfelglück',
     category: ProjectCategory.ILLUSTRATOR,

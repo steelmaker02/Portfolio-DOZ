@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     tags: ['Education', 'UI/UX'],
     size: 'large'
   },
-  
+
   {
     id: 'web-2',
     title: 'Odessa Balletttheater',
@@ -154,6 +154,18 @@ export const PROJECTS: Project[] = [
     tools: ['Figma', 'Illustrator'],
     tags: ['Tattoo', 'Studio'],
     size: 'wide'
+  },
+
+  {
+    id: 'web-11',
+    title: 'Gipfelglück — Outdoor Bekleidung',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web11_thumb.webp',
+    fullWebImage: 'images/projects/web11_full.webp',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Shop', 'Outdoor'],
+    size: 'small'
   },
 
   {

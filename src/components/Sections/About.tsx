@@ -126,7 +126,7 @@ const About: React.FC = () => {
                     transition={{ delay: i * 0.1 }}
                     className="bg-surface border border-white/5 p-5 rounded-2xl h-full cursor-default"
                   >
-                    <h4 className="text-white font-mono text-[10px] uppercase mb-3 opacity-50 tracking-widest">
+                    <h4 className="text-accent font-mono text-[10px] uppercase mb-3 opacity-50 tracking-widest">
                       {group.category}
                     </h4>
 

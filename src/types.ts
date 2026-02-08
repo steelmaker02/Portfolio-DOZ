@@ -27,6 +27,7 @@ export interface Project {
   workoutUrl?: string;
   peppapigUrl?: string
   alvarezchocolatUrl?: string
+  lenaweberfotografieUrl?: string
 
   description?: string;
 

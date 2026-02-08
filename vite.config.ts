@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
 
-  base: '/Portfolio-DOZ/',
+  base: '/',
 
   build: {
     outDir: 'dist',

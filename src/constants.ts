@@ -169,6 +169,19 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'web-12',
+    title: 'Lena Weber — Fotografie',
+    lenaweberfotografieUrl: "https://github.com/steelmaker02/lena-weber-fotografie",
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web12_thumb.webp',
+    fullWebImage: 'images/projects/web12_full.webp',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Portfolio', 'Foto'],
+    size: 'small'
+  },
+
+  {
     id: 'ps-1',
     title: 'Futurelab',
     category: ProjectCategory.PHOTOSHOP,

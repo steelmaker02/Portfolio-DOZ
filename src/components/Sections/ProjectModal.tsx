@@ -167,6 +167,18 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 </a>
                             )}
 
+                            {project.lenaweberfotografieUrl && (
+                                <a
+                                    href={project.lenaweberfotografieUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#784830] hover:border-[#784830] hover:shadow-[0_0_15px_rgba(120,72,48,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Seite</span>
+                                </a>
+                            )}
+
                             {project.adobestockUrl && (
                                 <a
                                     href={project.adobestockUrl}

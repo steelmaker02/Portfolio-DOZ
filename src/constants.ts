@@ -171,7 +171,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
-    lenaweberfotografieUrl: "https://github.com/steelmaker02/lena-weber-fotografie",
+    lenaweberfotografieUrl: "https://steelmaker02.github.io/lena-weber-fotografie/",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web12_thumb.webp',

@@ -46,6 +46,7 @@ const Footer: React.FC = () => {
 
     const privacyContent = (
         <div className="space-y-8 font-light text-secondary">
+
             <div>
                 <h3 className="text-white font-bold mb-2 text-lg">1. Datenschutz auf einen Blick</h3>
                 <p className="mb-2"><strong className="text-white">Allgemeine Hinweise</strong></p>
@@ -55,25 +56,59 @@ const Footer: React.FC = () => {
             </div>
 
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">2. Hosting</h3>
+                <h3 className="text-white font-bold mb-2 text-lg">2. Verantwortlicher</h3>
+                <p>
+                    Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) ist die im Impressum genannte Person.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-white font-bold mb-2 text-lg">3. Hosting</h3>
                 <p className="mb-2"><strong className="text-white">Hosting bei GitHub Pages</strong></p>
                 <p>
                     Diese Website wird bei GitHub Pages gehostet. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.
                 </p>
                 <p className="mt-2">
-                    Wenn Sie unsere Website besuchen, erfasst GitHub Ihre IP-Adresse sowie Informationen über den Browser und das genutzte Gerät, um die Sicherheit und Stabilität der Website zu gewährleisten. Diese Daten werden in Server-Log-Dateien gespeichert.
+                    Beim Besuch dieser Website erfasst GitHub unter anderem Ihre IP-Adresse sowie Informationen über den verwendeten Browser und das Betriebssystem. Diese Daten werden in sogenannten Server-Log-Dateien gespeichert und dienen der Gewährleistung von Sicherheit und Stabilität der Website.
+                </p>
+                <p className="mt-2">
+                    Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren und stabilen Bereitstellung der Website).
+                </p>
+                <p className="mt-2">
+                    Da GitHub seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Die Datenübertragung erfolgt auf Grundlage der von der Europäischen Kommission genehmigten Standardvertragsklauseln (SCC).
                 </p>
             </div>
 
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">3. Kontakt per E-Mail</h3>
-                <p className="mb-2"><strong className="text-white">Kein Kontaktformular</strong></p>
+                <h3 className="text-white font-bold mb-2 text-lg">4. Kontakt per E-Mail</h3>
                 <p>
-                    Wir verzichten auf unserer Website auf ein Kontaktformular. Wenn Sie uns per E-Mail kontaktieren, wird Ihre E-Mail inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                    Auf dieser Website wird kein Kontaktformular verwendet. Wenn Sie per E-Mail Kontakt aufnehmen, werden Ihre Angaben inklusive der von Ihnen übermittelten personenbezogenen Daten ausschließlich zur Bearbeitung der Anfrage gespeichert.
                 </p>
-                <p className="mt-2 mb-2"><strong className="text-white">Cookies</strong></p>
+                <p className="mt-2">
+                    Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) oder Art. 6 Abs. 1 lit. a DSGVO (Einwilligung). Eine Weitergabe der Daten an Dritte erfolgt nicht.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-white font-bold mb-2 text-lg">5. Cookies und Tracking</h3>
                 <p>
-                    Diese Seite verwendet keine Tracking-Cookies oder Analyse-Tools (wie Google Analytics). Es werden lediglich technisch notwendige Daten zur Bereitstellung der Seite geladen.
+                    Diese Website verwendet keine Cookies, kein Tracking und keine Analyse-Tools (z. B. Google Analytics). Es werden ausschließlich technisch notwendige Daten zur Bereitstellung der Website verarbeitet.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-white font-bold mb-2 text-lg">6. Rechte der betroffenen Personen</h3>
+                <p className="mb-2">Sie haben jederzeit das Recht:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten (Art. 15 DSGVO),</li>
+                    <li>die Berichtigung unrichtiger Daten zu verlangen (Art. 16 DSGVO),</li>
+                    <li>die Löschung Ihrer Daten zu verlangen (Art. 17 DSGVO),</li>
+                    <li>die Einschränkung der Verarbeitung zu verlangen (Art. 18 DSGVO),</li>
+                    <li>Widerspruch gegen die Verarbeitung Ihrer Daten einzulegen (Art. 21 DSGVO),</li>
+                    <li>eine erteilte Einwilligung jederzeit zu widerrufen (Art. 7 Abs. 3 DSGVO).</li>
+                </ul>
+                <p className="mt-4">
+                    Zudem haben Sie das Recht, sich bei einer zuständigen Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO).
                 </p>
             </div>
         </div>

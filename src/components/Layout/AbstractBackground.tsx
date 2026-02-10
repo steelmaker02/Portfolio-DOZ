@@ -87,6 +87,7 @@ const AbstractBackground: React.FC = () => {
                 <img
                     src="images/shapes/shape3.webp"
                     alt="Abstract 3D Background Shape"
+                    role="presentation"
                     loading="lazy"
                     decoding="async"
                     // @ts-ignore

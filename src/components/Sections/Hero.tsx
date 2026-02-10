@@ -87,6 +87,7 @@ const Hero: React.FC = () => {
               alt="Portrait"
               width="800"
               height="1000"
+              // @ts-ignore
               fetchPriority="high"
               loading="eager"
               decoding="sync"

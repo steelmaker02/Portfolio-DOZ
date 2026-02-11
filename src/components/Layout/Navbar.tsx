@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
       <div className="w-full max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
 
         <a href="#" className="relative block z-[60]" aria-label="Home" onClick={() => setMobileMenuOpen(false)}>
-          <AnimatedLogo />
+          <AnimatedLogo isAtTop={!isScrolled} />
         </a>
 
         <nav className="hidden lg:flex gap-8 items-center">

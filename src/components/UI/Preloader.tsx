@@ -11,7 +11,7 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
     useEffect(() => {
         const timerHideLogo = setTimeout(() => {
             setIsLogoVisible(false);
-        }, 2500);
+        }, 3000);
 
         const timerOpenCurtain = setTimeout(() => {
             onComplete();

@@ -45,15 +45,14 @@ const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             </motion.div>
 
             <div className="relative flex items-center justify-center">
-                <motion.img
-                    src="images/logo_big.svg"
-                    alt="Loading..."
-
-                    width="200"
-                    height="200"
-                    fetchPriority="high"
-                    loading="eager"
-
+                <motion.video
+                    src="images/logo_big.webm"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    width={200}
+                    height={200}
                     className="w-32 md:w-48 object-contain relative z-10"
                     variants={{
                         hidden: {

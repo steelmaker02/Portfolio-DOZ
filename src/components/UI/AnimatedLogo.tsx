@@ -1,98 +1,108 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 interface AnimatedLogoProps {
-    isAtTop: boolean;
+    isAtTop?: boolean;
 }
 
-const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ isAtTop }) => {
-    const particles = [
-        { id: 1, x: [0, 15, -10, 0], y: [0, -10, 10, 0], size: 2, delay: 0 },
-        { id: 2, x: [0, -20, 15, 0], y: [0, 15, -15, 0], size: 3, delay: 0.5 },
-        { id: 3, x: [0, 10, -20, 0], y: [0, -20, 5, 0], size: 2, delay: 1 },
-    ];
+const AnimatedLogo: React.FC<AnimatedLogoProps> = ({ isAtTop = true }) => {
+    const glitchStyles = `
+    @keyframes glitch-anim-1 {
+      0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+      20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+      40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+      60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+      80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
+      100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
+    }
+    @keyframes glitch-anim-2 {
+      0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+      20% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
+      40% { clip-path: inset(30% 0 20% 0); transform: translate(2px, 1px); }
+      60% { clip-path: inset(15% 0 80% 0); transform: translate(-1px, -2px); }
+      80% { clip-path: inset(55% 0 10% 0); transform: translate(1px, 2px); }
+      100% { clip-path: inset(40% 0 30% 0); transform: translate(-2px, 1px); }
+    }
+    
+    /* Классы для активации анимации */
+    .glitch-layer-1 {
+      animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+      opacity: 0;
+    }
+    .glitch-layer-2 {
+      animation: glitch-anim-2 3s infinite linear alternate-reverse;
+      opacity: 0;
+    }
+
+    /* Включаем анимацию при наведении ИЛИ автоматически каждые пару секунд */
+    .logo-container:hover .glitch-layer-1,
+    .logo-container.auto-glitch .glitch-layer-1 {
+      opacity: 0.8;
+    }
+    .logo-container:hover .glitch-layer-2,
+    .logo-container.auto-glitch .glitch-layer-2 {
+      opacity: 0.8;
+    }
+  `;
 
     return (
-        <div className="relative flex items-center justify-center group cursor-pointer">
+        <>
+            <style>{glitchStyles}</style>
 
-            <AnimatePresence>
-                {isAtTop && (
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{
-                            opacity: [0.2, 0.4, 0.2],
-                            scale: [1, 1.2, 1]
-                        }}
-                        exit={{ opacity: 0 }}
-                        transition={{
-                            duration: 4,
+            <motion.div
+                className="logo-container relative w-12 h-12 flex items-center justify-center"
+                initial="idle"
+                animate={isAtTop ? "glitch" : "idle"}
+                variants={{
+                    idle: { opacity: 1 },
+                    glitch: {
+                        opacity: 1,
+                        transition: {
                             repeat: Infinity,
-                            ease: "easeInOut",
-                            delay: 1.8
-                        }}
-                        className="absolute inset-0 bg-accent/20 blur-xl rounded-full"
-                    />
-                )}
-            </AnimatePresence>
-
-            <AnimatePresence>
-                {isAtTop && particles.map((p) => (
-                    <motion.div
-                        key={p.id}
-                        initial={{ opacity: 0 }}
-                        animate={{
-                            x: p.x,
-                            y: p.y,
-                            opacity: [0, 0.7, 0]
-                        }}
-                        exit={{ opacity: 0 }}
-                        transition={{
-                            duration: 5 + p.id,
-                            repeat: Infinity,
-                            delay: p.delay + 2,
-                            ease: "linear",
-                        }}
-                        className="absolute bg-accent rounded-full"
-                        style={{ width: p.size, height: p.size }}
-                    />
-                ))}
-            </AnimatePresence>
-
-            <motion.img
-                src="images/logo.svg"
-                alt="Logo"
-                width="48"
-                height="48"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                    opacity: 1,
-                    y: 0,
-                    rotateY: isAtTop ? [0, 10, -10, 0] : 0
+                            repeatType: "reverse",
+                            repeatDelay: 4,
+                            duration: 0.2
+                        }
+                    }
                 }}
-                transition={{
-                    opacity: { delay: 1.2, duration: 0.8 },
-                    y: { delay: 1.2, duration: 0.8 },
-                    rotateY: { duration: 6, repeat: Infinity, ease: "easeInOut" }
-                }}
-                className="relative z-10 h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:brightness-125 group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-            />
+            >
 
-            {isAtTop && (
-                <div className="absolute inset-0 z-20 overflow-hidden rounded-lg pointer-events-none">
-                    <motion.div
-                        animate={{ x: ['-200%', '200%'] }}
-                        transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            repeatDelay: 5,
-                            delay: 3,
-                            ease: "easeInOut",
-                        }}
-                        className="w-1/2 h-full bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12"
-                    />
-                </div>
-            )}
-        </div>
+                <motion.img
+                    src="images/logo.svg"
+                    alt=""
+                    className="glitch-layer-1 absolute inset-0 w-full h-full object-contain"
+                    style={{
+                        filter: "drop-shadow(2px 0 red)",
+                        mixBlendMode: "screen",
+                    }}
+                    variants={{
+                        idle: { opacity: 0 },
+                        glitch: { opacity: [0, 1, 0, 1, 0] }
+                    }}
+                />
+
+                <motion.img
+                    src="images/logo.svg"
+                    alt=""
+                    className="glitch-layer-2 absolute inset-0 w-full h-full object-contain"
+                    style={{
+                        filter: "drop-shadow(-2px 0 blue)",
+                        mixBlendMode: "screen"
+                    }}
+                    variants={{
+                        idle: { opacity: 0 },
+                        glitch: { opacity: [0, 1, 0, 0, 1] }
+                    }}
+                />
+
+                <img
+                    src="images/logo.svg"
+                    alt="Logo"
+                    className="relative z-10 w-full h-full object-contain"
+                />
+
+            </motion.div>
+        </>
     );
 };
 

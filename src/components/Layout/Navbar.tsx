@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NAV_ITEMS } from '../../constants';
 import { Menu, X } from 'lucide-react';
+import AnimatedLogo from '../UI/AnimatedLogo';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,14 +47,8 @@ const Navbar: React.FC = () => {
     >
       <div className="w-full max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center">
 
-        <a href="#" className="relative block group z-[60]" onClick={() => setMobileMenuOpen(false)}>
-          <img
-            src="images/logo.svg"
-            alt="Logo"
-            width="48"
-            height="48"
-            className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 -ml-0 md:-ml-0"
-          />
+        <a href="#" className="relative block z-[60]" aria-label="Home" onClick={() => setMobileMenuOpen(false)}>
+          <AnimatedLogo />
         </a>
 
         <nav className="hidden lg:flex gap-8 items-center">

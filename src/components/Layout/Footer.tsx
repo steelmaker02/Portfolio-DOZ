@@ -8,37 +8,56 @@ const Footer: React.FC = () => {
     const [modalOpen, setModalOpen] = useState<'impressum' | 'privacy' | null>(null);
 
     const impressumContent = (
-        <div className="space-y-8 font-light">
+        <div className="space-y-6 font-light text-sm md:text-base">
+
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">Angaben gemäß § 5 TMG</h3>
-                <p className="text-secondary">
-                    {USER_INFO.name} {USER_INFO.surname}<br />
-                    Ringstraße 43 <br />
-                    24534 Neumünster <br />
+                <h3 className="text-white font-bold mb-1">Angaben gemäß § 5 TMG</h3>
+                <p className="text-secondary leading-relaxed">
+                    Dmytro Zaiats<br />
+                    Ringstraße 43<br />
+                    24534 Neumünster
                 </p>
             </div>
 
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">Kontakt</h3>
-                <p className="text-secondary">
-                    E-Mail: {USER_INFO.email}<br />
-                    Telefon: +49 (160) 592 0213
+                <h3 className="text-white font-bold mb-1">Kontakt</h3>
+                <p className="text-secondary leading-relaxed">
+                    Telefon: +49 (160) 592 0213<br />
+                    E-Mail: zaiats.design@gmail.com
                 </p>
             </div>
 
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h3>
+                <h3 className="text-white font-bold mb-1">Verantwortlich für den Inhalt</h3>
                 <p className="text-secondary">
-                    {USER_INFO.name} {USER_INFO.surname}<br />
+                    Dmytro Zaiats<br />
                     (Anschrift wie oben)
                 </p>
             </div>
 
             <div>
-                <h3 className="text-white font-bold mb-2 text-lg">EU-Streitschlichtung</h3>
+                <h3 className="text-white font-bold mb-1">Urheberrecht & Bildnachweise</h3>
                 <p className="text-secondary">
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/.
-                    Unsere E-Mail-Adresse finden Sie oben im Impressum.
+                    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten (Designs, Codes, Texte) unterliegen dem deutschen Urheberrecht.
+                    <br /><br />
+                    <strong>Bildquellen:</strong> Soweit die Inhalte auf dieser Seite nicht vom Betreiber selbst erstellt wurden (z.B. Fotos in Design-Entwürfen), werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Genutzte Bilder stammen aus eigenen Quellen, KI-Generierung oder lizenzfreien Datenbanken (Unsplash, Pexels, Adobe Stock).
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-white font-bold mb-1">Hinweis zum Portfolio</h3>
+                <p className="text-secondary">
+                    Die in diesem Portfolio dargestellten Projekte dienen teilweise zu Demonstrationszwecken (Konzeptarbeiten/Studienprojekte) im Rahmen der Ausbildung und beruflichen Weiterentwicklung. Marken- oder Firmennamen in diesen Konzepten werden nur zur Veranschaulichung des Designs verwendet.
+                </p>
+            </div>
+
+            <div>
+                <h3 className="text-white font-bold mb-1">EU-Streitschlichtung</h3>
+                <p className="text-secondary">
+                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+                    <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline ml-1">
+                        https://ec.europa.eu/consumers/odr/
+                    </a>.
                 </p>
             </div>
         </div>
@@ -76,6 +95,10 @@ const Footer: React.FC = () => {
                 </p>
                 <p className="mt-2">
                     Da GitHub seinen Sitz in den USA hat, kann es zu einer Übermittlung personenbezogener Daten in ein Drittland kommen. Die Datenübertragung erfolgt auf Grundlage der von der Europäischen Kommission genehmigten Standardvertragsklauseln (SCC).
+                </p>
+                <p className="mt-4 mb-2"><strong className="text-white">Domain-Hosting bei Strato</strong></p>
+                <p>
+                    Die Domain dieser Website wird von der <strong>Strato AG</strong> (Otto-Ostrowski-Straße 7, 10249 Berlin, Deutschland) verwaltet. Wenn Sie unsere Website aufrufen, werden technische Daten (z. B. IP-Adresse) über die DNS-Server von Strato geleitet, um die Verbindung herzustellen.
                 </p>
             </div>
 

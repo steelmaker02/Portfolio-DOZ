@@ -249,7 +249,7 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.PHOTOSHOP,
     year: '2026',
     coverImage: 'images/projects/ps4_thumb.webp',
-    musikmagazinUrl: 'images/documents/SOUNDSPHERE - Musikmagazin.pdf',
+    musikmagazinUrl: 'images/documents/SOUNDSPHERE_Musikmagazin.pdf',
     gallery: [
       'images/projects/ps4_detail1.webp',
       'images/projects/ps4_detail2.webp',

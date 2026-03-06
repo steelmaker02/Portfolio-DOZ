@@ -119,6 +119,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 </a>
                             )}
 
+                            {project.musikmagazinUrl && (
+                                <a
+                                    href={project.musikmagazinUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                >
+                                    Musikmagazin PDF
+                                </a>
+                            )}
+
                             {project.instagramUrl && (
                                 <a
                                     href={project.instagramUrl}

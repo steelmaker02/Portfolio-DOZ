@@ -244,6 +244,24 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ps-4',
+    title: 'SOUNDSPHERE - Musikmagazin',
+    category: ProjectCategory.PHOTOSHOP,
+    year: '2026',
+    coverImage: 'images/projects/ps4_thumb.webp',
+    musikmagazinUrl: 'images/documents/SOUNDSPHERE - Musikmagazin.pdf',
+    gallery: [
+      'images/projects/ps4_detail1.webp',
+      'images/projects/ps4_detail2.webp',
+      'images/projects/ps4_detail3.webp',
+      'images/projects/ps4_detail4.webp'
+    ],
+    tools: ['InDesign', 'Musikmagazin'],
+    tags: ['Magazin', 'Musikschule'],
+    size: 'wide'
+  },
+
+  {
     id: 'logo-1',
     title: 'Gipfelglück',
     category: ProjectCategory.ILLUSTRATOR,

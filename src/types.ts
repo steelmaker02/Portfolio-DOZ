@@ -25,9 +25,10 @@ export interface Project {
   instagramUrl?: string;
   adobestockUrl?: string;
   workoutUrl?: string;
-  peppapigUrl?: string
-  alvarezchocolatUrl?: string
-  lenaweberfotografieUrl?: string
+  peppapigUrl?: string;
+  alvarezchocolatUrl?: string;
+  lenaweberfotografieUrl?: string;
+  musikmagazinUrl?: string;
 
   description?: string;
 

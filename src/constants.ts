@@ -79,7 +79,8 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-5',
     title: 'Alvarez Chocolat',
-    alvarezchocolatUrl: "https://steelmaker02.github.io/Alvarez/",
+    liveUrl: "https://steelmaker02.github.io/Alvarez/",
+    liveButtonColor: "#784830",
     category: ProjectCategory.WEB,
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
@@ -92,7 +93,8 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-6',
     title: 'Cardio Training',
-    workoutUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
+    liveUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
+    liveButtonColor: "#3fd47d",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web6_thumb.webp',
@@ -116,7 +118,8 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-8',
     title: 'Peppa Pig — Fan-Seite',
-    peppapigUrl: "https://steelmaker02.github.io/Peppa-Fan/",
+    liveUrl: "https://steelmaker02.github.io/Peppa-Fan/",
+    liveButtonColor: "#ff8a80",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web8_thumb.webp',
@@ -162,7 +165,8 @@ export const PROJECTS: Project[] = [
   {
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
-    lenaweberfotografieUrl: "https://steelmaker02.github.io/lena-weber-fotografie/",
+    liveUrl: "https://steelmaker02.github.io/lena-weber-fotografie/",
+    liveButtonColor: "#e8c6b5",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web12_thumb.webp',

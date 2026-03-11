@@ -32,6 +32,9 @@ export interface Project {
 
   description?: string;
 
+  liveUrl?: string;
+  liveButtonColor?: string;
+
   tools: string[];
   tags: string[];
   size?: CardSize;

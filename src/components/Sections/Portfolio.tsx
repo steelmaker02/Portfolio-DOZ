@@ -28,26 +28,14 @@ const Portfolio: React.FC = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.05
-      }
+      transition: { staggerChildren: 0.1, delayChildren: 0.05 }
     },
-    exit: {
-      opacity: 0,
-      filter: "blur(5px)",
-      transition: { duration: 0.3 }
-    }
+    exit: { opacity: 0, filter: "blur(5px)", transition: { duration: 0.3 } }
   };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30, filter: "blur(10px)" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: { duration: 0.5, ease: "easeOut" }
-    }
+    visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.5, ease: "easeOut" } }
   };
 
   return (
@@ -100,11 +88,9 @@ const Portfolio: React.FC = () => {
                   variants={cardVariants}
                   layout
                   key={project.id}
-
                   onMouseEnter={() => setHoveredId(project.id)}
                   onMouseLeave={() => setHoveredId(null)}
                   onClick={() => setSelectedProject(project)}
-
                   className={`relative break-inside-avoid mb-6 rounded-2xl overflow-hidden cursor-pointer group bg-[#050505] border transition-all duration-500 ease-out ${isHovered
                     ? 'z-10 scale-[1.02] border-accent/50 shadow-2xl shadow-black/50 grayscale-0 opacity-100'
                     : isDimmed
@@ -123,28 +109,27 @@ const Portfolio: React.FC = () => {
                     />
                   </div>
 
+                  {project.liveUrl && (
+                    <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
+                      <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      <span className="text-white text-[10px] font-mono font-bold uppercase tracking-wider">Coded</span>
+                    </div>
+                  )}
+
                   <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                     <div className="bg-black/90 backdrop-blur-md p-3 md:p-4 rounded-xl border border-white/10 group-hover:border-accent/40 shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-
                       <h3 className="text-white group-hover:text-white font-bold text-sm md:text-lg flex justify-between items-center transition-colors">
                         {project.title}
-
-                        <ArrowUpRight
-                          size={18}
-                          className="text-white transition-all duration-300 group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110"
-                        />
+                        <ArrowUpRight size={18} className="text-white transition-all duration-300 group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:scale-110" />
                       </h3>
-
                       <div className="relative h-4 overflow-hidden mt-1">
                         <p className="text-white/60 text-[10px] md:text-xs font-mono uppercase transition-transform duration-300 group-hover:-translate-y-full">
                           {project.category}
                         </p>
-
                         <p className="absolute inset-0 text-accent text-[10px] md:text-xs font-mono uppercase font-bold transition-transform duration-300 translate-y-full group-hover:translate-y-0">
                           Projekt ansehen
                         </p>
                       </div>
-
                     </div>
                   </div>
 

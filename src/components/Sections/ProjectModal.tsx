@@ -14,22 +14,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     const [canScrollDown, setCanScrollDown] = useState(false);
 
     useEffect(() => {
-        if (project) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
+        if (project) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = 'unset';
+        return () => { document.body.style.overflow = 'unset'; };
     }, [project]);
 
     useEffect(() => {
         if (project) {
             window.history.pushState({ modal: true }, '', window.location.href);
-            const handlePopState = () => { onClose(); };
+            const handlePopState = () => onClose();
             window.addEventListener('popstate', handlePopState);
-            return () => { window.removeEventListener('popstate', handlePopState); };
+            return () => window.removeEventListener('popstate', handlePopState);
         }
     }, [project]);
 
@@ -50,9 +45,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     const checkScroll = () => {
         if (!contentRef.current) return;
         const { scrollTop, scrollHeight, clientHeight } = contentRef.current;
-        const isScrollable = scrollHeight > clientHeight;
-        const isNotAtBottom = scrollTop + clientHeight < scrollHeight - 20;
-        setCanScrollDown(isScrollable && isNotAtBottom);
+        setCanScrollDown(scrollHeight > clientHeight && scrollTop + clientHeight < scrollHeight - 20);
     };
 
     useEffect(() => {
@@ -66,11 +59,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     }, [project]);
 
     const handleManualClose = () => {
-        if (window.history.state?.modal) {
-            window.history.back();
-        } else {
-            onClose();
-        }
+        if (window.history.state?.modal) window.history.back();
+        else onClose();
     };
 
     if (!project) return null;
@@ -108,58 +98,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                         <div className="pointer-events-auto flex flex-wrap items-center gap-3 justify-end self-start md:self-auto">
 
-                            {project.peppapigUrl && (
+                            {project.liveUrl && (
                                 <a
-                                    href={project.peppapigUrl}
+                                    href={project.liveUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#ff8a80] hover:border-[#ff8a80] hover:shadow-[0_0_15px_rgba(255,138,128,0.5)]"
+                                    style={{ '--hover-color': project.liveButtonColor || '#3B82F6' } as React.CSSProperties}
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[var(--hover-color)] hover:border-[var(--hover-color)] hover:shadow-[0_0_15px_var(--hover-color)]"
                                 >
                                     <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Site</span>
-                                </a>
-                            )}
-                            {project.workoutUrl && (
-                                <a
-                                    href={project.workoutUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#3fd47d] hover:border-[#3fd47d] hover:shadow-[0_0_15px_rgba(63,212,125,0.5)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Site</span>
-                                </a>
-                            )}
-                            {project.alvarezchocolatUrl && (
-                                <a
-                                    href={project.alvarezchocolatUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#784830] hover:border-[#784830] hover:shadow-[0_0_15px_rgba(120,72,48,0.5)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Site</span>
-                                </a>
-                            )}
-                            {project.lenaweberfotografieUrl && (
-                                <a
-                                    href={project.lenaweberfotografieUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#e8c6b5] hover:shadow-[0_0_15px_rgba(170,125,105,0.35)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Site</span>
+                                    <span className="hidden sm:inline">Live Seite</span>
                                 </a>
                             )}
 
                             {project.musikmagazinUrl && (
-                                <a
-                                    href={project.musikmagazinUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                                >
+                                <a href={project.musikmagazinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
                                     <BookOpen size={18} />
                                     <span className="hidden sm:inline">Magazin PDF</span>
                                 </a>
@@ -176,32 +129,19 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 </a>
                             )}
                             {project.instagramUrl && (
-                                <a
-                                    href={project.instagramUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-pink-600 hover:border-pink-600 hover:shadow-[0_0_15px_rgba(219,39,119,0.5)]"
-                                >
+                                <a href={project.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-pink-600 hover:border-pink-600 hover:shadow-[0_0_15px_rgba(219,39,119,0.5)]">
                                     <Instagram size={18} />
                                     <span className="hidden sm:inline">Instagram</span>
                                 </a>
                             )}
                             {project.adobestockUrl && (
-                                <a
-                                    href={project.adobestockUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-orange-600 hover:border-orange-600 hover:shadow-[0_0_15px_rgba(234,88,12,0.5)]"
-                                >
+                                <a href={project.adobestockUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-orange-600 hover:border-orange-600 hover:shadow-[0_0_15px_rgba(234,88,12,0.5)]">
                                     <Image size={18} />
                                     <span className="hidden sm:inline">Adobe Stock</span>
                                 </a>
                             )}
 
-                            <button
-                                onClick={handleManualClose}
-                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent"
-                            >
+                            <button onClick={handleManualClose} className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent">
                                 <X size={24} />
                             </button>
 
@@ -214,7 +154,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         className="flex-1 overflow-y-auto p-0 bg-[#0a0a0a]"
                         data-lenis-prevent="true"
                     >
-
                         {project.description && (
                             <div className="w-full pt-24 md:pt-24 pl-6 md:pl-8 pr-4 md:pr-6 pb-0">
                                 <p className="text-xs md:text-sm text-secondary/70 font-light max-w-3xl text-left">
@@ -224,22 +163,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         )}
 
                         {project.category === ProjectCategory.WEB && (
-                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-3 md:pt-4' : 'pt-24 md:pt-24'}`}>
+                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-4 md:pt-6' : 'pt-24 md:pt-28'}`}>
                                 {project.videoUrl && (
-                                    <video
-                                        src={project.videoUrl}
-                                        autoPlay loop muted playsInline
-                                        className="w-full h-auto block rounded-lg shadow-2xl"
-                                    />
+                                    <video src={project.videoUrl} autoPlay loop muted playsInline className="w-full h-auto block rounded-lg shadow-2xl" />
                                 )}
                                 {project.fullWebImage && (
                                     <div className="w-full">
-                                        <img
-                                            src={project.fullWebImage}
-                                            alt="Full Design"
-                                            className="w-full h-auto block"
-                                            loading="eager"
-                                        />
+                                        <img src={project.fullWebImage} alt="Full Design" className="w-full h-auto block" loading="eager" />
                                     </div>
                                 )}
                             </div>
@@ -249,38 +179,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-3 md:pt-4' : 'pt-24 md:pt-24'}`}>
-
+                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-4 md:pt-6' : 'pt-24 md:pt-28'}`}>
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">
                                         {project.gallery?.map((item, index) => {
                                             const src = typeof item === 'string' ? item : item.src;
                                             const title = typeof item === 'string' ? null : item.title;
-
                                             const isVideo = src.toLowerCase().endsWith('.mp4');
 
                                             return (
                                                 <div key={index} className="space-y-4">
                                                     <div className="flex justify-center">
                                                         {isVideo ? (
-                                                            <video
-                                                                src={src}
-                                                                autoPlay loop muted playsInline
-                                                                className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
-                                                            />
+                                                            <video src={src} autoPlay loop muted playsInline className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]" />
                                                         ) : (
-                                                            <img
-                                                                src={src}
-                                                                alt={`Detail ${index}`}
-                                                                className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
-                                                                loading={index < 2 ? "eager" : "lazy"}
-                                                                decoding="async"
-                                                            />
+                                                            <img src={src} alt={`Detail ${index}`} className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]" loading={index < 2 ? "eager" : "lazy"} decoding="async" />
                                                         )}
                                                     </div>
                                                     {title && (
-                                                        <h4 className="text-white/70 font-mono text-xs md:text-sm tracking-widest uppercase pl-2">
-                                                            {title}
-                                                        </h4>
+                                                        <h4 className="text-white/70 font-mono text-xs md:text-sm tracking-widest uppercase pl-2">{title}</h4>
                                                     )}
                                                 </div>
                                             );
@@ -292,18 +208,9 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                     <AnimatePresence>
                         {canScrollDown && (
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 20 }}
-                                className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
-                            >
-
+                            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} className="absolute bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
                                 <div className="bg-black/90 backdrop-blur-md border border-orange-500/30 text-orange-500 rounded-full p-3 shadow-[0_0_20px_rgba(249,115,22,0.4)]">
-                                    <motion.div
-                                        animate={{ y: [0, 4, 0] }}
-                                        transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                                    >
+                                    <motion.div animate={{ y: [0, 4, 0] }} transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}>
                                         <ArrowDown size={24} />
                                     </motion.div>
                                 </div>

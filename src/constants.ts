@@ -39,7 +39,6 @@ export const PROJECTS: Project[] = [
     year: '2025',
     coverImage: 'images/projects/web1_thumb.png',
     fullWebImage: 'images/projects/web1_full.webp',
-    description: 'Kurzer Kommentar: Fokus auf klare Benutzerführung und Barrierefreiheit.',
     tools: ['Figma', 'Photoshop', 'Illustrator'],
     tags: ['Education', 'UI/UX'],
     size: 'large'
@@ -85,7 +84,7 @@ export const PROJECTS: Project[] = [
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
     fullWebImage: 'images/projects/web5_full.webp',
-    description: 'Konzept für eine Premium-Schokoladenmarke.',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
     tools: ['Figma', 'After Effects'],
     tags: ['Food', 'Landing Page'],
     size: 'wide'
@@ -98,6 +97,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web6_thumb.webp',
     fullWebImage: 'images/projects/web6_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
     tools: ['Figma', 'Illustrator'],
     tags: ['Sport', 'Workout'],
     size: 'small'
@@ -121,6 +121,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web8_thumb.webp',
     fullWebImage: 'images/projects/web8_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
     tools: ['Figma', 'Illustrator'],
     tags: ['Kinder', 'Peppa'],
     size: 'small'
@@ -166,6 +167,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web12_thumb.webp',
     fullWebImage: 'images/projects/web12_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
     tools: ['Figma', 'Photoshop'],
     tags: ['Portfolio', 'Foto'],
     size: 'small'
@@ -177,7 +179,6 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps1_thumb.webp',
-    description: 'Compositing Arbeit aus über 50 Einzelbildern.',
     gallery: [
       'images/projects/ps1_detail1.webp',
       'images/projects/ps1_detail2.webp',
@@ -227,6 +228,7 @@ export const PROJECTS: Project[] = [
       'images/projects/ps3_detail10.webp',
       'images/projects/ps3_detail11.webp'
     ],
+    description: 'Dieses Projekt wurde im Team entwickelt, um die Symbolik und Bedeutung des Kreises gestalterisch zu erforschen.',
     tools: ['Photoshop', 'Canva'],
     tags: ['Präsentation', 'Gruppenarbeit'],
     size: 'wide'
@@ -244,6 +246,7 @@ export const PROJECTS: Project[] = [
       'images/projects/ps4_detail3.webp',
       'images/projects/ps4_detail4.webp'
     ],
+    description: 'Dieses Magazinlayout wurde mit Adobe InDesign entworfen und umgesetzt.',
     tools: ['InDesign', 'Musikmagazin'],
     tags: ['Magazin', 'Musikschule'],
     size: 'wide'

@@ -179,7 +179,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'ps-1',
-    title: 'Futurelab — Event zum Thema Zukunft',
+    title: 'Futurelab — Zukunftsmesse',
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps1_thumb.webp',
@@ -275,7 +275,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'logo-2',
-    title: 'Nachteule — moderner Verlag',
+    title: 'Nachteule — Moderner Verlag',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
     coverImage: 'images/projects/logo2_thumb.webp',

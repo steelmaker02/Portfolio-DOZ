@@ -119,7 +119,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Live Site</span>
                                 </a>
                             )}
-
                             {project.workoutUrl && (
                                 <a
                                     href={project.workoutUrl}
@@ -131,7 +130,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Live Site</span>
                                 </a>
                             )}
-
                             {project.alvarezchocolatUrl && (
                                 <a
                                     href={project.alvarezchocolatUrl}
@@ -143,7 +141,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Live Site</span>
                                 </a>
                             )}
-
                             {project.lenaweberfotografieUrl && (
                                 <a
                                     href={project.lenaweberfotografieUrl}
@@ -167,7 +164,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Magazin PDF</span>
                                 </a>
                             )}
-
                             {project.brandbookUrl && (
                                 <a
                                     href={project.brandbookUrl}
@@ -178,7 +174,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     Brandbuch PDF
                                 </a>
                             )}
-
                             {project.instagramUrl && (
                                 <a
                                     href={project.instagramUrl}
@@ -190,7 +185,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Instagram</span>
                                 </a>
                             )}
-
                             {project.adobestockUrl && (
                                 <a
                                     href={project.adobestockUrl}
@@ -219,16 +213,17 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         className="flex-1 overflow-y-auto p-0 bg-[#0a0a0a]"
                         data-lenis-prevent="true"
                     >
+
                         {project.description && (
-                            <div className="w-full flex justify-center pt-28 px-6 pb-2">
-                                <p className="text-sm md:text-base text-secondary/80 font-light max-w-3xl text-center italic">
+                            <div className="w-full pt-28 md:pt-32 pl-6 md:pl-8 pr-4 md:pr-6 pb-2">
+                                <p className="text-xs md:text-sm text-secondary/70 font-light max-w-3xl text-left">
                                     {project.description}
                                 </p>
                             </div>
                         )}
 
                         {project.category === ProjectCategory.WEB && (
-                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-8' : 'pt-24 md:pt-28'}`}>
+                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-4 md:pt-6' : 'pt-28 md:pt-32'}`}>
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
@@ -253,7 +248,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-8' : 'pt-24 md:pt-28'}`}>
+                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-4 md:pt-6' : 'pt-28 md:pt-32'}`}>
 
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">
                                         {project.gallery?.map((item, index) => {

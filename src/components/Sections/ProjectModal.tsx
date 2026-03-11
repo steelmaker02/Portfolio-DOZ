@@ -171,7 +171,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                                 >
-                                    Brandbuch PDF
+                                    <BookOpen size={18} />
+                                    <span className="hidden sm:inline">Barndbuch PDF</span>
                                 </a>
                             )}
                             {project.instagramUrl && (
@@ -215,7 +216,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                     >
 
                         {project.description && (
-                            <div className="w-full pt-28 md:pt-32 pl-6 md:pl-8 pr-4 md:pr-6 pb-2">
+                            <div className="w-full pt-24 md:pt-24 pl-6 md:pl-8 pr-4 md:pr-6 pb-0">
                                 <p className="text-xs md:text-sm text-secondary/70 font-light max-w-3xl text-left">
                                     {project.description}
                                 </p>
@@ -223,7 +224,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         )}
 
                         {project.category === ProjectCategory.WEB && (
-                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-4 md:pt-6' : 'pt-28 md:pt-32'}`}>
+                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-3 md:pt-4' : 'pt-24 md:pt-24'}`}>
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
@@ -248,7 +249,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-4 md:pt-6' : 'pt-28 md:pt-32'}`}>
+                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-3 md:pt-4' : 'pt-24 md:pt-24'}`}>
 
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">
                                         {project.gallery?.map((item, index) => {

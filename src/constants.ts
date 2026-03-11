@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
     fullWebImage: 'images/projects/web5_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
     tools: ['Figma', 'After Effects'],
     tags: ['Food', 'Landing Page'],
     size: 'wide'
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web6_thumb.webp',
     fullWebImage: 'images/projects/web6_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
     tools: ['Figma', 'Illustrator'],
     tags: ['Sport', 'Workout'],
     size: 'small'
@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web8_thumb.webp',
     fullWebImage: 'images/projects/web8_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
     tools: ['Figma', 'Illustrator'],
     tags: ['Kinder', 'Peppa'],
     size: 'small'
@@ -167,7 +167,7 @@ export const PROJECTS: Project[] = [
     year: '2026',
     coverImage: 'images/projects/web12_thumb.webp',
     fullWebImage: 'images/projects/web12_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live aufrufen und ansehen.',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
     tools: ['Figma', 'Photoshop'],
     tags: ['Portfolio', 'Foto'],
     size: 'small'
@@ -175,7 +175,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'ps-1',
-    title: 'Futurelab',
+    title: 'Futurelab — Event zum Thema Zukunft',
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps1_thumb.webp',
@@ -211,7 +211,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'ps-3',
-    title: 'Der Kreis – Gruppenpräsentation',
+    title: 'Der Kreis — Gruppenpräsentation',
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps3_thumb.webp',
@@ -235,7 +235,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'ps-4',
-    title: 'SOUNDSPHERE - Musikmagazin',
+    title: 'SOUNDSPHERE — Musikmagazin',
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2026',
     coverImage: 'images/projects/ps4_thumb.webp',
@@ -254,7 +254,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'logo-1',
-    title: 'Gipfelglück',
+    title: 'Gipfelglück — Outdoor Bekleidung',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
     coverImage: 'images/projects/logo1_thumb.webp',
@@ -271,7 +271,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'logo-2',
-    title: 'Nachteule',
+    title: 'Nachteule — moderner Verlag',
     category: ProjectCategory.ILLUSTRATOR,
     year: '2025',
     coverImage: 'images/projects/logo2_thumb.webp',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Instagram, Image, ArrowDown, Globe } from 'lucide-react';
+import { X, Instagram, Image, ArrowDown, Globe, BookOpen } from 'lucide-react';
 import { Project, ProjectCategory } from '../../types';
 
 interface ProjectModalProps {
@@ -108,14 +108,51 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                         <div className="pointer-events-auto flex flex-wrap items-center gap-3 justify-end self-start md:self-auto">
 
-                            {project.brandbookUrl && (
+                            {project.peppapigUrl && (
                                 <a
-                                    href={project.brandbookUrl}
+                                    href={project.peppapigUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#ff8a80] hover:border-[#ff8a80] hover:shadow-[0_0_15px_rgba(255,138,128,0.5)]"
                                 >
-                                    Brandbuch PDF
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Site</span>
+                                </a>
+                            )}
+
+                            {project.workoutUrl && (
+                                <a
+                                    href={project.workoutUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#3fd47d] hover:border-[#3fd47d] hover:shadow-[0_0_15px_rgba(63,212,125,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Site</span>
+                                </a>
+                            )}
+
+                            {project.alvarezchocolatUrl && (
+                                <a
+                                    href={project.alvarezchocolatUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#784830] hover:border-[#784830] hover:shadow-[0_0_15px_rgba(120,72,48,0.5)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Site</span>
+                                </a>
+                            )}
+
+                            {project.lenaweberfotografieUrl && (
+                                <a
+                                    href={project.lenaweberfotografieUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#e8c6b5] hover:shadow-[0_0_15px_rgba(170,125,105,0.35)]"
+                                >
+                                    <Globe size={18} />
+                                    <span className="hidden sm:inline">Live Site</span>
                                 </a>
                             )}
 
@@ -124,9 +161,21 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     href={project.musikmagazinUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                >
+                                    <BookOpen size={18} />
+                                    <span className="hidden sm:inline">Magazin PDF</span>
+                                </a>
+                            )}
+
+                            {project.brandbookUrl && (
+                                <a
+                                    href={project.brandbookUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center justify-center h-10 md:h-12 px-5 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                                 >
-                                    Musikmagazin PDF
+                                    Brandbuch PDF
                                 </a>
                             )}
 
@@ -139,54 +188,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                 >
                                     <Instagram size={18} />
                                     <span className="hidden sm:inline">Instagram</span>
-                                </a>
-                            )}
-
-                            {project.peppapigUrl && (
-                                <a
-                                    href={project.peppapigUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#ff8a80] hover:border-[#ff8a80] hover:shadow-[0_0_15px_rgba(255,138,128,0.5)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Seite</span>
-                                </a>
-                            )}
-
-                            {project.workoutUrl && (
-                                <a
-                                    href={project.workoutUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#3fd47d] hover:border-[#3fd47d] hover:shadow-[0_0_15px_rgba(63,212,125,0.5)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Seite</span>
-                                </a>
-                            )}
-
-                            {project.alvarezchocolatUrl && (
-                                <a
-                                    href={project.alvarezchocolatUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#784830] hover:border-[#784830] hover:shadow-[0_0_15px_rgba(120,72,48,0.5)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Seite</span>
-                                </a>
-                            )}
-
-                            {project.lenaweberfotografieUrl && (
-                                <a
-                                    href={project.lenaweberfotografieUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[#e8c6b5] hover:shadow-[0_0_15px_rgba(170,125,105,0.35)]"
-                                >
-                                    <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Seite</span>
                                 </a>
                             )}
 
@@ -204,7 +205,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                             <button
                                 onClick={handleManualClose}
-                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                className="flex items-center justify-center h-10 w-10 md:h-12 md:w-12 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white transition-all hover:bg-accent hover:border-accent"
                             >
                                 <X size={24} />
                             </button>
@@ -218,8 +219,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                         className="flex-1 overflow-y-auto p-0 bg-[#0a0a0a]"
                         data-lenis-prevent="true"
                     >
+                        {project.description && (
+                            <div className="w-full flex justify-center pt-28 px-6 pb-2">
+                                <p className="text-sm md:text-base text-secondary/80 font-light max-w-3xl text-center italic">
+                                    {project.description}
+                                </p>
+                            </div>
+                        )}
+
                         {project.category === ProjectCategory.WEB && (
-                            <div className="w-full flex flex-col items-center pt-24 md:pt-28 pb-10 gap-10 md:gap-16">
+                            <div className={`w-full flex flex-col items-center pb-10 gap-10 md:gap-16 ${project.description ? 'pt-8' : 'pt-24 md:pt-28'}`}>
                                 {project.videoUrl && (
                                     <video
                                         src={project.videoUrl}
@@ -240,28 +249,37 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             </div>
                         )}
 
-                        {(project.category === ProjectCategory.PHOTOSHOP ||
+                        {(project.category === ProjectCategory.GRAFIKDESIGN ||
                             project.category === ProjectCategory.ILLUSTRATOR ||
                             project.category === ProjectCategory.AI) && (
 
-                                <div className="w-full pt-24 md:pt-28 px-4 md:px-10 pb-20">
-
+                                <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-8' : 'pt-24 md:pt-28'}`}>
 
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">
                                         {project.gallery?.map((item, index) => {
                                             const src = typeof item === 'string' ? item : item.src;
                                             const title = typeof item === 'string' ? null : item.title;
 
+                                            const isVideo = src.toLowerCase().endsWith('.mp4');
+
                                             return (
                                                 <div key={index} className="space-y-4">
                                                     <div className="flex justify-center">
-                                                        <img
-                                                            src={src}
-                                                            alt={`Detail ${index}`}
-                                                            className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
-                                                            loading={index < 2 ? "eager" : "lazy"}
-                                                            decoding="async"
-                                                        />
+                                                        {isVideo ? (
+                                                            <video
+                                                                src={src}
+                                                                autoPlay loop muted playsInline
+                                                                className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
+                                                            />
+                                                        ) : (
+                                                            <img
+                                                                src={src}
+                                                                alt={`Detail ${index}`}
+                                                                className="max-w-full max-h-[85vh] w-auto h-auto object-contain block rounded-xl border border-white/5 shadow-2xl bg-[#050505]"
+                                                                loading={index < 2 ? "eager" : "lazy"}
+                                                                decoding="async"
+                                                            />
+                                                        )}
                                                     </div>
                                                     {title && (
                                                         <h4 className="text-white/70 font-mono text-xs md:text-sm tracking-widest uppercase pl-2">

@@ -8,7 +8,7 @@ import ProjectModal from './ProjectModal';
 const TABS = [
   { id: 'ALL', label: 'Alle', icon: Layers },
   { id: ProjectCategory.WEB, label: 'Webseiten', icon: Monitor },
-  { id: ProjectCategory.PHOTOSHOP, label: 'Photoshop', icon: ImageIcon },
+  { id: ProjectCategory.GRAFIKDESIGN, label: 'Grafikdesign', icon: ImageIcon },
   { id: ProjectCategory.ILLUSTRATOR, label: 'Logos', icon: PenTool },
   { id: ProjectCategory.AI, label: 'KI Kunst', icon: Sparkles },
 ];

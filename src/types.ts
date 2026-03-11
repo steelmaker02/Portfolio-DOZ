@@ -1,6 +1,6 @@
 export enum ProjectCategory {
   WEB = 'Web Design',
-  PHOTOSHOP = 'Photoshop Art',
+  GRAFIKDESIGN = 'Designkonzepte',
   ILLUSTRATOR = 'Logofolio',
   AI = 'AI Gen'
 }

@@ -32,19 +32,18 @@ export const SKILLS = [
 ];
 
 export const PROJECTS: Project[] = [
-
   {
     id: 'web-1',
     title: 'Online Bildungsplatform',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: 'images/projects/web1_thumb.webp',
+    coverImage: 'images/projects/web1_thumb.png',
     fullWebImage: 'images/projects/web1_full.webp',
+    description: 'Kurzer Kommentar: Fokus auf klare Benutzerführung und Barrierefreiheit.',
     tools: ['Figma', 'Photoshop', 'Illustrator'],
     tags: ['Education', 'UI/UX'],
     size: 'large'
   },
-
   {
     id: 'web-2',
     title: 'Odessa Balletttheater',
@@ -56,7 +55,6 @@ export const PROJECTS: Project[] = [
     tags: ['Culture', 'Minimal'],
     size: 'wide'
   },
-
   {
     id: 'web-3',
     title: 'Hörgeräteshop',
@@ -68,7 +66,6 @@ export const PROJECTS: Project[] = [
     tags: ['E-Commerce', 'Medical'],
     size: 'small'
   },
-
   {
     id: 'web-4',
     title: 'Cargo aus China',
@@ -80,7 +77,6 @@ export const PROJECTS: Project[] = [
     tags: ['Fashion', 'Branding'],
     size: 'small'
   },
-
   {
     id: 'web-5',
     title: 'Alvarez Chocolat',
@@ -89,11 +85,11 @@ export const PROJECTS: Project[] = [
     year: '2025',
     coverImage: 'images/projects/web5_thumb.webp',
     fullWebImage: 'images/projects/web5_full.webp',
+    description: 'Konzept für eine Premium-Schokoladenmarke.',
     tools: ['Figma', 'After Effects'],
     tags: ['Food', 'Landing Page'],
     size: 'wide'
   },
-
   {
     id: 'web-6',
     title: 'Cardio Training',
@@ -106,7 +102,6 @@ export const PROJECTS: Project[] = [
     tags: ['Sport', 'Workout'],
     size: 'small'
   },
-
   {
     id: 'web-7',
     title: 'Programmiershule',
@@ -118,7 +113,6 @@ export const PROJECTS: Project[] = [
     tags: ['IT', 'Onlineshule'],
     size: 'small'
   },
-
   {
     id: 'web-8',
     title: 'Peppa Pig — Fan-Seite',
@@ -131,7 +125,6 @@ export const PROJECTS: Project[] = [
     tags: ['Kinder', 'Peppa'],
     size: 'small'
   },
-
   {
     id: 'web-9',
     title: 'Mandy Aquagrim',
@@ -143,7 +136,6 @@ export const PROJECTS: Project[] = [
     tags: ['Kinder', 'Aquagrim'],
     size: 'small'
   },
-
   {
     id: 'web-10',
     title: 'Tattoo Artist',
@@ -155,7 +147,6 @@ export const PROJECTS: Project[] = [
     tags: ['Tattoo', 'Studio'],
     size: 'wide'
   },
-
   {
     id: 'web-11',
     title: 'Gipfelglück — Outdoor Bekleidung',
@@ -167,7 +158,6 @@ export const PROJECTS: Project[] = [
     tags: ['Shop', 'Outdoor'],
     size: 'small'
   },
-
   {
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
@@ -184,9 +174,10 @@ export const PROJECTS: Project[] = [
   {
     id: 'ps-1',
     title: 'Futurelab',
-    category: ProjectCategory.PHOTOSHOP,
+    category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps1_thumb.webp',
+    description: 'Compositing Arbeit aus über 50 Einzelbildern.',
     gallery: [
       'images/projects/ps1_detail1.webp',
       'images/projects/ps1_detail2.webp',
@@ -197,11 +188,10 @@ export const PROJECTS: Project[] = [
     tags: ['Compositing', 'Retouch'],
     size: 'tall'
   },
-
   {
     id: 'ps-2',
     title: 'The Horrors — Konzertplakat',
-    category: ProjectCategory.PHOTOSHOP,
+    category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps2_thumb.webp',
     gallery: [
@@ -218,11 +208,10 @@ export const PROJECTS: Project[] = [
     tags: ['Concept Art', 'Matte Painting'],
     size: 'wide'
   },
-
   {
     id: 'ps-3',
     title: 'Der Kreis – Gruppenpräsentation',
-    category: ProjectCategory.PHOTOSHOP,
+    category: ProjectCategory.GRAFIKDESIGN,
     year: '2025',
     coverImage: 'images/projects/ps3_thumb.webp',
     gallery: [
@@ -242,11 +231,10 @@ export const PROJECTS: Project[] = [
     tags: ['Präsentation', 'Gruppenarbeit'],
     size: 'wide'
   },
-
   {
     id: 'ps-4',
     title: 'SOUNDSPHERE - Musikmagazin',
-    category: ProjectCategory.PHOTOSHOP,
+    category: ProjectCategory.GRAFIKDESIGN,
     year: '2026',
     coverImage: 'images/projects/ps4_thumb.webp',
     musikmagazinUrl: 'images/documents/SOUNDSPHERE_Musikmagazin.pdf',
@@ -278,7 +266,6 @@ export const PROJECTS: Project[] = [
     tags: ['Branding', 'Vector'],
     size: 'small'
   },
-
   {
     id: 'logo-2',
     title: 'Nachteule',
@@ -294,7 +281,6 @@ export const PROJECTS: Project[] = [
     tags: ['Branding', 'Vector'],
     size: 'small'
   },
-
   {
     id: 'logo-3',
     title: 'PUR Biomarkt',
@@ -330,7 +316,6 @@ export const PROJECTS: Project[] = [
     tags: ['AI Art'],
     size: 'small'
   },
-
   {
     id: 'ai-2',
     title: '8k Muster zum Drucken',
@@ -353,7 +338,6 @@ export const PROJECTS: Project[] = [
     tags: ['AI Art'],
     size: 'small'
   },
-
   {
     id: 'ai-3',
     title: 'Luxusproduktfotografie',

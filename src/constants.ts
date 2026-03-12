@@ -404,13 +404,13 @@ export const PROJECTS: Project[] = [
     gallery: [
       'images/projects/foto2.webp',
       'images/projects/foto3.webp',
-       'images/projects/foto4.webp',
+      'images/projects/foto4.webp',
       'images/projects/foto5.webp'
     ],
     tools: ['Canon 77D, Lightroom'],
     tags: ['Bildbearbeitung'],
     size: 'small'
-  },
+  }
 ];
 
 export const SOCIALS: SocialLink[] = [

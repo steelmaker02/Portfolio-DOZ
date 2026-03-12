@@ -10,8 +10,8 @@ const TABS = [
   { id: ProjectCategory.WEB, label: 'Webseiten', icon: Monitor },
   { id: ProjectCategory.GRAFIKDESIGN, label: 'Grafikdesign', icon: ImageIcon },
   { id: ProjectCategory.ILLUSTRATOR, label: 'Logos', icon: PenTool },
-  { id: ProjectCategory.AI, label: 'KI Kunst', icon: Sparkles },
-  { id: ProjectCategory.FOTO, label: 'Foto', icon: Camera },
+  { id: ProjectCategory.AI, label: 'KI-Kunst', icon: Sparkles },
+  { id: ProjectCategory.FOTO, label: 'Fotos', icon: Camera },
 ];
 
 const Portfolio: React.FC = () => {

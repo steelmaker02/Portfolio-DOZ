@@ -393,7 +393,24 @@ export const PROJECTS: Project[] = [
     tools: ['Stable Diffusion'],
     tags: ['AI Art'],
     size: 'small'
-  }
+  },
+
+  {
+    id: 'foto-1',
+    title: 'Familienfotos',
+    category: ProjectCategory.FOTO,
+    year: '2025',
+    coverImage: 'images/projects/foto1.webp',
+    gallery: [
+      'images/projects/foto2.webp',
+      'images/projects/foto3.webp',
+       'images/projects/foto4.webp',
+      'images/projects/foto5.webp'
+    ],
+    tools: ['Canon 77D, Lightroom'],
+    tags: ['Bildbearbeitung'],
+    size: 'small'
+  },
 ];
 
 export const SOCIALS: SocialLink[] = [

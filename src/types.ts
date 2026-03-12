@@ -2,7 +2,8 @@ export enum ProjectCategory {
   WEB = 'Web Design',
   GRAFIKDESIGN = 'Designkonzepte',
   ILLUSTRATOR = 'Logofolio',
-  AI = 'AI Gen'
+  AI = 'AI Gen',
+  FOTO = 'Foto'
 }
 
 export type CardSize = 'small' | 'wide' | 'tall' | 'large';

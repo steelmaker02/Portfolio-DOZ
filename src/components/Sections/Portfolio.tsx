@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUpRight, Layers, Image as ImageIcon, PenTool, Monitor, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Layers, Image as ImageIcon, PenTool, Monitor, Sparkles, Camera } from 'lucide-react';
 import { PROJECTS } from '../../constants';
 import { Project, ProjectCategory } from '../../types';
 import ProjectModal from './ProjectModal';
@@ -11,6 +11,7 @@ const TABS = [
   { id: ProjectCategory.GRAFIKDESIGN, label: 'Grafikdesign', icon: ImageIcon },
   { id: ProjectCategory.ILLUSTRATOR, label: 'Logos', icon: PenTool },
   { id: ProjectCategory.AI, label: 'KI Kunst', icon: Sparkles },
+  { id: ProjectCategory.FOTO, label: 'Foto', icon: Camera },
 ];
 
 const Portfolio: React.FC = () => {

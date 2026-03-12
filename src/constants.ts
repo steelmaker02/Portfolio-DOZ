@@ -410,6 +410,50 @@ export const PROJECTS: Project[] = [
     tools: ['Canon 77D, Lightroom'],
     tags: ['Bildbearbeitung'],
     size: 'small'
+  },
+  {
+    id: 'foto-2',
+    title: 'Nature',
+    category: ProjectCategory.FOTO,
+    year: '2025',
+    coverImage: 'images/projects/foto6.webp',
+    gallery: [
+      'images/projects/foto7.webp',
+      'images/projects/foto8.webp',
+      'images/projects/foto9.webp',
+      'images/projects/foto10.webp',
+      'images/projects/foto11.webp',
+      'images/projects/foto12.webp',
+      'images/projects/foto13.webp',
+      'images/projects/foto24.webp',
+      'images/projects/foto27.webp'
+    ],
+    tools: ['Canon 77D, Lightroom'],
+    tags: ['Bildbearbeitung'],
+    size: 'small'
+  },
+  {
+    id: 'foto-3',
+    title: 'Stadt',
+    category: ProjectCategory.FOTO,
+    year: '2025',
+    coverImage: 'images/projects/foto14.webp',
+    gallery: [
+      'images/projects/foto15.webp',
+      'images/projects/foto16.webp',
+      'images/projects/foto17.webp',
+      'images/projects/foto18.webp',
+      'images/projects/foto19.webp',
+      'images/projects/foto20.webp',
+      'images/projects/foto21.webp',
+      'images/projects/foto22.webp',
+      'images/projects/foto23.webp',
+      'images/projects/foto25.webp',
+      'images/projects/foto26.webp'
+    ],
+    tools: ['Canon 77D, Lightroom'],
+    tags: ['Bildbearbeitung'],
+    size: 'small'
   }
 ];
 

@@ -177,7 +177,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
                         {(project.category === ProjectCategory.GRAFIKDESIGN ||
                             project.category === ProjectCategory.ILLUSTRATOR ||
-                            project.category === ProjectCategory.AI) && (
+                            project.category === ProjectCategory.AI ||
+                            project.category === ProjectCategory.FOTO) && (
 
                                 <div className={`w-full px-4 md:px-10 pb-20 ${project.description ? 'pt-4 md:pt-6' : 'pt-24 md:pt-28'}`}>
                                     <div className="flex flex-col gap-8 md:gap-16 max-w-6xl mx-auto">

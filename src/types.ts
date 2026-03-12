@@ -3,7 +3,7 @@ export enum ProjectCategory {
   GRAFIKDESIGN = 'Designkonzepte',
   ILLUSTRATOR = 'Logofolio',
   AI = 'AI Gen',
-  FOTO = 'Fotografien'
+  FOTO = ''
 }
 
 export type CardSize = 'small' | 'wide' | 'tall' | 'large';

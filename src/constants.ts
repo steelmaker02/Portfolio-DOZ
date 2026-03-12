@@ -415,7 +415,7 @@ export const PROJECTS: Project[] = [
     id: 'foto-2',
     title: 'Nature',
     category: ProjectCategory.FOTO,
-    year: '2025',
+    year: '2017 — 2025',
     coverImage: 'images/projects/foto6.webp',
     gallery: [
       'images/projects/foto7.webp',
@@ -436,7 +436,7 @@ export const PROJECTS: Project[] = [
     id: 'foto-3',
     title: 'Stadt',
     category: ProjectCategory.FOTO,
-    year: '2025',
+    year: '2017 — 2025',
     coverImage: 'images/projects/foto14.webp',
     gallery: [
       'images/projects/foto15.webp',

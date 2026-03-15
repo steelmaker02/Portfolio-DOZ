@@ -178,6 +178,21 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'web-13',
+    title: 'Studio DOZ — Fotogalerie',
+    liveUrl: "https://steelmaker02.github.io/studio-doz-portfolio/",
+    liveButtonColor: "#f7d2d2",
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web13_thumb.webp',
+    fullWebImage: 'images/projects/web13_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Portfolio', 'Foto'],
+    size: 'wide'
+  },
+
+  {
     id: 'ps-1',
     title: 'Futurelab — Zukunftsmesse',
     category: ProjectCategory.GRAFIKDESIGN,

@@ -272,6 +272,34 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ps-5',
+    title: '52 Grafikdesign-Stilen für Plakate',
+    category: ProjectCategory.GRAFIKDESIGN,
+    year: '2026',
+    coverImage: 'images/projects/ps5_thumb.webp',
+    plakateUrl: 'images/documents/52_Plakatdesign.pdf',
+    gallery: [
+      'images/projects/ps5_detail1.webp',
+      'images/projects/ps5_detail2.webp',
+      'images/projects/ps5_detail3.webp',
+      'images/projects/ps5_detail4.webp',
+      'images/projects/ps5_detail5.webp',
+      'images/projects/ps5_detail6.webp',
+      'images/projects/ps5_detail7.webp',
+      'images/projects/ps5_detail8.webp',
+      'images/projects/ps5_detail9.webp',
+      'images/projects/ps5_detail10.webp',
+      'images/projects/ps5_detail11.webp',
+      'images/projects/ps5_detail12.webp',
+      'images/projects/ps5_detail13.webp'
+    ],
+    description: 'Ein visuelles Archiv aus 52 Designrichtungen — Layout / InDesign, Entwicklung / KI.',
+    tools: ['InDesign', 'Photoshop'],
+    tags: ['Archiv', 'Plakate'],
+    size: 'wide'
+  },
+
+  {
     id: 'logo-1',
     title: 'Gipfelglück — Outdoor Bekleidung',
     category: ProjectCategory.ILLUSTRATOR,

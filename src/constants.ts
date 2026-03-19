@@ -166,7 +166,7 @@ export const PROJECTS: Project[] = [
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
     liveUrl: "https://steelmaker02.github.io/lena-weber-fotografie/",
-    liveButtonColor: "#e8c6b5",
+    liveButtonColor: "#cf987c",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web12_thumb.webp',
@@ -181,7 +181,7 @@ export const PROJECTS: Project[] = [
     id: 'web-13',
     title: 'Studio DOZ — Fotogalerie',
     liveUrl: "https://steelmaker02.github.io/studio-doz-portfolio/",
-    liveButtonColor: "#f7d2d2",
+    liveButtonColor: "#ca9d9d",
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web13_thumb.webp',
@@ -312,6 +312,7 @@ export const PROJECTS: Project[] = [
       'images/projects/logo1_mockup3.webp',
       'images/projects/logo1_mockup4.webp'
     ],
+    description: 'Ganzheitliche Brand Identity mit klarer visueller Ausrichtung und funktionalem Designansatz.',
     tools: ['Illustrator', 'Photoshop'],
     tags: ['Branding', 'Vector'],
     size: 'small'

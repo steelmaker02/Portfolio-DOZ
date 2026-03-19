@@ -112,7 +112,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             )}
 
                             {project.musikmagazinUrl && (
-                                <a href={project.musikmagazinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                                <a href={project.musikmagazinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-cyan-500 hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)]">
                                     <BookOpen size={18} />
                                     <span className="hidden sm:inline">Magazin PDF</span>
                                 </a>
@@ -120,14 +120,14 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                             {project.plakateUrl && (
                                 <a href={project.plakateUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-purple-600 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)]">
                                     <BookOpen size={18} />
-                                    <span className="hidden sm:inline">52 Plakatdesign PDF</span>
+                                    <span className="hidden sm:inline">Plakatdesign PDF</span>
                                 </a>
                             )}
                             {project.brandbookUrl && (
                                 <a href={project.brandbookUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-accent hover:border-accent hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-amber-500 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.5)]"
                                 >
                                     <BookOpen size={18} />
                                     <span className="hidden sm:inline">Brandbuch PDF</span>

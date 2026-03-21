@@ -440,6 +440,34 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ai-4',
+    title: 'Next-Gen Männerporträts',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai64.webp',
+    gallery: [
+      'images/projects/ai60.webp',
+      'images/projects/ai61.webp',
+      'images/projects/ai62.webp',
+      'images/projects/ai63.webp',
+      'images/projects/ai65.webp',
+      'images/projects/ai66.webp',
+      'images/projects/ai67.webp',
+      'images/projects/ai68.webp',
+      'images/projects/ai69.webp',
+      'images/projects/ai70.webp',
+      'images/projects/ai71.webp',
+      'images/projects/ai72.webp',
+      'images/projects/ai73.webp',
+      'images/projects/ai74.webp'
+    ],
+    description: 'Visuelle Ideen, umgesetzt mit kreativer Freiheit und KI.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
     id: 'foto-1',
     title: 'Familienfotos',
     category: ProjectCategory.FOTO,

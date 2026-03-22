@@ -497,6 +497,37 @@ export const PROJECTS: Project[] = [
     tags: ['AI Art'],
     size: 'tall'
   },
+  {
+    id: 'ai-6',
+    title: 'Fashion Editorial — Frauenporträts',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai100.webp',
+    gallery: [
+      'images/projects/ai201.webp',
+      'images/projects/ai202.webp',
+      'images/projects/ai203.webp',
+      'images/projects/ai204.webp',
+      'images/projects/ai205.webp',
+      'images/projects/ai206.webp',
+      'images/projects/ai207.webp',
+      'images/projects/ai208.webp',
+      'images/projects/ai209.webp',
+      'images/projects/ai210.webp',
+      'images/projects/ai211.webp',
+      'images/projects/ai212.webp',
+      'images/projects/ai213.webp',
+      'images/projects/ai214.webp',
+      'images/projects/ai215.webp',
+      'images/projects/ai216.webp',
+      'images/projects/ai217.webp',
+      'images/projects/ai218.webp'
+    ],
+    description: 'Jeder Stil eines Modehauses lässt sich präzise nach Referenz visuell umsetzen.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
 
   {
     id: 'foto-1',

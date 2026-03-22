@@ -468,6 +468,37 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ai-5',
+    title: 'Brand-Kollaborationen',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai100.webp',
+    gallery: [
+      'images/projects/ai101.webp',
+      'images/projects/ai102.webp',
+      'images/projects/ai103.webp',
+      'images/projects/ai104.webp',
+      'images/projects/ai105.webp',
+      'images/projects/ai106.webp',
+      'images/projects/ai107.webp',
+      'images/projects/ai108.webp',
+      'images/projects/ai109.webp',
+      'images/projects/ai110.webp',
+      'images/projects/ai111.webp',
+      'images/projects/ai112.webp',
+      'images/projects/ai113.webp',
+      'images/projects/ai114.webp',
+      'images/projects/ai115.webp', 
+      'images/projects/ai116.webp'
+
+    ],
+    description: 'Zwei Marken, eine Idee – neu gedacht und visuell interpretiert.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
     id: 'foto-1',
     title: 'Familienfotos',
     category: ProjectCategory.FOTO,

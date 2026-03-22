@@ -502,7 +502,7 @@ export const PROJECTS: Project[] = [
     title: 'Fashion Editorial — Frauenporträts',
     category: ProjectCategory.AI,
     year: '2026',
-    coverImage: 'images/projects/ai100.webp',
+    coverImage: 'images/projects/ai200.webp',
     gallery: [
       'images/projects/ai201.webp',
       'images/projects/ai202.webp',

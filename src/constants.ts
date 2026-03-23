@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     title: 'Online Bildungsplatform',
     category: ProjectCategory.WEB,
     year: '2025',
-    coverImage: 'images/projects/web1_thumb.png',
+    coverImage: 'images/projects/web1_thumb.webp',
     fullWebImage: 'images/projects/web1_full.webp',
     tools: ['Figma', 'Photoshop', 'Illustrator'],
     tags: ['Education', 'UI/UX'],

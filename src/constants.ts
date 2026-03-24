@@ -530,6 +530,24 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ai-7',
+    title: 'Die Zukunft der Performance. Entwickelt mit KI.',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai300.webp',
+    gallery: [
+      'images/projects/ai301.webp',
+      'images/projects/ai302.webp',
+      'images/projects/ai303.webp',
+      'images/projects/ai304.webp'
+    ],
+    description: 'Mit der richtigen Idee lässt sich jedes Produkt zur Realität entwickeln.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
     id: 'foto-1',
     title: 'Familienfotos',
     category: ProjectCategory.FOTO,

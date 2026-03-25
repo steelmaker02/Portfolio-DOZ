@@ -639,7 +639,7 @@ export const PROJECTS: Project[] = [
       'images/projects/ai054.webp',
       'images/projects/ai055.webp',
       'images/projects/ai056.webp',
-      'images/projects/ai507.webp',
+      'images/projects/ai057.webp',
       'images/projects/ai058.webp',
       'images/projects/ai059.webp'
     ],

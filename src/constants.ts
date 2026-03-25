@@ -548,6 +548,108 @@ export const PROJECTS: Project[] = [
   },
 
   {
+    id: 'ai-8',
+    title: 'Handcrafted Felt Worlds mit KI',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai020.webp',
+    gallery: [
+      'images/projects/ai021.webp',
+      'images/projects/ai022.webp'
+    ],
+    description: 'Stilisierte Filzästhetik, die Szenen in eine warme, taktile Märchenwelt übersetzt.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
+    id: 'ai-9',
+    title: 'Next-Gen Product Staging',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai030.webp',
+    gallery: [
+      'images/projects/ai031.webp',
+      'images/projects/ai032.webp'
+    ],
+    description: 'Visuelle Produktwelten, die Marken hochwertig und begehrenswert inszenieren.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'small'
+  },
+
+  {
+    id: 'ai-10',
+    title: 'Digital Beverage Aesthetics',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai011.webp',
+    gallery: [
+      'images/projects/ai012.webp',
+      'images/projects/ai013.webp'
+    ],
+    description: 'Visuelle Welten, die Getränke stilvoll und begehrenswert inszenieren.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
+    id: 'ai-11',
+    title: 'Deconstructed Food Aesthetics',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai040.webp',
+    gallery: [
+      'images/projects/ai041.webp'
+    ],
+    description: 'Visuelle Food-Kompositionen, die Zutaten und Strukturen präzise inszenieren.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
+    id: 'ai-12',
+    title: 'Conceptual Food Staging',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai01.webp',
+    gallery: [
+      'images/projects/ai02.webp',
+      'images/projects/ai03.webp'
+    ],
+    description: 'Kontrastreiche Food-Visuals, die Alltag und Inszenierung neu verbinden.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'tall'
+  },
+
+  {
+    id: 'ai-13',
+    title: 'Cinematic Product Sequences',
+    category: ProjectCategory.AI,
+    year: '2026',
+    coverImage: 'images/projects/ai50.webp',
+    gallery: [
+      'images/projects/ai51.webp',
+      'images/projects/ai52.webp',
+      'images/projects/ai53.webp',
+      'images/projects/ai54.webp',
+      'images/projects/ai55.webp',
+      'images/projects/ai56.webp',
+      'images/projects/ai57.webp',
+      'images/projects/ai58.webp',
+      'images/projects/ai59.webp'
+    ],
+    description: 'ИИ создает визуальные последовательности для повествовательной презентации бренда.',
+    tools: ['Nano Banana'],
+    tags: ['AI Art'],
+    size: 'wide'
+  },
+
+  {
     id: 'foto-1',
     title: 'Familienfotos',
     category: ProjectCategory.FOTO,

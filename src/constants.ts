@@ -531,7 +531,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'ai-7',
-    title: 'Die Zukunft der Performance. Entwickelt mit KI.',
+    title: 'Die Zukunft der Performance.',
     category: ProjectCategory.AI,
     year: '2026',
     coverImage: 'images/projects/ai300.webp',
@@ -643,7 +643,7 @@ export const PROJECTS: Project[] = [
       'images/projects/ai058.webp',
       'images/projects/ai059.webp'
     ],
-    description: 'ИИ создает визуальные последовательности для повествовательной презентации бренда.',
+    description: 'KI erschafft visuelle Sequenzen für narrative Markeninszenierung.',
     tools: ['Nano Banana'],
     tags: ['AI Art'],
     size: 'wide'

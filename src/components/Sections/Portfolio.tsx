@@ -114,7 +114,7 @@ const Portfolio: React.FC = () => {
                     <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 bg-black/60 backdrop-blur-md rounded-full border border-white/10 shadow-lg">
                       <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                       <div className="font-mono text-[10px] tracking-wider flex items-center gap-1.5">
-                        <span className="text-white font-bold uppercase">Live Seite</span>
+                        <span className="text-white font-bold uppercase">Live-Seite</span>
                         <span className="text-white/60 font-light lowercase">(fiktiv)</span>
                       </div>
                     </div>

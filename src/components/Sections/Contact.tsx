@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCardClick = () => {
-    window.location.href = `mailto:${USER_INFO.email}?subject=Bewerbung%20Pflichtpraktikum%20-%20Anfrage`;
+    window.location.href = `mailto:${USER_INFO.email}?subject=Projektanfrage%20%C3%BCber%20Portfolio`;
   };
 
   const handleEmailClick = (e: React.MouseEvent) => {
@@ -37,11 +37,12 @@ const Contact: React.FC = () => {
 
             <div className="space-y-6 text-secondary text-base md:text-lg">
               <p className="leading-relaxed max-w-lg">
-                Ich suche ab <span className="text-white font-bold">September 2026</span> ein anspruchsvolles
-                <br className="hidden md:block" />
-                <span className="text-white"> 6-monatiges Pflichtpraktikum</span> im Bereich Web Design.
+                Ob <span className="text-white font-bold">Webdesign</span>,{' '}
+                <span className="text-white font-bold">Branding</span> oder{' '}
+                <span className="text-white font-bold">kreative KI-Konzepte</span> —
+                ich entwickle digitale Lösungen, die Ästhetik und Funktionalität verbinden.
                 <br /><br />
-                Lassen Sie uns darüber sprechen, wie ich Ihr Team unterstützen kann.
+                Haben Sie ein Projekt im Kopf? Lassen Sie uns darüber sprechen.
               </p>
 
               <div className="pt-6">

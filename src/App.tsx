@@ -21,7 +21,7 @@ const App: React.FC = () => {
     const styleValue = "color: #A1A1AA; font-family: 'JetBrains Mono', monospace; font-size: 12px;";
 
     console.log(
-      `%cCREATOR%c Dmytro Zaiats\n%cROLE   %c Mediengestalter i.A.\n%cSTATUS %c Suche Pflichtpraktikum (ab 09.2026)\n%cCONTACT%c zaiats.design@gmail.com`,
+      `%cCREATOR%c Dmytro Zaiats\n%cROLE   %c Digital Designer & Creative Developer\n%cSTATUS %c Sofort verfügbar\n%cCONTACT%c zaiats.design@gmail.com`,
       styleLabel, styleValue,
       styleLabel, styleValue,
       styleLabel, styleValue,

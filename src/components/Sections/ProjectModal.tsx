@@ -107,7 +107,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-[var(--hover-color)] hover:border-[var(--hover-color)] hover:shadow-[0_0_15px_var(--hover-color)]"
                                 >
                                     <Globe size={18} />
-                                    <span className="hidden sm:inline">Live Seite</span>
+                                    <span className="hidden sm:inline">Live-Seite</span>
                                 </a>
                             )}
 

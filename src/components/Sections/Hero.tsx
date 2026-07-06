@@ -44,10 +44,10 @@ const Hero: React.FC = () => {
             <div>
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="px-3 py-1 rounded-full border border-accent/30 bg-accent/10 text-accent text-[10px] md:text-xs font-mono uppercase tracking-wider">
-                  Umschulung
+                  Digital Design
                 </span>
                 <span className="text-secondary text-xs md:text-sm font-mono">
-                  Mediengestalter Digital & Print
+                  Digital & Web Designer
                 </span>
               </div>
 

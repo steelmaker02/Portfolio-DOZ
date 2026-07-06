@@ -13,9 +13,9 @@ const About: React.FC = () => {
 
   const timeline = [
     {
-      year: "06.2025 – Heute",
+      year: "seit 06.2025",
       title: "Umschulung: Mediengestalter Digital & Print",
-      place: "cimdata Bildungsakademie",
+      place: "Cimdata Bildungsakademie",
       desc: "Intensive duale Ausbildung mit Fokus auf Konzeption und Realisierung.",
       details: [
         "Digital: Web-Interfaces, Interaktivität & CMS",
@@ -104,9 +104,9 @@ const About: React.FC = () => {
                 internationalen Gastronomie habe ich gelernt, komplexe Prozesse zu strukturieren.
               </p>
               <p>
-                Was als Hobby begann – Webdesign, Fotografie und KI-Kunst – mache ich nun durch meine
-                Umschulung bei Cimdata zu meinem Beruf.
-                Ich verbinde technisches Verständnis mit ästhetischem Gespür.
+                Was als Hobby begann – Webdesign, Fotografie und KI-Kunst – ist heute meine Berufung.
+                Als Mediengestalter verbinde ich technisches Verständnis mit ästhetischem Gespür,
+                um überzeugende und funktionale digitale Erlebnisse zu kreieren.
               </p>
             </motion.div>
 

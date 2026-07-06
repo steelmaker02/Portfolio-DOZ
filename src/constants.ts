@@ -3,9 +3,9 @@ import { ProjectCategory, Project, SocialLink } from './types';
 export const USER_INFO = {
   name: "Dmytro",
   surname: "Zaiats",
-  role: "Mediengestalter i.A. & Creative Dev",
-  status: "Suche Pflichtpraktikum",
-  availability: "ab 09.2026",
+  role: "Digital Designer & Creative Developer",
+  status: "Digital Designer",
+  availability: "Sofort verfügbar",
   location: "Neumünster - Kiel - Hamburg",
   email: "zaiats.design@gmail.com",
   cv_link: "images/documents/Lebenslauf-Zaiats_Dmytro.pdf",
@@ -106,13 +106,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'web-7',
-    title: 'Programmiershule',
+    title: 'Programmierschule',
     category: ProjectCategory.WEB,
     year: '2026',
     coverImage: 'images/projects/web7_thumb.webp',
     fullWebImage: 'images/projects/web7_full.webp',
     tools: ['Figma', 'Illustrator'],
-    tags: ['IT', 'Onlineshule'],
+    tags: ['IT', 'Onlineschule'],
     size: 'small'
   },
   {
@@ -273,7 +273,7 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'ps-5',
-    title: '52 Grafikdesign-Stilen für Plakate',
+    title: '52 Grafikdesign-Stile für Plakate',
     category: ProjectCategory.GRAFIKDESIGN,
     year: '2026',
     coverImage: 'images/projects/ps5_thumb.webp',
@@ -488,7 +488,7 @@ export const PROJECTS: Project[] = [
       'images/projects/ai112.webp',
       'images/projects/ai113.webp',
       'images/projects/ai114.webp',
-      'images/projects/ai115.webp', 
+      'images/projects/ai115.webp',
       'images/projects/ai116.webp'
 
     ],

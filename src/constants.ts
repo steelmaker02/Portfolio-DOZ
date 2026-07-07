@@ -5,7 +5,7 @@ export const USER_INFO = {
   surname: "Zaiats",
   role: "Digital Designer & Creative Developer",
   status: "Digital Designer",
-  availability: "Sofort verfügbar",
+  availability: "Jetzt kontaktieren",
   location: "Neumünster - Kiel - Hamburg",
   email: "zaiats.design@gmail.com",
   cv_link: "images/documents/Lebenslauf-Zaiats_Dmytro.pdf",

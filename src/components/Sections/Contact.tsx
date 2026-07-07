@@ -35,26 +35,25 @@ const Contact: React.FC = () => {
               Zusammenarbeit.
             </h2>
 
-            <div className="space-y-6 text-secondary text-base md:text-lg">
-              <p className="leading-relaxed max-w-lg">
-                Ob <span className="text-white font-bold">Webdesign</span>,{' '}
-                <span className="text-white font-bold">Branding</span> oder{' '}
-                <span className="text-white font-bold">kreative KI-Konzepte</span> —
-                ich entwickle digitale Lösungen, die Ästhetik und Funktionalität verbinden.
-                <br /><br />
-                Haben Sie ein Projekt im Kopf? Lassen Sie uns darüber sprechen.
-              </p>
+            <p className="leading-relaxed max-w-lg">
+              Ob <span className="text-white font-bold">Webdesign</span>,{' '}
+              <span className="text-white font-bold">Branding</span> oder{' '}
+              <span className="text-white font-bold">kreative KI-Konzepte</span> —
+              <br className="hidden md:inline" />{' '}
+              ich entwickle digitale Lösungen, die Ästhetik und Funktionalität verbinden.
+              <br /><br />
+              Haben Sie ein Projekt im Kopf? Lassen Sie uns darüber sprechen.
+            </p>
 
-              <div className="pt-6">
-                <p className="text-xs font-mono uppercase text-accent mb-3">Standort</p>
+            <div className="pt-6">
+              <p className="text-xs font-mono uppercase text-accent mb-3">Standort</p>
 
-                <div className="flex flex-wrap items-center gap-2 text-white text-lg">
-                  <span>Neumünster</span>
-                  <span className="text-green-500 text-xs">•</span>
-                  <span>Kiel</span>
-                  <span className="text-green-500 text-xs">•</span>
-                  <span>Hamburg</span>
-                </div>
+              <div className="flex flex-wrap items-center gap-2 text-white text-lg">
+                <span>Neumünster</span>
+                <span className="text-green-500 text-xs">•</span>
+                <span>Kiel</span>
+                <span className="text-green-500 text-xs">•</span>
+                <span>Hamburg</span>
               </div>
             </div>
           </div>
@@ -112,6 +111,7 @@ const Contact: React.FC = () => {
           </div>
 
         </div>
+
       </div>
     </section>
   );

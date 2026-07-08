@@ -228,30 +228,7 @@ export const PROJECTS: Project[] = [
     tags: ['Concept Art', 'Matte Painting'],
     size: 'wide'
   },
-  {
-    id: 'ps-3',
-    title: 'Der Kreis — Gruppenpräsentation',
-    category: ProjectCategory.GRAFIKDESIGN,
-    year: '2025',
-    coverImage: 'images/projects/ps3_thumb.webp',
-    gallery: [
-      'images/projects/ps3_detail1.webp',
-      'images/projects/ps3_detail2.webp',
-      'images/projects/ps3_detail3.webp',
-      'images/projects/ps3_detail4.webp',
-      'images/projects/ps3_detail5.webp',
-      'images/projects/ps3_detail6.webp',
-      'images/projects/ps3_detail7.webp',
-      'images/projects/ps3_detail8.webp',
-      'images/projects/ps3_detail9.webp',
-      'images/projects/ps3_detail10.webp',
-      'images/projects/ps3_detail11.webp'
-    ],
-    description: 'Dieses Projekt wurde im Team entwickelt, um die Symbolik und Bedeutung des Kreises gestalterisch zu erforschen.',
-    tools: ['Photoshop', 'Canva'],
-    tags: ['Präsentation', 'Gruppenarbeit'],
-    size: 'wide'
-  },
+
   {
     id: 'ps-4',
     title: 'SOUNDSPHERE — Musikmagazin',
@@ -651,15 +628,20 @@ export const PROJECTS: Project[] = [
 
   {
     id: 'foto-1',
-    title: 'Familienfotos',
+    title: 'ROHE STILLE',
     category: ProjectCategory.FOTO,
-    year: '2025',
-    coverImage: 'images/projects/foto1.webp',
+    year: '2026',
+    coverImage: 'images/projects/f01.avif',
     gallery: [
-      'images/projects/foto2.webp',
-      'images/projects/foto3.webp',
-      'images/projects/foto4.webp',
-      'images/projects/foto5.webp'
+      'images/projects/f02.webp',
+      'images/projects/f03.avif',
+      'images/projects/f04.avif',
+      'images/projects/f05.avif',
+      'images/projects/f06.avif',
+      'images/projects/f07.avif',
+      'images/projects/f08.avif',
+      'images/projects/f09.webp',
+      'images/projects/f10.avif'
     ],
     tools: ['Canon 77D, Lightroom'],
     tags: ['Bildbearbeitung'],

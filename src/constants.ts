@@ -33,50 +33,6 @@ export const SKILLS = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'web-1',
-    title: 'Online Bildungsplatform',
-    category: ProjectCategory.WEB,
-    year: '2025',
-    coverImage: 'images/projects/web1_thumb.webp',
-    fullWebImage: 'images/projects/web1_full.webp',
-    tools: ['Figma', 'Photoshop', 'Illustrator'],
-    tags: ['Education', 'UI/UX'],
-    size: 'large'
-  },
-  {
-    id: 'web-2',
-    title: 'Odessa Balletttheater',
-    category: ProjectCategory.WEB,
-    year: '2025',
-    coverImage: 'images/projects/web2_thumb.webp',
-    fullWebImage: 'images/projects/web2_full.webp',
-    tools: ['Figma', 'Photoshop'],
-    tags: ['Culture', 'Minimal'],
-    size: 'wide'
-  },
-  {
-    id: 'web-3',
-    title: 'Hörgeräteshop',
-    category: ProjectCategory.WEB,
-    year: '2025',
-    coverImage: 'images/projects/web3_thumb.webp',
-    fullWebImage: 'images/projects/web3_full.webp',
-    tools: ['Figma', 'Shopify'],
-    tags: ['E-Commerce', 'Medical'],
-    size: 'small'
-  },
-  {
-    id: 'web-4',
-    title: 'Cargo aus China',
-    category: ProjectCategory.WEB,
-    year: '2025',
-    coverImage: 'images/projects/web4_thumb.webp',
-    fullWebImage: 'images/projects/web4_full.webp',
-    tools: ['Figma', 'Illustrator'],
-    tags: ['Fashion', 'Branding'],
-    size: 'small'
-  },
-  {
     id: 'web-5',
     title: 'Alvarez Chocolat',
     liveUrl: "https://steelmaker02.github.io/Alvarez/",
@@ -90,31 +46,7 @@ export const PROJECTS: Project[] = [
     tags: ['Food', 'Landing Page'],
     size: 'wide'
   },
-  {
-    id: 'web-6',
-    title: 'Cardio Training',
-    liveUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
-    liveButtonColor: "#3fd47d",
-    category: ProjectCategory.WEB,
-    year: '2026',
-    coverImage: 'images/projects/web6_thumb.webp',
-    fullWebImage: 'images/projects/web6_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
-    tools: ['Figma', 'Illustrator'],
-    tags: ['Sport', 'Workout'],
-    size: 'small'
-  },
-  {
-    id: 'web-7',
-    title: 'Programmierschule',
-    category: ProjectCategory.WEB,
-    year: '2026',
-    coverImage: 'images/projects/web7_thumb.webp',
-    fullWebImage: 'images/projects/web7_full.webp',
-    tools: ['Figma', 'Illustrator'],
-    tags: ['IT', 'Onlineschule'],
-    size: 'small'
-  },
+
   {
     id: 'web-8',
     title: 'Peppa Pig — Fan-Seite',
@@ -129,39 +61,22 @@ export const PROJECTS: Project[] = [
     tags: ['Kinder', 'Peppa'],
     size: 'small'
   },
+
   {
-    id: 'web-9',
-    title: 'Mandy Aquagrim',
+    id: 'web-6',
+    title: 'Cardio Training',
+    liveUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
+    liveButtonColor: "#3fd47d",
     category: ProjectCategory.WEB,
     year: '2026',
-    coverImage: 'images/projects/web9_thumb.webp',
-    fullWebImage: 'images/projects/web9_full.webp',
+    coverImage: 'images/projects/web6_thumb.webp',
+    fullWebImage: 'images/projects/web6_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
     tools: ['Figma', 'Illustrator'],
-    tags: ['Kinder', 'Aquagrim'],
+    tags: ['Sport', 'Workout'],
     size: 'small'
   },
-  {
-    id: 'web-10',
-    title: 'Tattoo Artist',
-    category: ProjectCategory.WEB,
-    year: '2026',
-    coverImage: 'images/projects/web10_thumb.webp',
-    fullWebImage: 'images/projects/web10_full.webp',
-    tools: ['Figma', 'Illustrator'],
-    tags: ['Tattoo', 'Studio'],
-    size: 'wide'
-  },
-  {
-    id: 'web-11',
-    title: 'Gipfelglück — Outdoor Bekleidung',
-    category: ProjectCategory.WEB,
-    year: '2025',
-    coverImage: 'images/projects/web11_thumb.webp',
-    fullWebImage: 'images/projects/web11_full.webp',
-    tools: ['Figma', 'Photoshop'],
-    tags: ['Shop', 'Outdoor'],
-    size: 'small'
-  },
+
   {
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
@@ -190,6 +105,102 @@ export const PROJECTS: Project[] = [
     tools: ['Figma', 'Photoshop'],
     tags: ['Portfolio', 'Foto'],
     size: 'wide'
+  },
+
+  {
+    id: 'web-1',
+    title: 'Online Bildungsplatform',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web1_thumb.webp',
+    fullWebImage: 'images/projects/web1_full.webp',
+    tools: ['Figma', 'Photoshop', 'Illustrator'],
+    tags: ['Education', 'UI/UX'],
+    size: 'large'
+  },
+
+  {
+    id: 'web-2',
+    title: 'Odessa Balletttheater',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web2_thumb.webp',
+    fullWebImage: 'images/projects/web2_full.webp',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Culture', 'Minimal'],
+    size: 'wide'
+  },
+
+  {
+    id: 'web-3',
+    title: 'Hörgeräteshop',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web3_thumb.webp',
+    fullWebImage: 'images/projects/web3_full.webp',
+    tools: ['Figma', 'Shopify'],
+    tags: ['E-Commerce', 'Medical'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-4',
+    title: 'Cargo aus China',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web4_thumb.webp',
+    fullWebImage: 'images/projects/web4_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Fashion', 'Branding'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-7',
+    title: 'Programmierschule',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web7_thumb.webp',
+    fullWebImage: 'images/projects/web7_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['IT', 'Onlineschule'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-9',
+    title: 'Mandy Aquagrim',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web9_thumb.webp',
+    fullWebImage: 'images/projects/web9_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Kinder', 'Aquagrim'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-10',
+    title: 'Tattoo Artist',
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web10_thumb.webp',
+    fullWebImage: 'images/projects/web10_full.webp',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Tattoo', 'Studio'],
+    size: 'wide'
+  },
+
+  {
+    id: 'web-11',
+    title: 'Gipfelglück — Outdoor Bekleidung',
+    category: ProjectCategory.WEB,
+    year: '2025',
+    coverImage: 'images/projects/web11_thumb.webp',
+    fullWebImage: 'images/projects/web11_full.webp',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Shop', 'Outdoor'],
+    size: 'small'
   },
 
   {

@@ -51,7 +51,7 @@ const About: React.FC = () => {
     },
     {
       category: "Motion & Video",
-      items: ["After Effects", "DaVinci Resolve", "Cinema 4D", "Spline", "Premiere Pro"]
+      items: ["After Effects", "Cinema 4D", "Spline", "Premiere Pro"]
     },
     {
       category: "Development",

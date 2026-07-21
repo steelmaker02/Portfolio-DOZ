@@ -133,6 +133,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
                                     <span className="hidden sm:inline">Brandbuch PDF</span>
                                 </a>
                             )}
+                            {project.theactUrl && (
+                                <a href={project.theactUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-emerald-500 hover:border-emerald-400 hover:shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+                                >
+                                    <BookOpen size={18} />
+                                    <span className="hidden sm:inline">THE_ACT PDF</span>
+                                </a>
+                            )}
                             {project.instagramUrl && (
                                 <a href={project.instagramUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center h-10 md:h-12 px-5 gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-full text-white text-xs md:text-sm font-bold transition-all hover:bg-pink-600 hover:border-pink-600 hover:shadow-[0_0_15px_rgba(219,39,119,0.5)]">
                                     <Instagram size={18} />

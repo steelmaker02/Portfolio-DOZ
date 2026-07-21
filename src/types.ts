@@ -30,6 +30,7 @@ export interface Project {
   alvarezchocolatUrl?: string;
   lenaweberfotografieUrl?: string;
   musikmagazinUrl?: string;
+  theactUrl?: string;
   plakateUrl?: string,
 
   description?: string;

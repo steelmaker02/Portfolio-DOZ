@@ -33,6 +33,36 @@ export const SKILLS = [
 
 export const PROJECTS: Project[] = [
   {
+    id: 'web-6',
+    title: 'Cardio Training',
+    liveUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
+    liveButtonColor: "#3fd47d",
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web6_thumb.webp',
+    fullWebImage: 'images/projects/web6_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
+    tools: ['Figma', 'Illustrator'],
+    tags: ['Sport', 'Workout'],
+    size: 'small'
+  },
+
+  {
+    id: 'web-13',
+    title: 'Studio DOZ — Fotogalerie',
+    liveUrl: "https://steelmaker02.github.io/studio-doz-portfolio/",
+    liveButtonColor: "#ca9d9d",
+    category: ProjectCategory.WEB,
+    year: '2026',
+    coverImage: 'images/projects/web13_thumb.webp',
+    fullWebImage: 'images/projects/web13_full.webp',
+    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
+    tools: ['Figma', 'Photoshop'],
+    tags: ['Portfolio', 'Foto'],
+    size: 'wide'
+  },
+
+  {
     id: 'web-5',
     title: 'Alvarez Chocolat',
     liveUrl: "https://steelmaker02.github.io/Alvarez/",
@@ -63,21 +93,6 @@ export const PROJECTS: Project[] = [
   },
 
   {
-    id: 'web-6',
-    title: 'Cardio Training',
-    liveUrl: "https://steelmaker02.github.io/WORKOUT-Cardio-Training/",
-    liveButtonColor: "#3fd47d",
-    category: ProjectCategory.WEB,
-    year: '2026',
-    coverImage: 'images/projects/web6_thumb.webp',
-    fullWebImage: 'images/projects/web6_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
-    tools: ['Figma', 'Illustrator'],
-    tags: ['Sport', 'Workout'],
-    size: 'small'
-  },
-
-  {
     id: 'web-12',
     title: 'Lena Weber — Fotografie',
     liveUrl: "https://steelmaker02.github.io/lena-weber-fotografie/",
@@ -90,21 +105,6 @@ export const PROJECTS: Project[] = [
     tools: ['Figma', 'Photoshop'],
     tags: ['Portfolio', 'Foto'],
     size: 'small'
-  },
-
-  {
-    id: 'web-13',
-    title: 'Studio DOZ — Fotogalerie',
-    liveUrl: "https://steelmaker02.github.io/studio-doz-portfolio/",
-    liveButtonColor: "#ca9d9d",
-    category: ProjectCategory.WEB,
-    year: '2026',
-    coverImage: 'images/projects/web13_thumb.webp',
-    fullWebImage: 'images/projects/web13_full.webp',
-    description: 'Diese Beispiel-Website zeigt die reale Umsetzung des Designs. Über den Button können Sie die Seite live besuchen.',
-    tools: ['Figma', 'Photoshop'],
-    tags: ['Portfolio', 'Foto'],
-    size: 'wide'
   },
 
   {
@@ -282,6 +282,35 @@ export const PROJECTS: Project[] = [
       'images/projects/ps5_detail13.webp'
     ],
     description: 'Ein visuelles Archiv aus 52 Designrichtungen — Layout / InDesign, Entwicklung / KI.',
+    tools: ['InDesign', 'Photoshop'],
+    tags: ['Archiv', 'Plakate'],
+    size: 'wide'
+  },
+
+  {
+    id: 'ps-6',
+    title: 'THE ACT — Trendige Präsentation',
+    category: ProjectCategory.GRAFIKDESIGN,
+    year: '2026',
+    coverImage: 'images/projects/the act0.avif',
+    theactUrl: 'images/documents/THE_ACT.pdf',
+    gallery: [
+      'images/projects/the act01.avif',
+      'images/projects/the act02.avif',
+      'images/projects/the act03.avif',
+      'images/projects/the act04.avif',
+      'images/projects/the act05.avif',
+      'images/projects/the act06.avif',
+      'images/projects/the act07.avif',
+      'images/projects/the act08.avif',
+      'images/projects/the act09.avif',
+      'images/projects/the act10.avif',
+      'images/projects/the act11.avif',
+      'images/projects/the act12.avif',
+      'images/projects/the act13.avif',
+      'images/projects/the act14.avif'
+    ],
+    description: 'Produktpräsentation der neuen Feuchtigkeitspflegelinie von The act/',
     tools: ['InDesign', 'Photoshop'],
     tags: ['Archiv', 'Plakate'],
     size: 'wide'
